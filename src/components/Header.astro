@@ -1,0 +1,171 @@
+---
+import Image from "astro/components/Image.astro";
+import CloseIcon from "../assets/icon/close.svg";
+import MenuIcon from "../assets/icon/menu.svg";
+import Logo from "../assets/logo.svg";
+import { constants } from "../constants";
+import Button from "./Button.astro";
+---
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 40px;
+    background: var(--surface-primary);
+    z-index: 1000;
+
+    @media screen and (max-width: 992px) {
+      & {
+        padding: 8px 24px;
+      }
+    }
+  }
+
+  .header-space {
+    height: 88px;
+    @media screen and (max-width: 860px) {
+      & {
+        height: 66px;
+      }
+    }
+  }
+
+  .header-logo {
+    margin: 0;
+
+    & img {
+      vertical-align: middle;
+
+      @media screen and (max-width: 860px) {
+        & {
+          height: 50px;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+
+    & ul {
+      display: flex;
+      gap: 26px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      & a {
+        text-decoration: none;
+        color: var(--text-primary);
+        font-size: 16px;
+        font-weight: 700;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    @media screen and (max-width: 860px) {
+      & {
+        position: fixed;
+        top: 66px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px 32px 73px;
+        gap: 40px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(32px);
+        z-index: 1000;
+
+        & ul {
+          flex-direction: column;
+          padding: 0 16px;
+          gap: 32px;
+
+          & a {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .navigation-toggle {
+    display: none;
+  }
+
+  .navigation-icon {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: var(--surface-secondary-dark);
+    border-radius: 100%;
+    cursor: pointer;
+
+    @media screen and (max-width: 860px) {
+      & {
+        display: inline-flex;
+      }
+    }
+
+    & .menu-icon {
+      fill: var(--text-on-fill);
+    }
+
+    & .close-icon {
+      display: none;
+      fill: var(--text-on-fill);
+    }
+  }
+
+  .navigation-toggle:checked {
+    & ~ * .menu-icon {
+      display: none;
+    }
+    & ~ * .close-icon {
+      display: inline;
+    }
+    & ~ .navigation {
+      display: flex;
+    }
+  }
+</style>
+
+<nav class="header">
+  <h1 class="header-logo">
+    <Image src={Logo} alt={constants.pageTitle} width={122} />
+  </h1>
+  <input type="checkbox" id="navigation-toggle" class="navigation-toggle" />
+  <label for="navigation-toggle" class="navigation-icon">
+    <MenuIcon class="menu-icon" />
+    <CloseIcon class="close-icon" />
+  </label>
+  <div class="navigation">
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">FAQ</a></li>
+      <li><a href="">Timetable</a></li>
+      <li><a href="">Floor Guide</a></li>
+      <li><a href="">Staffs</a></li>
+    </ul>
+    <Button href="/" target="_blank">イベントに申し込む</Button>
+  </div>
+</nav>
+<div class="header-space"></div>

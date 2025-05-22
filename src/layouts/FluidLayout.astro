@@ -1,0 +1,50 @@
+---
+import Footer from "../components/Footer.astro";
+import GlobalStyles from "../components/GlobalStyles.astro";
+import Header from "../components/Header.astro";
+import { constants } from "../constants";
+
+/** 最大幅の指定がないレイアウト（トップページや凝ったページ作成時に利用してください） */
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+
+// ページタイトルの指定があれば固定のページ名と合わせて表示する
+const pageTitle =
+  !!title && title.length > 0
+    ? `${title} | ${constants.pageTitle}`
+    : constants.pageTitle;
+---
+
+<style>
+  .body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+  }
+  .main {
+    flex: 1;
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <GlobalStyles />
+  </head>
+  <body class="body">
+    <Header />
+    <main class="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

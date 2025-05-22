@@ -1,0 +1,124 @@
+---
+import DoubleArrow from "../assets/icon/double-arrow.svg";
+
+interface Props {
+  variant?: "primary" | "secondary";
+  size?: "small" | "large";
+  disabled?: boolean;
+  href?: string;
+  target?: string;
+}
+
+const {
+  variant = "primary",
+  size = "small",
+  disabled = false,
+  href,
+  target,
+} = Astro.props;
+---
+
+<style>
+  .button {
+    display: inline-block;
+    padding: 8px 24px;
+    background-color: var(--surface-primary-dark);
+    color: var(--text-on-fill);
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .button--primary {
+    background-color: var(--surface-primary-dark);
+    border: 2px solid var(--surface-primary-dark);
+    color: var(--text-on-fill);
+
+    &:hover {
+      background-color: var(--surface-primary);
+      border: 2px solid var(--surface-primary-dark);
+      color: var(--surface-primary-dark);
+    }
+
+    & .arrow {
+      fill: var(--surface-primary-dark);
+    }
+  }
+
+  .button--secondary {
+    background-color: var(--surface-secondary-dark);
+    border: 2px solid var(--surface-secondary-dark);
+    color: var(--text-on-fill);
+
+    &:hover {
+      background-color: var(--surface-primary);
+      border: 2px solid var(--surface-secondary-dark);
+      color: var(--surface-secondary-dark);
+    }
+
+    & .arrow {
+      fill: var(--surface-secondary-dark);
+    }
+  }
+
+  .button--disabled {
+    background-color: var(--surface-tertiary);
+    border: 2px solid var(--surface-tertiary);
+    color: var(--text-on-fill);
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: var(--surface-tertiary);
+      border: 2px solid var(--surface-tertiary);
+      color: var(--text-on-fill);
+    }
+
+    & .arrow {
+      fill: var(--surface-tertiary);
+    }
+  }
+
+  .button--small {
+    font-size: 14px;
+
+    & .arrow {
+      display: none;
+    }
+  }
+
+  .button--large {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 16px 120px;
+
+    & .arrow {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 24px;
+      margin: auto 0;
+      padding: 6px;
+      background-color: var(--surface-primary);
+      border-radius: 99px;
+    }
+  }
+</style>
+
+<a
+  class={`button button--${variant} button--${size} ${disabled ? "button--disabled" : ""}`}
+  href={disabled ? undefined : href}
+  aria-disabled={disabled}
+  role="button"
+  target={target}
+  rel={target === "_blank" ? "noopener noreferrer" : undefined}
+>
+  <slot />
+  <DoubleArrow class="arrow" />
+</a>

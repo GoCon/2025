@@ -1,0 +1,262 @@
+---
+import Logo from "../assets/logo.svg";
+import XLogo from "../assets/x-logo.svg";
+import { constants } from "../constants";
+---
+
+<footer>
+  <div class="footer-navigation">
+    <div class="footer-body">
+      <div class="link-list">
+        <div class="link-column">
+          <div class="link-group">
+            <a href="/2025" class="text-link">Home</a>
+            <a href="/2025/proposal" class="text-link">Proposal</a>
+          </div>
+        </div>
+        <div class="link-column">
+          <h3 class="column-title">About</h3>
+          <div class="link-group">
+            <a href="https://go.dev/conduct" class="text-link"
+              >Code of Conduct</a
+            >
+            <a href="mailto:info@gocon.jp" class="text-link">INFO@GOCON.JP</a>
+            <a
+              href="https://drive.google.com/file/d/1Xon1uyLT-810sxnkLMngmL67z68K3XJG/view"
+              class="text-link">特定商取引法に基づく表記</a
+            >
+          </div>
+        </div>
+        <div class="link-column">
+          <h3 class="column-title">Past Conferences</h3>
+          <div class="link-group">
+            <a
+              href="https://gocon.jp/2024"
+              class="text-link"
+              target="_blank"
+              rel="noopener noreferrer">2024</a
+            >
+            <a
+              href="https://gocon.jp/2023"
+              class="text-link"
+              target="_blank"
+              rel="noopener noreferrer">2023</a
+            >
+            <a
+              href="https://gocon.jp/2022spring"
+              class="text-link"
+              target="_blank"
+              rel="noopener noreferrer">2022 Spring</a
+            >
+            <a
+              href="https://gocon.jp/2021autumn"
+              class="text-link"
+              target="_blank"
+              rel="noopener noreferrer">2021 Autumn</a
+            >
+            <a
+              href="https://gocon.jp/2021spring"
+              class="text-link"
+              target="_blank"
+              rel="noopener noreferrer">2021 Spring</a
+            >
+          </div>
+        </div>
+        <div class="link-column social">
+          <a href="https://x.com/goconjp" class="text-link social-link">
+            <XLogo class="social-icon" />
+            <span>#GOCON</span>
+          </a>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-info">
+        <div class="logo-container">
+          <Logo class="footer-logo" />
+          <span>{constants.pageTitle}</span>
+        </div>
+        <p class="copyright">
+          The Go gopher was designed by Renée French. Illustrations by tottie.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-gradient"></div>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .footer-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: var(--primitive-light-blue);
+    padding: 40px 0;
+    border-radius: 80px 80px 0 0;
+  }
+
+  .footer-body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 24px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .link-list {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .column-title {
+    font-family: "Noto Sans JP", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--primitive-blue);
+    margin: 0;
+  }
+
+  .link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .text-link {
+    font-family: "Noto Sans JP", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 175%;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .text-link:hover {
+    text-decoration: underline;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .social-icon {
+    width: 23px;
+    height: 24px;
+  }
+
+  hr {
+    width: 100%;
+    border: 1px solid var(--primitive-light-gray);
+    margin: 0;
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 24px;
+    box-sizing: border-box;
+  }
+
+  .logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 175%;
+    color: var(--text-primary);
+  }
+
+  .footer-logo {
+    width: 80px;
+    height: 47px;
+  }
+
+  .copyright {
+    font-family: "Noto Sans JP", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--text-primary);
+    margin: 0;
+    text-align: right;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .footer-gradient {
+    width: 100%;
+    height: 8px;
+    background: var(--gradient);
+  }
+
+  @media (max-width: 768px) {
+    .footer-navigation {
+      border-radius: 20px 20px 0 0;
+    }
+
+    .link-list {
+      display: none;
+    }
+
+    hr {
+      display: none;
+    }
+
+    .footer-info {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 0;
+      width: 100%;
+    }
+
+    .copyright {
+      text-align: left;
+      width: 100%;
+    }
+
+    .logo-container {
+      width: 100%;
+    }
+
+    .link-column {
+      min-width: 100%;
+    }
+  }
+</style>

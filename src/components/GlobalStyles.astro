@@ -1,0 +1,50 @@
+---
+/** サイト全体のデザイントークンやグローバルスタイルを定義する */
+---
+
+<style is:global>
+  :root {
+    --primitive-red: #ee5977;
+    --primitive-light-blue: #eef9ff;
+    --primitive-white: #ffffff;
+    --primitive-navy: #103972;
+    --primitive-blue: #0094e4;
+    --primitive-cyan: #6cc6d8;
+    --primitive-yellow: #fddd00;
+    --primitive-light-gray: #d5e1e8;
+    --primitive-black: #333333;
+    --text-primary: #333333;
+    --text-on-fill: #ffffff;
+    --text-accent: #0094e4;
+    --text-accent2: #ee5977;
+    --surface-primary: #ffffff;
+    --surface-secondary: #eef9ff;
+    --surface-tertiary: #d5e1e8;
+    --surface-primary-dark: #ee5977;
+    --surface-secondary-dark: #103972;
+    --gradient: linear-gradient(90deg, #0094e4 0%, #6cc6d8 50%, #fddd00 100%);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-title {
+    margin: 0 0 24px;
+    font-size: 48px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+
+    @media screen and (max-width: 860px) {
+      & {
+        margin: 0 0 16px;
+        font-size: 32px;
+      }
+    }
+
+    &::first-letter {
+      color: var(--text-accent);
+    }
+  }
+</style>

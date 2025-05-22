@@ -1,12 +1,152 @@
 ---
+import { Image } from "astro:assets";
+import Gopher from "../assets/page-header-gopher.png";
+import Footer from "../components/Footer.astro";
+import GlobalStyles from "../components/GlobalStyles.astro";
+import Header from "../components/Header.astro";
+import { constants } from "../constants";
+
+/** 最大幅の指定がないレイアウト（トップページや凝ったページ作成時に利用してください） */
+
 interface Props {
-  title: string;
+  /** ページタイトル（日本語部分） */
+  title?: string;
+  /** ページタイトル（英語部分） */
+  titleEn?: string;
 }
 
-const { title } = Astro.props;
+const { title, titleEn } = Astro.props;
+
+// ページタイトルの指定があれば固定のページ名と合わせて表示する
+const pageTitle =
+  !!title && title.length > 0
+    ? `${title} | ${constants.pageTitle}`
+    : constants.pageTitle;
 ---
 
-<!doctype html>
+<style>
+  .body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+  }
+
+  .article {
+    flex: 1;
+  }
+
+  .page-header {
+    background: var(--gradient);
+
+    & .inner {
+      position: relative;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 40px;
+      box-sizing: border-box;
+
+      @media screen and (max-width: 860px) {
+        & {
+          padding: 24px 24px;
+        }
+      }
+    }
+
+    & .gopher {
+      position: absolute;
+      bottom: -110px;
+      right: 0;
+      z-index: 1;
+
+      @media screen and (max-width: 860px) {
+        & {
+          bottom: -40px;
+          right: 8px;
+          width: 100px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .page-title {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-right: 200px;
+    box-sizing: border-box;
+    font-weight: 700;
+    color: var(--text-on-fill);
+    overflow-wrap: break-word;
+
+    @media screen and (max-width: 860px) {
+      & {
+        padding-right: 80px;
+      }
+    }
+
+    & .jp {
+      font-size: 24px;
+      line-height: 1.5;
+
+      @media screen and (max-width: 860px) {
+        & {
+          font-size: 18px;
+        }
+      }
+    }
+
+    & .en {
+      font-size: 68px;
+      line-height: 1.5;
+
+      @media screen and (max-width: 860px) {
+        & {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+
+  .main {
+    position: relative;
+    background: var(--surface-primary);
+    border-radius: 80px 80px 0 0;
+
+    @media screen and (max-width: 860px) {
+      & {
+        border-radius: 20px 20px 0 0;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: var(--gradient);
+      z-index: -1;
+    }
+
+    & .inner {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 80px 40px;
+      box-sizing: border-box;
+
+      @media screen and (max-width: 860px) {
+        & {
+          padding: 40px 20px;
+        }
+      }
+    }
+  }
+</style>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,9 +154,33 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{pageTitle}</title>
+    <GlobalStyles />
   </head>
-  <body>
-    <slot />
+  <body class="body">
+    <Header />
+    <article class="article">
+      <header class="page-header">
+        <div class="inner">
+          <h1 class="page-title">
+            <span class="jp">{title}</span>
+            <span class="en">{titleEn}</span>
+          </h1>
+          <Image
+            src={Gopher}
+            alt="Gopher"
+            class="gopher"
+            width={275}
+            height={275}
+          />
+        </div>
+      </header>
+      <main class="main">
+        <div class="inner">
+          <slot />
+        </div>
+      </main>
+    </article>
+    <Footer />
   </body>
 </html>
