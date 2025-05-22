@@ -9,12 +9,21 @@ import Button from "./Button.astro";
   .main-visual {
     padding: 40px 40px 80px;
 
+    @media screen and (max-width: 860px) {
+      padding: 0 0 40px;
+    }
+
     & .main-visual-inner {
       position: relative;
       padding: 56px 16px 80px;
       border-radius: 80px;
       background: var(--gradient);
       z-index: 1;
+
+      @media screen and (max-width: 860px) {
+        padding: 56px 16px 80px;
+        border-radius: 0 0 40px 40px;
+      }
 
       &::before {
         content: "";
@@ -26,6 +35,12 @@ import Button from "./Button.astro";
         border-radius: inherit;
         background: url("../assets/mv-bg.svg") no-repeat center center;
         background-size: 1355px;
+        mix-blend-mode: overlay;
+
+        @media screen and (max-width: 860px) {
+          background: url("../assets/mv-bg-sp.svg") no-repeat center center;
+          background-size: cover;
+        }
       }
     }
   }
@@ -36,8 +51,17 @@ import Button from "./Button.astro";
     text-align: center;
     z-index: 2;
 
+    @media screen and (max-width: 860px) {
+      margin: 0 0 -10%;
+    }
+
     img {
       width: 50%;
+
+      @media screen and (max-width: 860px) {
+        width: 70%;
+        height: auto;
+      }
     }
   }
 
@@ -47,10 +71,20 @@ import Button from "./Button.astro";
     text-align: center;
     z-index: 3;
 
+    @media screen and (max-width: 860px) {
+      margin: 0 -16px;
+      overflow: hidden;
+    }
+
     img {
       max-width: 773px;
       width: 100%;
       height: auto;
+
+      @media screen and (max-width: 860px) {
+        width: 105%;
+        margin: 0 -2.5%;
+      }
     }
   }
 
@@ -62,6 +96,11 @@ import Button from "./Button.astro";
     margin: -105px auto 0;
     padding: 16px 120px;
     z-index: 2;
+
+    @media screen and (max-width: 860px) {
+      margin: -10% auto 0;
+      padding: 16px 24px;
+    }
 
     p {
       margin: 0;
@@ -76,16 +115,30 @@ import Button from "./Button.astro";
       font-weight: 700;
       line-height: 1.5;
 
+      @media screen and (max-width: 860px) {
+        font-size: 24px;
+      }
+
       & .sat {
         padding-left: 3px;
         font-size: 36px;
         color: var(--text-accent);
+
+        @media screen and (max-width: 860px) {
+          padding-left: 0px;
+          font-size: 12px;
+        }
       }
 
       & .san {
         padding-left: 7px;
         font-size: 36px;
         color: var(--text-accent2);
+
+        @media screen and (max-width: 860px) {
+          padding-left: 3px;
+          font-size: 12px;
+        }
       }
     }
 
@@ -93,6 +146,10 @@ import Button from "./Button.astro";
       font-size: 28px;
       font-weight: 700;
       line-height: 1.5;
+
+      @media screen and (max-width: 860px) {
+        font-size: 18px;
+      }
     }
   }
 
@@ -118,7 +175,7 @@ import Button from "./Button.astro";
       <Image src={Logo} alt="Go Conference 2025" />
     </h1>
     <p class="gopher">
-      <Image class="gopher" src={Gopher} alt="Go Conference 2025 Main Visual" />
+      <Image src={Gopher} alt="Go Conference 2025 Main Visual" />
     </p>
     <aside class="event-info">
       <div class="date">
