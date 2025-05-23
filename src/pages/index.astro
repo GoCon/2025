@@ -34,6 +34,32 @@ import FluidLayout from "../layouts/FluidLayout.astro";
       padding-left: 40px;
       font-weight: 700;
     }
+
+    @media screen and (max-width: 860px) {
+      display: block;
+
+      & tbody,
+      & tr,
+      & th,
+      & td {
+        display: block;
+      }
+
+      & tr {
+        padding: 24px 0;
+        border-bottom: 1px solid var(--surface-tertiary);
+      }
+
+      & th {
+        margin-bottom: 16px;
+      }
+
+      & th,
+      & td {
+        padding: 0;
+        border: none;
+      }
+    }
   }
 
   .sponsorship {
