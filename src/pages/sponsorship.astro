@@ -1,0 +1,64 @@
+---
+import Button from "../components/Button.astro";
+import Chip from "../components/Chip.astro";
+import { constants } from "../constants";
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+  .contents {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .sponsorship-title {
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+  }
+
+  .sponsorship-date {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+  }
+</style>
+
+<Layout title="スポンサー" titleEn="Sponsorship">
+  <h2 class="section-title">スポンサーの募集について</h2>
+  <div class="contents">
+    <p>Go Conferenceではスポンサーを募集します。</p>
+    <div class="summary">
+      <h3 class="sponsorship-title">
+        <Chip variant="secondary">募集期間</Chip>
+      </h3>
+      <div class="sponsorship-date">
+        <p class="inner">
+          <span>{constants.sponsorship.start}</span>
+          <span>~</span>
+          <span>{constants.sponsorship.end}</span>
+        </p>
+      </div>
+    </div>
+    <p>
+      <Button size="large">申し込みはこちら</Button>
+    </p>
+  </div>
+</Layout>

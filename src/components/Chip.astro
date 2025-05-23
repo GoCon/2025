@@ -1,0 +1,46 @@
+---
+interface Props {
+  variant?: "primary" | "secondary";
+}
+
+const { variant = "primary" } = Astro.props;
+---
+
+<style>
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 24px;
+    background-color: var(--surface-primary-dark);
+    color: var(--text-on-fill);
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 860px) {
+      & {
+        border-radius: 10px;
+        padding: 4px 16px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .chip--primary {
+    background-color: var(--surface-primary-dark);
+    border: 2px solid var(--surface-primary-dark);
+    color: var(--text-on-fill);
+  }
+
+  .chip--secondary {
+    background-color: var(--surface-secondary-dark);
+    border: 2px solid var(--surface-secondary-dark);
+    color: var(--text-on-fill);
+  }
+</style>
+
+<span class={`chip chip--${variant}`}>
+  <slot />
+</span>
