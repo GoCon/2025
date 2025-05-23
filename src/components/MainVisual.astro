@@ -161,10 +161,18 @@ import Button from "./Button.astro";
     text-align: center;
     z-index: 2;
 
+    @media screen and (max-width: 860px) {
+      bottom: -28px;
+    }
+
     & .cta-button-inner {
       display: inline-block;
       border: 5px solid var(--surface-primary);
       border-radius: 999px;
+
+      @media screen and (max-width: 860px) {
+        border-width: 4px;
+      }
     }
   }
 </style>
