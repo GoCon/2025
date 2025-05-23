@@ -5,6 +5,7 @@ import MenuIcon from "../assets/icon/menu.svg";
 import Logo from "../assets/logo.svg";
 import { constants } from "../constants";
 import Button from "./Button.astro";
+import { concatWithBase } from "../utils/concatWithBase";
 ---
 
 <style>
@@ -159,7 +160,7 @@ import Button from "./Button.astro";
   </label>
   <div class="navigation">
     <ul>
-      <li><a href="">Home</a></li>
+      <li><a href={concatWithBase()}>Home</a></li>
       <li><a href="">FAQ</a></li>
       <li><a href="">Timetable</a></li>
       <li><a href="">Floor Guide</a></li>

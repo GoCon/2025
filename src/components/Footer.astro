@@ -2,6 +2,7 @@
 import Logo from "../assets/logo.svg";
 import XLogo from "../assets/x-logo.svg";
 import { constants } from "../constants";
+import { concatWithBase } from "../utils/concatWithBase";
 ---
 
 <footer>
@@ -10,8 +11,8 @@ import { constants } from "../constants";
       <div class="link-list">
         <div class="link-column">
           <div class="link-group">
-            <a href="/2025" class="text-link">Home</a>
-            <a href="/2025/proposal" class="text-link">Proposal</a>
+            <a href={concatWithBase()} class="text-link">Home</a>
+            <a href={concatWithBase("/proposal")} class="text-link">Proposal</a>
           </div>
         </div>
         <div class="link-column">
