@@ -1,8 +1,11 @@
 ---
+import Favicon from "../assets/favicon.svg";
+
 import Footer from "../components/Footer.astro";
 import GlobalStyles from "../components/GlobalStyles.astro";
 import Header from "../components/Header.astro";
 import { constants } from "../constants";
+import { concatWithBase } from "../utils/concatWithBase";
 
 /** 最大幅の指定がないレイアウト（トップページや凝ったページ作成時に利用してください） */
 
@@ -35,10 +38,35 @@ const pageTitle =
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={Favicon.src} />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <GlobalStyles />
+
+    <meta property="og:site_name" content={constants.pageTitle} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={constants.pageDescription} />
+    <meta
+      property="og:image"
+      content={new URL(
+        concatWithBase("og_image_lg.png"),
+        Astro.site || Astro.url.origin,
+      )}
+    />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:description" content={constants.pageDescription} />
+    <meta
+      property="twitter:image"
+      content={new URL(
+        concatWithBase("og_image_md.png"),
+        Astro.site || Astro.url.origin,
+      )}
+    />
   </head>
   <body class="body">
     <Header />
