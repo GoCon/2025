@@ -10,6 +10,7 @@ import Footer from "../components/Footer.astro";
 import GlobalStyles from "../components/GlobalStyles.astro";
 import Header from "../components/Header.astro";
 import { constants } from "../constants";
+import { concatWithBaseUrl } from "../utils/concatWithBase";
 import { concatWithBase } from "../utils/concatWithBase";
 
 /** 最大幅の指定がないレイアウト（トップページや凝ったページ作成時に利用してください） */
@@ -171,7 +172,7 @@ const pageTitle =
     <meta property="og:description" content={constants.pageDescription} />
     <meta
       property="og:image"
-      content={new URL(concatWithBase(OgImageLg.src), Astro.url)}
+      content={concatWithBaseUrl(OgImageLg.src, Astro.url)}
     />
 
     <meta property="twitter:card" content="summary" />
@@ -180,7 +181,7 @@ const pageTitle =
     <meta property="twitter:description" content={constants.pageDescription} />
     <meta
       property="twitter:image"
-      content={new URL(concatWithBase(OgImageMd.src), Astro.url)}
+      content={concatWithBaseUrl(OgImageMd.src, Astro.url)}
     />
   </head>
   <body class="body">

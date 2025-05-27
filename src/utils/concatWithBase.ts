@@ -11,3 +11,9 @@ export function concatWithBase(path?: string): string {
   }
   return `${import.meta.env.BASE_URL}/${cleanPath}`;
 }
+
+export function concatWithBaseUrl(path?: string, astroUrl?: URL): string {
+  // Netlify環境では DEPLOY_URL を優先使用
+  const baseOrigin = import.meta.env.DEPLOY_URL || astroUrl?.origin;
+  return `${baseOrigin}${concatWithBase(path)}`;
+}
