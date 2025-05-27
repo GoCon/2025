@@ -98,6 +98,11 @@ const {
     font-size: 20px;
     padding: 16px 120px;
 
+    @media screen and (max-width: 860px) {
+      font-size: 16px;
+      padding: 10px 64px;
+    }
+
     & .arrow {
       position: absolute;
       top: 0;
@@ -107,6 +112,13 @@ const {
       padding: 6px;
       background-color: var(--surface-primary);
       border-radius: 99px;
+
+      @media screen and (max-width: 860px) {
+        right: 14px;
+        width: 16px;
+        height: 16px;
+        padding: 4px;
+      }
     }
   }
 </style>

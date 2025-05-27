@@ -1,0 +1,206 @@
+---
+import "@fontsource/barlow/700.css";
+import { Image } from "astro:assets";
+import Gopher from "../assets/mv-gophers.png";
+import Logo from "../assets/mv-logo.svg";
+import { concatWithBase } from "../utils/concatWithBase";
+import Button from "./Button.astro";
+---
+
+<style>
+  .main-visual {
+    padding: 40px 40px 80px;
+
+    @media screen and (max-width: 860px) {
+      padding: 0 0 40px;
+    }
+
+    & .main-visual-inner {
+      position: relative;
+      padding: 56px 16px 80px;
+      border-radius: 80px;
+      background: var(--gradient);
+      z-index: 1;
+
+      @media screen and (max-width: 860px) {
+        padding: 56px 16px 80px;
+        border-radius: 0 0 40px 40px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: inherit;
+        background: url("../assets/mv-bg.svg") no-repeat center center;
+        background-size: 1355px;
+        mix-blend-mode: overlay;
+
+        @media screen and (max-width: 860px) {
+          background: url("../assets/mv-bg-sp.svg") no-repeat center center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  .logo {
+    position: relative;
+    margin: 0 0 -105px;
+    text-align: center;
+    z-index: 2;
+
+    @media screen and (max-width: 860px) {
+      margin: 0 0 -10%;
+    }
+
+    img {
+      width: 50%;
+
+      @media screen and (max-width: 860px) {
+        width: 70%;
+        height: auto;
+      }
+    }
+  }
+
+  .gopher {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    z-index: 3;
+
+    @media screen and (max-width: 860px) {
+      margin: 0 -16px;
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 773px;
+      width: 100%;
+      height: auto;
+
+      @media screen and (max-width: 860px) {
+        width: 105%;
+        margin: 0 -2.5%;
+      }
+    }
+  }
+
+  .event-info {
+    position: relative;
+    width: fit-content;
+    background: var(--surface-primary);
+    border-radius: 24px;
+    margin: -105px auto 0;
+    padding: 16px 120px;
+    font-family: "Barlow", sans-serif;
+    z-index: 2;
+
+    @media screen and (max-width: 860px) {
+      margin: -10% auto 0;
+      padding: 16px 24px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    & .date {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.5;
+
+      @media screen and (max-width: 860px) {
+        font-size: 24px;
+      }
+
+      & .sat {
+        padding-left: 3px;
+        font-size: 36px;
+        color: var(--text-accent);
+
+        @media screen and (max-width: 860px) {
+          padding-left: 0px;
+          font-size: 12px;
+        }
+      }
+
+      & .san {
+        padding-left: 7px;
+        font-size: 36px;
+        color: var(--text-accent2);
+
+        @media screen and (max-width: 860px) {
+          padding-left: 3px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    & .venue {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.5;
+
+      @media screen and (max-width: 860px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .cta-button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -33px;
+    text-align: center;
+    z-index: 2;
+
+    @media screen and (max-width: 860px) {
+      bottom: -28px;
+    }
+
+    & .cta-button-inner {
+      display: inline-block;
+      border: 5px solid var(--surface-primary);
+      border-radius: 999px;
+
+      @media screen and (max-width: 860px) {
+        border-width: 4px;
+      }
+    }
+  }
+</style>
+
+<div class="main-visual">
+  <div class="main-visual-inner">
+    <h1 class="logo">
+      <Image src={Logo} alt="Go Conference 2025" />
+    </h1>
+    <p class="gopher">
+      <Image src={Gopher} alt="Go Conference 2025 Main Visual" />
+    </p>
+    <aside class="event-info">
+      <div class="date">
+        <p>9.27<span class="sat">SAT</span></p>
+        <p>28<span class="san">SUN</span></p>
+      </div>
+      <p class="venue">Abema Towers 10F / 11F, Tokyo</p>
+    </aside>
+    <div class="cta-button">
+      <div class="cta-button-inner">
+        <Button href={concatWithBase("proposal")} size="large"
+          >プロポーザルに応募</Button
+        >
+      </div>
+    </div>
+  </div>
+</div>

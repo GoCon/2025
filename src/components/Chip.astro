@@ -1,14 +1,16 @@
 ---
 interface Props {
   variant?: "primary" | "secondary";
+  class?: string;
 }
 
-const { variant = "primary" } = Astro.props;
+const { variant = "primary", class: className } = Astro.props;
 ---
 
 <style>
   .chip {
     display: inline-flex;
+    justify-content: center;
     align-items: center;
     padding: 8px 24px;
     background-color: var(--surface-primary-dark);
@@ -41,6 +43,6 @@ const { variant = "primary" } = Astro.props;
   }
 </style>
 
-<span class={`chip chip--${variant}`}>
+<span class={`chip chip--${variant}${className ? ` ${className}` : ""}`}>
   <slot />
 </span>

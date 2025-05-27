@@ -11,6 +11,15 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
+      '@fontsource-variable/noto-sans':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@fontsource-variable/noto-sans-jp':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/barlow':
+        specifier: ^5.2.5
+        version: 5.2.5
       astro:
         specifier: ^5.7.13
         version: 5.7.13(@types/node@22.15.20)(rollup@4.41.0)(typescript@5.8.3)(yaml@2.8.0)
@@ -273,6 +282,15 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/noto-sans-jp@5.2.5':
+    resolution: {integrity: sha512-+ieDlugS+FCva2eLahVgybiaPMs1xLcBYByflzw1WghvFPFNJzsQHw85N+dadXzaqccVTiVDGYW4E0bMv4CHAQ==}
+
+  '@fontsource-variable/noto-sans@5.2.7':
+    resolution: {integrity: sha512-VaA+clV7xTOx+pSOdyjr9nR7khjrJGr7ZHs2KXlx+AqLyG/SUVBadNwauCH0rvF/eZkZr67neNxdKMOLtVxweg==}
+
+  '@fontsource/barlow@5.2.5':
+    resolution: {integrity: sha512-p+2XXEM7v85kbn0Dh8g0YLMjTCDiRCAi9nHik6w/2owZ9CkT1yYGGgaUMshJRqykh7efv1gE0QxAkOhZHd8tEg==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -2283,6 +2301,12 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.4':
     optional: true
+
+  '@fontsource-variable/noto-sans-jp@5.2.5': {}
+
+  '@fontsource-variable/noto-sans@5.2.7': {}
+
+  '@fontsource/barlow@5.2.5': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

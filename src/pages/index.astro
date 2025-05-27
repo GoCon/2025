@@ -1,7 +1,143 @@
 ---
+import Button from "../components/Button.astro";
+import Chip from "../components/Chip.astro";
+import MainVisual from "../components/MainVisual.astro";
 import FluidLayout from "../layouts/FluidLayout.astro";
+import { concatWithBase } from "../utils/concatWithBase";
 ---
 
+<style>
+  .section-title > .accent {
+    color: var(--text-accent);
+  }
+
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    text-align: center;
+
+    @media screen and (max-width: 860px) {
+      padding: 40px 24px;
+    }
+
+    &.event {
+      padding: 40px 40px 80px;
+
+      @media screen and (max-width: 860px) {
+        padding: 40px 24px;
+      }
+    }
+  }
+
+  .event-table {
+    margin: 40px auto 0;
+
+    @media screen and (max-width: 860px) {
+      display: block;
+    }
+
+    & tbody,
+    & tr,
+    & th,
+    & td {
+      @media screen and (max-width: 860px) {
+        display: block;
+      }
+    }
+
+    & tr {
+      @media screen and (max-width: 860px) {
+        padding: 24px 0;
+        border-bottom: 1px solid var(--surface-tertiary);
+      }
+    }
+
+    & th,
+    & td {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--surface-tertiary);
+
+      @media screen and (max-width: 860px) {
+        padding: 0;
+        border-bottom: none;
+      }
+    }
+
+    & th {
+      @media screen and (max-width: 860px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    & td {
+      text-align: left;
+      padding-left: 40px;
+      font-weight: 700;
+
+      @media screen and (max-width: 860px) {
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+
+    .chip {
+      width: 100%;
+
+      @media screen and (max-width: 860px) {
+        width: 160px;
+      }
+    }
+  }
+
+  .sponsorship {
+    & .cta-button {
+      margin-top: 24px;
+    }
+  }
+</style>
+
 <FluidLayout>
-  <h1>トップページ</h1>
+  <MainVisual />
+  <section class="section event">
+    <h2 class="section-title">
+      <span class="accent">Go Conference</span>とは
+    </h2>
+    <p>
+      Go Conference はプログラミング言語
+      ”Go”ユーザーのためのカンファレンスです。
+    </p>
+    <table class="event-table">
+      <tbody>
+        <tr>
+          <th><Chip class="chip" variant="secondary">開催日時</Chip></th>
+          <td>
+            Day 1: 2025年9月27日（土） 　10：00 - 19:00 （開場　9：00）<br />
+            Day 2: 2025年9月28日（日） 　10：00 - 19:00 （開場　9：00）
+          </td>
+        </tr>
+        <tr>
+          <th><Chip class="chip" variant="secondary">開催場所</Chip></th>
+          <td>東京都渋谷区宇田川町40番1号 Abema Towers 10F / 11F</td>
+        </tr>
+        <tr>
+          <th><Chip class="chip" variant="secondary">参加費</Chip></th>
+          <td>未定</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="section sponsorship">
+    <h2 class="section-title">スポンサー募集中</h2>
+    <p>Go Conferenceへのスポンサー応募は以下リンクからできます</p>
+    <p class="cta-button">
+      <Button
+        href={concatWithBase("sponsorship")}
+        size="large"
+        variant="secondary"
+      >
+        スポンサー募集フォーム
+      </Button>
+    </p>
+  </section>
 </FluidLayout>
