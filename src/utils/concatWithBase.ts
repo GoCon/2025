@@ -5,8 +5,9 @@ export function concatWithBase(path?: string): string {
   if (!path) {
     return import.meta.env.BASE_URL;
   }
+  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
   if (import.meta.env.BASE_URL === "/") {
-    return `/${path}`;
+    return `/${cleanPath}`;
   }
-  return `${import.meta.env.BASE_URL}/${path}`;
+  return `${import.meta.env.BASE_URL}/${cleanPath}`;
 }

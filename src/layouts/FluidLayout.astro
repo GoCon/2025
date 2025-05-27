@@ -1,5 +1,7 @@
 ---
 import Favicon from "../assets/favicon.svg";
+import OgImageLg from "../assets/og_image_lg.png";
+import OgImageMd from "../assets/og_image_md.png";
 
 import Footer from "../components/Footer.astro";
 import GlobalStyles from "../components/GlobalStyles.astro";
@@ -50,7 +52,7 @@ const pageTitle =
     <meta property="og:description" content={constants.pageDescription} />
     <meta
       property="og:image"
-      content={new URL(concatWithBase("og_image_md.png"), Astro.url)}
+      content={new URL(concatWithBase(OgImageLg.src), Astro.url.origin)}
     />
 
     <meta property="twitter:card" content="summary" />
@@ -59,7 +61,7 @@ const pageTitle =
     <meta property="twitter:description" content={constants.pageDescription} />
     <meta
       property="twitter:image"
-      content={new URL(concatWithBase("og_image_md.png"), Astro.url)}
+      content={new URL(concatWithBase(OgImageMd.src), Astro.url.origin)}
     />
   </head>
   <body class="body">
