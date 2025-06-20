@@ -1,6 +1,7 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Logo from "../assets/logo.svg";
+import OpenInNewIcon from "../assets/icon/open-in-new.svg";
 import XLogo from "../assets/x-logo.svg";
 import { constants } from "../constants";
 
@@ -24,6 +25,15 @@ const currentLocale = Astro.currentLocale || "ja";
               href={getRelativeLocaleUrl(currentLocale, "workshop")}
               class="text-link">Workshop</a
             >
+            <a
+              href="https://docs.google.com/document/d/1LxjzxHK23aTAFvGZeR-BpHf8sC6RKAqbImtnUtxQ3Yo/edit?tab=t.0#heading=h.n5j5dks9hlev"
+              class="text-link external-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Sponsor FAQ</span>
+              <OpenInNewIcon class="external-icon" />
+            </a>
           </div>
         </div>
         <div class="link-column">
@@ -187,6 +197,18 @@ const currentLocale = Astro.currentLocale || "ja";
   .social-icon {
     width: 23px;
     height: 24px;
+  }
+
+  .external-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .external-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
   }
 
   hr {
