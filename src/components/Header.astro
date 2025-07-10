@@ -3,7 +3,6 @@ import Image from "astro/components/Image.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import CloseIcon from "../assets/icon/close.svg";
 import MenuIcon from "../assets/icon/menu.svg";
-import OpenInNewIcon from "../assets/icon/open-in-new.svg";
 import Logo from "../assets/logo.svg";
 import { constants } from "../constants";
 import Button from "./Button.astro";
@@ -181,41 +180,6 @@ const currentLocale = Astro.currentLocale || "ja";
       }
     }
   }
-
-  .external-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    color: var(--text-primary);
-    font-size: 16px;
-    font-weight: 700;
-    transition: opacity 0.3s ease;
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    @media screen and (max-width: 860px) {
-      & {
-        padding-left: 16px;
-        font-size: 24px;
-      }
-    }
-  }
-
-  .external-icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-
-    @media screen and (max-width: 860px) {
-      & {
-        width: 24px;
-        height: 24px;
-      }
-    }
-  }
 </style>
 
 <nav class="header">
@@ -237,16 +201,10 @@ const currentLocale = Astro.currentLocale || "ja";
           Sponsorship
         </a>
       </li>
+      <li>
+        <a href={getRelativeLocaleUrl(currentLocale, "faq")}> FAQ </a>
+      </li>
     </ul>
-    <a
-      href="https://docs.google.com/document/d/1LxjzxHK23aTAFvGZeR-BpHf8sC6RKAqbImtnUtxQ3Yo/edit?tab=t.0#heading=h.n5j5dks9hlev"
-      class="external-link"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span>Sponsor FAQ</span>
-      <OpenInNewIcon class="external-icon" />
-    </a>
     <ul class="language-switcher">
       <li class="language-link">
         <a
