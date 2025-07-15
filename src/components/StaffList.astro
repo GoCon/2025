@@ -1,0 +1,210 @@
+---
+import { getCollection } from "astro:content";
+import { concatWithBase } from "../utils/concatWithBase";
+import XLogo from "../assets/x-logo.svg";
+import GitHubLogo from "../assets/github-mark.svg";
+import LinkIcon from "../assets/icon/link.svg";
+
+const staffs = await getCollection("staffs");
+---
+
+<section class="staffs-section">
+  <div class="staffs-grid">
+    {
+      staffs.map((staff) => (
+        <div class="staff-card">
+          <div
+            class={`staff-avatar ${staff.data.avatar ? "staff-avatar--with-image" : "staff-avatar--placeholder"}`}
+          >
+            {staff.data.avatar && (
+              <img
+                src={
+                  new URL(
+                    concatWithBase(`staffs/${staff.data.avatar}`),
+                    Astro.url,
+                  ).href
+                }
+                alt={staff.data.name}
+              />
+            )}
+          </div>
+
+          <h3 class="staff-name">{staff.data.name}</h3>
+
+          <p class="staff-company">{staff.data.company || ""}</p>
+
+          {staff.data.links && (
+            <div class="social-links">
+              {staff.data.links.x && (
+                <a
+                  href={staff.data.links.x}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link social-link--x"
+                  aria-label="X (Twitter)"
+                >
+                  <XLogo />
+                </a>
+              )}
+              {staff.data.links.github && (
+                <a
+                  href={staff.data.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link social-link--github"
+                  aria-label="GitHub"
+                >
+                  <GitHubLogo />
+                </a>
+              )}
+              {staff.data.links.website && (
+                <a
+                  href={staff.data.links.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link social-link--website"
+                  aria-label="Website"
+                >
+                  <LinkIcon />
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .staffs-section {
+    padding: 0;
+  }
+
+  .staffs-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+    text-align: center;
+
+    &::first-letter {
+      color: var(--text-accent);
+    }
+  }
+
+  .staffs-subtitle {
+    font-family: "Barlow", sans-serif;
+    font-size: 68px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 40px;
+    text-align: center;
+    line-height: 1.2;
+
+    @media screen and (max-width: 860px) {
+      font-size: 40px;
+      margin: 0 0 32px;
+    }
+  }
+
+  .staffs-grid {
+    display: grid;
+    gap: 24px;
+    margin-top: 32px;
+    justify-content: center;
+    grid-template-columns: repeat(3, 360px);
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: repeat(2, 360px);
+    }
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 360px;
+    }
+  }
+
+  .staff-card {
+    background: var(--primitive-light-blue);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    width: 360px;
+    height: 300px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .staff-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #666;
+  }
+
+  .staff-avatar--with-image {
+    background: #fff;
+  }
+
+  .staff-avatar--placeholder {
+    background: #c4c4c4;
+  }
+
+  .staff-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .staff-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 4px;
+    line-height: 1.4;
+  }
+
+  .staff-company {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0 0 4px;
+    line-height: 1.4;
+    height: 24px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .social-link svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-primary);
+  }
+</style>

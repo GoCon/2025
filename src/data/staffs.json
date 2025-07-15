@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "name": "サンプルさん",
+    "company": "テスト株式会社",
+    "avatar": "masakurapa.png",
+    "links": {
+      "x": "https://x.com/masakurapa",
+      "github": "https://github.com/masakurapa"
+    }
+  },
+  {
+    "id": "2",
+    "name": "サンプル太郎",
+    "links": {
+      "website": "https://example.com"
+    }
+  },
+  {
+    "id": "3",
+    "name": "テスト花子",
+    "company": "テスト株式会社"
+  }
+]
