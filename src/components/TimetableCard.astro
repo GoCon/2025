@@ -1,0 +1,159 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  /**
+   * セッションの識別子
+   * @example A1-SP
+   */
+  sessionId: string;
+  /**
+   * セッションのタイトル
+   * @example タクシーアプリ『GO』高速マッチングシステムで実践したGoチューニングテクニック
+   */
+  title: string;
+  /**
+   * セッションの開始時間
+   * @example 10:00
+   */
+  timeStart: string;
+  /**
+   * セッションの終了時間
+   * @example 10:20
+   */
+  timeEnd: string;
+  /**
+   * セッションの時間
+   * @example Short Talk (20min)
+   */
+  sessionTime: string;
+  /**
+   * セッションの部屋
+   */
+  room: "RoomA" | "RoomB";
+  /**
+   * セッションの講演者名
+   */
+  speakerName: string;
+  /**
+   * セッションの講演者のサムネイル画像URL
+   */
+  speakerThumbnailSrc: string;
+}
+
+const {
+  sessionId,
+  title,
+  timeStart,
+  timeEnd,
+  sessionTime,
+  room,
+  speakerName,
+  speakerThumbnailSrc,
+} = Astro.props;
+---
+
+<style>
+  .timetable-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 24px;
+    border-radius: 16px;
+    background-color: var(--primitive-light-cyan);
+    color: var(--text-primary);
+
+    &.room-a {
+      background-color: var(--primitive-light-blue);
+    }
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-header-time {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .card-header-session-id {
+    margin: 0;
+    padding: 4px 16px;
+    border-radius: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-on-fill);
+    background-color: var(--primitive-cyan);
+
+    &.room-a {
+      background-color: var(--primitive-blue);
+    }
+  }
+
+  .card-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.75;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .speaker-info {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .speaker-thumbnail {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .speaker-name {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .session-time {
+    margin: 0;
+    font-size: 12px;
+  }
+</style>
+
+<section class={`timetable-card ${room === "RoomA" ? "room-a" : "room-b"}`}>
+  <div class="card-header">
+    <p class="card-header-time">{timeStart} - {timeEnd}</p>
+    <p
+      class={`card-header-session-id ${room === "RoomA" ? "room-a" : "room-b"}`}
+    >
+      {sessionId}
+    </p>
+  </div>
+  <h3 class="card-title">{title}</h3>
+  <div class="card-footer">
+    <div class="speaker-info">
+      <Image
+        src={speakerThumbnailSrc}
+        alt={speakerName}
+        width={24}
+        height={24}
+        loading="lazy"
+        class="speaker-thumbnail"
+      />
+      <p class="speaker-name">{speakerName}</p>
+    </div>
+    <p class="session-time">{sessionTime}</p>
+  </div>
+</section>
