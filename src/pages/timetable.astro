@@ -1,0 +1,175 @@
+---
+import Button from "../components/Button.astro";
+import TimetableCard from "../components/TimetableCard.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/sub-page.css";
+---
+
+<style>
+  .section-title .day-date {
+    margin-left: 16px;
+    font-size: 24px;
+    vertical-align: text-bottom;
+  }
+
+  .timetable-nav {
+    margin-bottom: 40px;
+
+    & ul {
+      display: flex;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  .timetable-grid {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 8px 16px;
+    width: 100%;
+  }
+
+  .room-title {
+    padding: 16px 40px;
+    border-radius: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    background-color: var(--primitive-cyan);
+    color: var(--text-on-fill);
+    text-align: center;
+
+    &.room-a {
+      background-color: var(--primitive-blue);
+    }
+  }
+
+  .time-slot {
+    display: flex;
+    align-items: flex-start;
+
+    span {
+      position: sticky;
+      top: calc(88px + 16px);
+      left: 0;
+      z-index: 1;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  .session-cell {
+    display: flex;
+    height: 100%;
+  }
+</style>
+
+<Layout title="タイムテーブル" titleEn="Timetable">
+  <nav class="timetable-nav">
+    <ul>
+      <li>
+        <Button href="#day1" size="small" variant="secondary">DAY1</Button>
+      </li>
+      <li>
+        <Button href="#day2" size="small" variant="secondary">DAY2</Button>
+      </li>
+    </ul>
+  </nav>
+
+  <h2 id="day1" class="section-title">
+    DAY1<span class="day-date">9.27 SAT</span>
+  </h2>
+  <article>
+    <div class="timetable-grid">
+      <!-- ヘッダー行 -->
+      <div></div>
+      <div class="room-title room-a">RoomA</div>
+      <div class="room-title room-b">RoomB</div>
+
+      <!-- コンテンツ行 -->
+      <div class="time-slot" style="grid-row: span 3;">
+        <span>10:00</span>
+      </div>
+
+      <div class="session-cell">
+        <TimetableCard
+          sessionId="A1-SP"
+          title="タクシーアプリ『GO』高速マッチングシステムで実践したGoチューニングテクニック"
+          timeStart="10:00"
+          timeEnd="10:20"
+          sessionTime="Short Talk (20min)"
+          room="RoomA"
+          speakerName="山田太郎"
+          speakerThumbnailSrc="https://placehold.jp/150x120.png"
+        />
+      </div>
+
+      <div class="session-cell">
+        <TimetableCard
+          sessionId="B1-SP"
+          title="タクシーアプリ『GO』高速マッチングシステムで実践したGoチューニングテクニックタクシーアプリ『GO』高速マッチングシステムで実践したGoチューニングテクニック"
+          timeStart="10:00"
+          timeEnd="10:20"
+          sessionTime="Short Talk (20min)"
+          room="RoomB"
+          speakerName="山田太郎"
+          speakerThumbnailSrc="https://placehold.jp/150x120.png"
+        />
+      </div>
+
+      <div class="session-cell">
+        <TimetableCard
+          sessionId="A1-SP"
+          title="タクシーアプリ『GO』高速マッチングシステムで実践したGoチューニングテクニック"
+          timeStart="10:00"
+          timeEnd="10:20"
+          sessionTime="Short Talk (20min)"
+          room="RoomA"
+          speakerName="山田太郎"
+          speakerThumbnailSrc="https://placehold.jp/150x120.png"
+        />
+      </div>
+
+      <div class="session-cell">
+        <TimetableCard
+          sessionId="B1-SP"
+          title="タクシーアプリ『GO』高速マッチングシステムで実践したGoチューニングテクニック"
+          timeStart="10:00"
+          timeEnd="10:20"
+          sessionTime="Short Talk (20min)"
+          room="RoomB"
+          speakerName="山田太郎"
+          speakerThumbnailSrc="https://placehold.jp/150x120.png"
+        />
+      </div>
+
+      <div class="session-cell">
+        <TimetableCard
+          sessionId="A1-SP"
+          title="タクシーアプリ『GO』高速マッチングシステムで実践したGoチューニングテクニック"
+          timeStart="10:00"
+          timeEnd="10:20"
+          sessionTime="Short Talk (20min)"
+          room="RoomA"
+          speakerName="山田太郎"
+          speakerThumbnailSrc="https://placehold.jp/150x120.png"
+        />
+      </div>
+
+      <div class="session-cell">
+        <TimetableCard
+          sessionId="B1-SP"
+          title="タクシーアプリ『GO』高速マッチングシステムで実践したGoチューニングテクニック"
+          timeStart="10:00"
+          timeEnd="10:20"
+          sessionTime="Short Talk (20min)"
+          room="RoomB"
+          speakerName="山田太郎"
+          speakerThumbnailSrc="https://placehold.jp/150x120.png"
+        />
+      </div>
+    </div>
+  </article>
+</Layout>
