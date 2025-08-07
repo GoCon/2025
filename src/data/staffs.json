@@ -83,7 +83,12 @@
   {
     "id": "6",
     "name": "Daiki Kubo",
-    "company": "株式会社タップル",
+    "company": "株式会社サイバーエージェント",
+    "avatar": "pythonism_.jpg",
+    "sns": {
+      "link": "https://x.com/pythonism_",
+      "type": "x"
+    },
     "communities": [
       {
         "name": "Go Conference"
@@ -287,7 +292,7 @@
     },
     "communities": [
       {
-        "name": "Go Conference"
+        "name": "GoConnect"
       }
     ]
   },
@@ -425,6 +430,57 @@
       },
       {
         "name": "golang.tokyo"
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "name": "luccafort",
+    "company": "Money Forward Kyoto",
+    "avatar": "luccafort.jpg",
+    "sns": {
+      "link": "https://x.com/luccafort",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Kyoto.go"
+      },
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "name": "sadah",
+    "company": "アマゾンウェブサービスジャパン合同会社",
+    "avatar": "sada_h.jpg",
+    "sns": {
+      "link": "https://x.com/sada_h",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "name": "Kizuku",
+    "company": "株式会社ディー・エヌ・エー",
+    "avatar": "Kizuku_tech.jpg",
+    "sns": {
+      "link": "https://x.com/Kizuku_tech",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Kizuku.go"
       }
     ]
   }
