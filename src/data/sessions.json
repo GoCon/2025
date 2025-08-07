@@ -1,0 +1,1159 @@
+{
+  "sessions": [
+    {
+      "id": "644546",
+      "title": "イテレータによってGoはどう変わるのか",
+      "description": "みなさんは、Go1.18でジェネリクス（型パラメタ）が登場したとき、どのようにそのエコシステムが発展していくか想像しましたか？\r\nもっと遡れば、Go Modulesの登場からGo1.21の後方互換性の強化[#57001]、そしてfor文のループ変数に関する変更[#57969]を互換性を崩さないように導入する流れを予想できたでしょうか？\r\n\r\n※ [#XXXX]は関連するGoのissue番号を表しています。\r\n\r\nGoは毎日徐々に進化しています。Goチームやコントリビューターは日々議論を重ね、後方互換やその後のエコシステムの発展を考えながら機能を追加していっています。その進化は驚くほど滑らかに我々の開発体験を壊さずに、そしてジェネリクス（型パラメタ）のような大きな機能も取り入れられながら行われています。\r\n\r\n本セッションは、ほぼ毎日Goのissueの一覧を眺め、毎週木曜日前後に公開されるプロポーザルレビューミーティングの結果を確認することで得られた知見を基に次の大きな機能であるイテレータに関する話題を扱います。\r\n\r\nGo1.23では、for range文において関数経由で任意のデータ構造をイテレーションする仕組み（イテレータ）が導入されます[#61405]。mapsパッケージでは、ついにKeys関数がイテレータを返す関数として導入され[#61900]、slicesパッケージ[#61899]やstringsパッケージ[#61901]、regexpパッケージでもイテレータを使った関数が導入されるでしょう[#61902]。Map関数やFilter関数など、イテレータに作用する関数についても導入が議論されています[#61898]。\r\n\r\nイテレータは、任意のデータ構造やデータストリームを1つのシーケンシャルなデータ列として提供する仕組みとして捉えることができます。実際、Go1.23で導入されるイテレータは、iterパッケージとしてSeq[V]型やSeq2[K, V]型として提供されます[#61897]。これはGoが提供しているio.Writer型やio.Reader型、そしてfs.FS型で提供している高度な抽象化に通づるものがあります。さまざまなデータ、データの流れ、処理がイテレータで表現されるようになるでしょう。\r\n\r\n本セッションでは、Goにおけるイテレータという概念がどのように生まれ[#47203]、どういう機能として提供される予定なのかコミュニティのディスカッションを追いながら解説します。そして、イテレータが生み出すであろうエコシステムについてコミュニティでの議論を振り返りながらまとめ、Goの未来がどのように変わっていくのかサンプルコードを示しながら次のような予想を展開します。\r\n\r\n■ 予想1：エラーを伴う処理への応用\r\n各プロポーザルでGoogleのGoチームが予想しているように、イテレータはデータ構造をイテレーションするための機能に留まらず、(*sql.DB).Scan関数や(*bytes.Scanner).Scan関数のようなエラー処理を伴うリソースの読み込みなどにも使用されていくでしょう[#65236]。\r\n\r\n■ 予想2：sync.WaitGroupやerrgroup.Groupへの応用\r\nGo1.22でリリースされたmath/rand/v2パッケージ[#61716]やGopherCon 2023でも発表が行われ、その動向が注目を浴びているencoding/json/v2パッケージ[#63397]など、標準ライブラリのv2が盛んに議論されています。また、sync/v2パッケージを期待する声もあり、その中でsync.WaitGroupが改善される可能性も考えられます。予想ではありますが、golang.org/x/sync/errgroupパッケージがsync/v2パッケージに含まれるようになれば、ゴルーチンの処理をWaitメソッドで待ったり、github.com/sourcegraph/conc/poolパッケージのResultContextPool型のようにスライスで処理結果を取得するのではなく、イテレータによって処理の結果を取得するようになるかもしれません。\r\n\r\n本セッションを通して、イテレータの基礎だけに留まらず、それが普及した後のエコシステム、そして今後のGoの進化について考える機会を提供できたらと思います。\r\n\r\n● 関連するissue\r\n[#57001]: https://go.dev/issues/57001\r\n[#57969]: https://go.dev/issues/57969\r\n[#33502]: https://go.dev/issues/33502\r\n[#61405]: https://go.dev/issues/61405\r\n[#61900]: https://go.dev/issues/61900\r\n[#61899]: https://go.dev/issues/61899\r\n[#61901]: https://go.dev/issues/61901\r\n[#61902]: https://go.dev/issues/61902\r\n[#61898]: https://go.dev/issues/61898\r\n[#61897]: https://go.dev/issues/61897\r\n[#47203]: https://go.dev/issues/47203#discussioncomment-1034432\r\n[#65236]: https://go.dev/issues/65236#issuecomment-1906793427\r\n[#61716]: https://go.dev/issues/61716\r\n[#63397]: https://go.dev/issues/63397",
+      "startsAt": "2024-06-08T01:30:00Z",
+      "endsAt": "2024-06-08T02:10:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": ["899d1bf7-e2c2-4333-b9f1-c07788bca0c7"],
+      "categoryItems": [248141, 248148],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "649102",
+      "title": "Dive into gomock",
+      "description": "みなさまは、interfaceに依存するコンポーネントのテストを書いていますか？ また、テストで使うinterfaceの実装はどうやって用意していますか？ interfaceにメソッドが追加されたらどうしますか？ 意図したメソッドが呼び出されていなかったら？ メソッドに渡される引数の比較方法を柔軟にしたくなったら？\r\n\r\ninterfaceのモックを用いたテストを簡単に記述するためのフレームワークの1つに、gomock[^1]があります。\r\ngomockを使ったモック実装を使ってテストすることで、interfaceのメソッド呼び出しが適切に行われていることを検査し、意図しないメソッド呼び出しがあればテストを失敗させることができます。\r\nまた、gomockを使ったモック実装を生成するためのツールとしてmockgenが用意されています。mockgenを使うことで、interfaceの定義が変わってもgo generateコマンドで簡単にモック実装を修正することができます。\r\n\r\n本セッションでは、gomockがどのようにinterfaceのメソッド呼び出しを検査しているのか解説します。\r\n主に以下のトピックについて取り上げる予定です。\r\n- mockgenが生成するコードの内容\r\n- 期待するメソッド呼び出しを記述し、記録する\r\n- 期待するメソッド呼び出しがなければテストを失敗させる\r\n- 引数の比較方法をカスタマイズする\r\n\r\nこのセッションが、Goのinterfaceモックを用いたテストの仕組みへの理解を深める一助となれば幸いです。\r\n\r\n[^1]: https://github.com/uber-go/mock",
+      "startsAt": "2024-06-08T02:50:00Z",
+      "endsAt": "2024-06-08T03:30:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": ["91a3208f-3835-4ed5-ba69-179e915b156a"],
+      "categoryItems": [248141, 248147],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "646485",
+      "title": "Data Race Detection In Go From Beginners Eye",
+      "description": "Do you know what is Data Race in concurrent programming and what is inside it's hood ?\r\n\r\n- Background\r\n\r\nRecently, I faced a problem in my code a data race issue that caused our service to crash after we mistakenly deployed it without checking for race conditions . I didn't know how to fix and prevent the data race issue at first , so I searched online to learn more about data races and the Go Race Detector. Curiosity led me to explore how to prevent Data Races, and I'm excited to share my story of understanding the inner workings of the Go Data Race Detector.\r\n\r\nIn the realm of concurrent programming, the occurrence of Data Race conditions can be frequent and challenging to manage. If I put it in simple words , when two or more goroutines access shared memory data concurrently and one goroutine is a write , Data Race conditions may arise, leading to unpredictable failures which we can not detect long after the code has been deployed to production. This session focuses on exploring the Go Race Detector, which is built upon the C/C++ ThreadSanitizer runtime library. Originally designed to identify errors in Google's internal codebase and Chromium, The Race Detector is a powerful and proven  tool for detecting data race bugs.\r\n\r\nGiven that we wanted to write multithreaded programs, how can we protect our systems from the unknown consequences of difficult to track down data race bugs in a manner that is reliable and scalable .\r\n\r\nGo Race Detector follows \" Pure Happens Before Race Detection\"  using Vector Clocks so let's understand the concepts.\r\n\r\n-  Expected effect on audience\r\n\r\nThis session aims to provide attendees, especially beginners, with a comprehensive understanding of Data Races in concurrent programming. Participants will gain insights into detecting and addressing these issues effectively using the Go Race Detector and also the attendies will learn about the backend technolgy behind Data Race Detector .",
+      "startsAt": "2024-06-08T04:50:00Z",
+      "endsAt": "2024-06-08T05:10:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["64bc44d2-39b3-4740-a51f-e00649e59f13"],
+      "categoryItems": [248143, 248146],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "637496",
+      "title": "Go1.21から導入されたGo Toolchainの仕組みをまるっと解説",
+      "description": "Go Toolchainが導入されることになった背景を紹介します。\r\ngo1.21より前まではgo.modのgo行に多くの人が期待していた動きと実際の動きが異なることを説明します。\r\nGo1.21からGo Toolchainの導入により、go.mod/go.workファイルのgo行の意味が変わり、さらにtoolchain行が追加されました。\r\nそれにより、どう変わって、どう便利になったのかを紹介します。\r\n\r\nこのセッションを聞いて資料を参照することで、go行とtoolchain行を理解し活用できるようになります。\r\ngo1.21よりも前を使っている方にも、その段階での仕様を把握できるので正確に自分とチームの環境を整理できるようになります。",
+      "startsAt": "2024-06-08T04:50:00Z",
+      "endsAt": "2024-06-08T05:10:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["2c2bcde7-c49f-4c65-a998-ac4c8c2ecdfe"],
+      "categoryItems": [248142, 248146],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44253,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "648209",
+      "title": "Cleanup handling in Go",
+      "description": "Goはgoroutineによる並行処理を容易に実現できます。しかし、その並行処理の終了処理は開発者に委ねられています。\r\n処理をただ停止するだけでは済まない場合も多く、適切な終了処理、つまり「クリーンアップ」が必要です。\r\n\r\nクリーンアップには、例えば次のようなものがあります。\r\n\r\n- トランザクション処理: 中途停止するとデータ整合性が失われるため、最後まで完了させる必要がある。\r\n- 外部リソースとの接続: 正常に終了させて、リソース解放や接続解除を行う必要がある。\r\n- 一時ファイルやデータ: 処理終了後に不要になるため、削除する必要がある。\r\n\r\nいわゆる「グレースフルシャットダウン」と「通常のシャットダウン」の違いは、クリーンアップ処理の有無にあると考えています。\r\n\r\n本発表では、まず「クリーンアップ」をユースケースの1つに持つ標準パッケージの機能の `testing.T.Cleanup` 、 `context.AfterFunc` 、 `http.Server.RegisterOnShutdown` などを改めてみていきます。\r\n\r\nさらに、より複雑なコードベースを持つアプリケーションにおけるクリーンアップ処理について考察します。\r\n必要な要件をあげ、そしてその要件を満たす具体的な実装を提案します。\r\n\r\n本発表を通じて、開発者の方々にクリーンアップ処理について改めて考えてもらい、各開発現場にあるであろうクリーンアップ処理についてGoコミュニティで会話がされることを期待しています。",
+      "startsAt": "2024-06-08T05:20:00Z",
+      "endsAt": "2024-06-08T05:40:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["0028ec2b-7cc7-436e-8cc6-302cf8d4e752"],
+      "categoryItems": [248142, 248147],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "649848",
+      "title": "Custom logging with slog: Making Logging Fun Again!",
+      "description": "## Abstract:\r\nIn Go 1.21, \"slog\" has emerged as a logging library. This talk aims to spotlight the slog, guiding attendees from its fundamental concepts to customized logging. We'll explore the slog by implementing custom slog handlers. We also cover performance tips to avoid slowing down our code. Let’s make logging more than just an afterthought!\r\n\r\n## Outline: (20 min talk)\r\n1. Introduction (3 minutes)\r\n2. Fundamental of slog (6 minutes)\r\n    - Key features and advantages of using the slog.\r\n    - A quick tour of slog's APIs.\r\n3. Making Custom Handlers (10 minutes)\r\n    - Demonstrating custom handlers in `slog` to integrate with several cases.\r\n    - Making custom handlers with code samples.\r\n    - Optimization for efficient log without compromising performance.\r\n4. Conclusion (1 minute)\r\n\r\n## Target Audience:\r\nThis talk is designed for Go developers of all levels interested in slog and improving their application's logging. Whether you're new to the slog or looking for ways to leverage it more effectively.\r\n\r\n## Takeaways:\r\nAttendees will leave with a comprehensive understanding of slog and how to customize slog with taking care of performance.",
+      "startsAt": "2024-06-08T05:20:00Z",
+      "endsAt": "2024-06-08T05:40:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["55c66d31-401c-4b53-b074-e476a4d84d6b"],
+      "categoryItems": [248143, 248145],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44253,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "649626",
+      "title": "Goにconst型修飾を期待しなくてよい理由",
+      "description": "Goにはconst型修飾がありません。\r\n言い換えると、型によって変数の不変性を担保できません。\r\nそのため、時には安全でないチープな言語とみなされ、技術選定や習得する上で言語の抵抗感につながることがあります。\r\n\r\nしかし、なぜGo言語に不変性を担保する機能がないのでしょうか？\r\n実はGoのメンテナは10年以上前から様々な機能を議論しています。\r\nそして、Go言語に合った解決を見つけられていないのが現状です。\r\n結果として不変性についての機能がない代わりに、言語の互換性や自由度を維持しています。\r\n\r\n本記事(セッション)は、既存の議論を交えながら不変性についてのトレードオフを説明することで、言語の抵抗感を払拭し、Go言語を生産的な言語として捉える考え方を紹介します。",
+      "startsAt": "2024-06-08T06:20:00Z",
+      "endsAt": "2024-06-08T06:40:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["fffe7623-17b8-4a25-b1f6-819ce00b7384"],
+      "categoryItems": [248143, 248147],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "649675",
+      "title": "GoのLanguage Server Protocol実装、「gopls」の自動補完の仕組みを学ぶ",
+      "description": "Language Server Protocol（以下、LSP）は、型やシンボルの自動補完、定義参照、修正案の提示といったコーディング支援機能をエディタやIDEに提供するプロトコルです。\r\nGo言語では、公式にサポートされているLSPの実装として「gopls」があります。goplsは、成長するGoのエコシステムに対応し、大規模なコードベースでも高速かつリソース効率的に開発者を支援するよう進化してきました。\r\nその結果、goplsは現在、多くのエディタやIDEのデフォルトのLSPバックエンドとなっています。参加者の皆さんも、気づかないうちにgoplsを使用している可能性があります。\r\nしかし、多くの開発者がgoplsを使用しているにもかかわらず、goplsの内部メカニズムを詳しく解説した記事は少ないです。私自身も、「敷居が高い」という印象を持っていました。\r\n\r\nこのセッションでは、goplsが提供する多くの機能の中から、自動補完に焦点を絞り、その仕組みを紹介します。\r\ngoplsの自動補完機能は、スマートに、かつ適切な候補を提案してくれます。その裏側で動く、泥臭く堅実な処理について学ぶことで、goplsをより身近なツールとして捉えることができるでしょう。\r\n\r\nまず、LSPの基本的な仕様と、goplsのアーキテクチャの概要を紹介します。これにより、参加者ご自身でgoplsの仕組みを調査する際の基礎知識を提供します。\r\nその後、主題である自動補完の仕組みについて詳しく説明します。あるGoのコードに変更を加えた場合、どのように適切な補完候補が提案されるのか、簡単な具体的な例を用いて説明します。\r\n\r\n本セッションを通じて、参加者の皆さんがgoplsの自動補完の仕組みを理解し、その他の機能についても興味を持って学ぶきっかけとなることを期待しています。",
+      "startsAt": "2024-06-08T06:20:00Z",
+      "endsAt": "2024-06-08T06:40:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["4ae43c21-4c2b-4757-944d-d95236895312"],
+      "categoryItems": [248142, 248147],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44253,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "649858",
+      "title": "バイナリを眺めてわかる gob encoding の仕様と性質、適切な使い方",
+      "description": "このセッションの対象者:\r\n- メッセージエンコーディングの仕様に興味がある方\r\n- gob encoding の適切なユースケースが気になる方\r\n- バイナリリーディングに興味がある方\r\n\r\nセッションを聞くことで得られるもの:\r\n- gob encoding の仕様と性質がわかる\r\n- メッセージエンコーディング選定にあたって評価すべき観点の一部を知れる\r\n- バイナリエンコーディングを読み解くプロセスがわかる\r\n- gob encoding を利用すべき適切なユースケースがわかる\r\n\r\n概要:\r\nGo は標準パッケージに encoding/gob という独自のメッセージエンコーディング実装を持っています。 gob はバイナリエンコーディングであり、ストリームでの利用を念頭にデザインされています。\r\n\r\nしかしながら、 human readable でない点や、言語固有のエンコーディングである点などから、性質を正しく理解することや、性質に合った適切なユースケースを選択することが難しいと考えています。\r\n\r\nそこで本セッションでは、 Go が固有のメッセージエンコーディングをデザインするに至った背景について整理しながら、実際のバイナリを眺めて gob の仕様や性質への理解を深めることを目指します。\r\n\r\nバイナリを眺めて仕様を理解する過程で、一般的なメッセージエンコーディングとしての性質(サイズ, メッセージ互換性, エコシステム, self-describingかどうか, etc..)について gob を評価し、gobを利用すべき適切なユースケースについても提案します。\r\n\r\n実用的な知識を共有しつつ、バイナリエンコーディングを読み解く面白さや、メッセージエンコーディングを比較する際の観点の一部もお伝えできればと考えています。",
+      "startsAt": "2024-06-08T06:50:00Z",
+      "endsAt": "2024-06-08T07:10:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["af931ed9-d101-401c-acec-7f9844cb6ca6"],
+      "categoryItems": [248142, 248147],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "648864",
+      "title": "Unified Diff 形式の差分から Go AST を構築して feature flag を自動計装する",
+      "description": "開発スピードの高速化とデプロイまでの時間短縮を可能にするトランクベース開発では、main branch を常に Production リリース可能な状態に保つ必要があります。開発段階であるがゆえに Production への反映を避けたい場合や、修正内容を Staging 環境で QAテストすることが必要な場合は、feature flag を用いた実装が必要です。feature flag とは、コードを変更せずにシステムの振る舞いを変更可能にする仕組みであり、主に環境変数やステータスを管理する外部サービスを通じて有効/無効を切り替えることができます。具体的には、flagの値に応じた分岐をあらかじめ実装することで、外部から入力されたfeature flagの値によってシステムの振る舞いを変えることができるようにします。\r\n\r\nトランクベース開発での迅速な開発進行と同時にシステム品質を保証するためには、細かなQAプロセスが不可欠です。CIによるシステム的なチェックは必須ですが、それに加えて Staging 環境での QA も同様に非常に重要になってきます。これを実現するためには、適宜 feature flag を組み込んだ実装が必要になります。しかし feature flag の実装はコードを複雑化させるため、トランクベース開発においては長期間にわたる存在や同時に多数存在することは推奨されていません。したがって、QA で品質を保証しつつコードの複雑化を最小限に抑えるには、feature flag の迅速な組み込みと削除が必要です。しかし QA の品質を高めるためには頻繁に feature flag を組み込む必要があり、管理コストが増大するという課題があります。\r\n\r\nこの課題を解決するために、git diff で出力される Unified Diff 形式の差分情報から Go の抽象構文木（以下、AST） を構築し、AST の差分を利用して feature flag の自動計装を試みました。本セッションでは uber-go のリファクタリングツールである「gopatch」の内部実装を参考に、Unified Diffから有効なGoコードへの変換とASTの構築プロセスを通じて、適切なfeature flagの自動挿入方法を紹介します。参加者はこのセッションを通じて、Unified Diffを活用したツール作成のアイデアやfeature flagの効果的な活用方法を学ぶことができます。さらに、自動計装ツールの開発にこの知見を応用することが可能になります。",
+      "startsAt": "2024-06-08T06:50:00Z",
+      "endsAt": "2024-06-08T07:10:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["88a51b9c-0162-4c4e-aaa5-cced43a7f44d"],
+      "categoryItems": [248142, 248147],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44253,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "646478",
+      "title": "Mapのパフォーマンス向上のために検討されているSwissTableを理解する",
+      "description": "現在GoではMapの内部実装をSwissTableを使用したものに置き換えることでパフォーマンスを向上させる案が議論[1]されています。SwissTableはRust[2]やabseil(Googleが公開したC++のライブラリ)[3]で使用されている実装です。\r\n\r\n本セッションでは、SwissTableの概要と利点の紹介に留まらず、Map内部実装を変更するという影響範囲が広い変更について、Go Teamがどのような考慮をしているかやどんな議論がされているかを紹介します。\r\n\r\nこのセッションを通じて、Goの内部実装が変更される可能性に伴う議論を紹介することで、この提案の議論からGoの開発においてGo Teamが考慮している点や姿勢について学んだことを共有できればと思っています。\r\n加えて、SwissTableへの理解を深めることで、変更がGo本体に採用されなかった場合にも、アルゴリズムの特性がみなさんが作成しているサービスに適しているかどうか判断できるようになり、必要な場合にはSwissTableを独自実装したりサードパーティ実装を使用したりすることで、Mapを伴う処理の高速化が必要になった時の手助けができればと幸いです。\r\n\r\n[1] https://github.com/golang/go/issues/54766\r\n[2] https://github.com/rust-lang/hashbrown\r\n[3] https://abseil.io/",
+      "startsAt": "2024-06-08T07:20:00Z",
+      "endsAt": "2024-06-08T07:40:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["e09e96c9-e540-4592-b510-6b1f08022328"],
+      "categoryItems": [248142, 248147],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "649860",
+      "title": "試してわかるGo ModulesとMinimal Version Selection",
+      "description": "Goはmoduleという単位で依存性を管理するシステムを公式に提供しています。そのシステムの中でも特に重要で特徴的なのが、依存モジュールのバージョンを決定する方法・アルゴリズムです。このアルゴリズムは、Minimal Version Selectionと呼ばれています。知っていても知らなくても、GoのほとんどのユーザーはこのMinimal Version Selectionを利用しています。あなたがgo getコマンドを実行するときには、Minimal Version Selectionが走っているのです。\r\n\r\nしかし、Minimal Version Selectionについて良くわかっているGoユーザーはそれほど多くないのではないでしょうか。その理由としては「よく分かっていなくても開発ができるから」という理由ももちろんあるでしょう。しかしそれだけではなく、「手を動かして学ぶことが大変だから」という理由も大きいと思います。モジュールシステムを実際に手で動かして学ぶためには、自分が知りたい疑問に答えられるような複数のモジュールの複数のバージョンを作って公開し、それを使うメインモジュールを自分で作らなければいけないからです。\r\n\r\nこのセッションでは、それをオーディエンスに代わって実演します。それにより、このセッションを見終わった人は、次のような問いかけに対してすっきり答えられるようになるでしょう。\r\n\r\n- 私のモジュールには、requireしているバージョンより新しいバージョンが使われている依存モジュールがあります。これはなぜ起きるのでしょうか？\r\n- 同一のgo.modで時間をおいて2回go buildしたとき、依存モジュールのバージョンが変わることはありますか？\r\n- go.sumは「lockファイル」ですか？（ネタバレ: 違います）\r\n- go.sumがバージョンの決定と関係ないのなら、go.sumはなんのためにあるのですか？\r\n- 依存モジュールの公開されている全てのバージョンをexcludeしたらどうなるのですか？\r\n\r\n[セッションの予定アウトライン]\r\n- 依存性管理とはどのような課題か\r\n- Goのmoduleとは何か\r\n- Minimal Version Selectionとは何か\r\n- go getしたときに何が起きるのか\r\n- Semantic VersioningとSemantic Import Versioning\r\n- Minimal Version Selectionは何が嬉しいのか\r\n- excludeとは何か\r\n- go.sumは何に使われるのか\r\n- 練習問題コーナー\r\n",
+      "startsAt": "2024-06-08T07:20:00Z",
+      "endsAt": "2024-06-08T07:40:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["fb4134f3-9529-482a-aceb-ec259fa71291"],
+      "categoryItems": [248142, 248147],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44253,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "649710",
+      "title": "Guide to Profile-Guided Optimization: inlining, devirtualining, and profiling",
+      "description": "Goの公式コンパイラは様々な最適化を提供しており､その中で関数のインライン展開と脱仮想化が挙げられます｡\r\n関数のインライン展開は､関数呼び出しをその関数の本体で直接置き換え､関数呼び出しのオーバーヘッドを抑えます｡\r\nまたGoの脱仮想化は､インターフェースを通じたメソッド呼び出しの実行時コストを削減するために､コンパイル時に具体的な実装を特定する最適化手法です｡\r\nこの2つの最適化の適用範囲を広げられる最適化手法として､Go1.20でPGO(Profile-Guided Optimization)が追加されました｡\r\n本セッションでは､インライン展開､脱仮想化と､PGOがこの2つの最適化にどういった影響を及ぼすかについて解説します｡\r\n\r\nまず､Goコンパイラにおける関数のインライン展開と脱仮想化の基礎的な部分を説明します｡\r\nインライン展開では､どのような条件でインライン展開がおこなわれるのかについて掘り下げ､関連するコマンドラインオプションを紹介します｡\r\n脱仮想化の説明では､その仕組みを他の言語処理系と比較して解説し､Goコンパイラの設計思想に触れていきます｡\r\n次に､PGOによってインライン展開と脱仮想化の適用範囲が広がる仕組みを解説します｡\r\n最後に､弊社でのPGOを活用した実際のアプリケーションのパフォーマンス改善に向けた取り組みを共有します｡\r\n\r\nこのセッションを通じて､参加者の方はGoにおける先進的な最適化技術の仕組みを理解し､自身のプロジェクトに応用するための知識を得ることができます｡\r\nPGOのプラクティカルな事例を共有することで､サービスのパフォーマンスを更に引き上げたい方に有益なセッションとなることを目指しています｡",
+      "startsAt": "2024-06-08T07:50:00Z",
+      "endsAt": "2024-06-08T08:10:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["8f41fb17-3d01-48fe-914f-a0f69d4d1213"],
+      "categoryItems": [248143, 248147],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "647542",
+      "title": "詳解 \"Fixing For Loops in Go 1.22\" / 自作linterをgolangci-lintへコントリビュートした話",
+      "description": "Go1.22から(プレビューはGo1.21から)ループ変数のメモリ共有問題が解消されたことは皆様よくご存知かと思います。\r\ncf. [Fixing For Loops in Go 1.22](https://go.dev/blog/loopvar-preview)\r\n\r\nそれではもう1歩踏み込んで、ループ変数がイテレーション毎に異なるインスタンスになるのはどのような時でしょうか？以下2つの出力が異なる理由をどう説明できるでしょうか？\r\n```go\r\nfor i := range 3 {\r\n\tfmt.Print(&i) // [0x14000112018, 0x14000112030, 0x14000112038] // 異なるアドレス\r\n}\r\nfor i := range 3 {\r\n\tprint(&i) // [0x1400010af18, 0x1400010af18, 0x1400010af18] // 同じアドレス\r\n}\r\n```\r\n\r\n新しいループとそれを取り巻くツールの実装は、既存コードでバグを生み出さない・パフォーマンスを落とさない工夫がされています。\r\n\r\n本セッションでは、loopvarパッケージのコードリーディングを通して、これら変更の背後にある内部動作を解説します。\r\nさらに、デザインドキュメントやコミュニティでの議論、周辺ツールを併せて確認することで、セマンティクス変更への理解をより深めたいと思います。\r\n\r\nまた、Go1.22から不要になったループ変数のコピーを検出する自作linter [copyloopvar](https://golangci-lint.run/usage/linters/#copyloopvar) をgolangci-lintにコントリビュートした話もお伝えします。\r\nこのlinterが何をどのように検知するかを紹介する中で、Goにおける静的解析ツールの作成方法も解説します。\r\nlinterの自作やOSS貢献に一歩踏み出す際、本セッションがご参考になれば幸いです。",
+      "startsAt": "2024-06-08T07:50:00Z",
+      "endsAt": "2024-06-08T08:10:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": ["fc5fcbb6-163c-4110-b688-c77bcbdc9a0a"],
+      "categoryItems": [248143, 248145],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44253,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "701753",
+      "title": "DELISH KITCHENにおけるマスタデータのキャッシュ戦略とその歴史的変遷",
+      "description": "DELISH KITCHENで扱うデータには、大別してレシピデータなどの主に入稿によってしか変動しないものと、お気に入りなどユーザの行動によって変動するものとが存在しています。\r\n両者を比較すると、マスタデータの方は変動性が低い傾向があるため、キャッシュについても異なる戦略が必要となります。\r\nDELISH KITCHENのリリース当初から現在に至るまでのキャッシュ戦略の変遷や、その際どのような試行錯誤を経てきたか、また今後の展望について、Goの実装を交えてお話します。",
+      "startsAt": "2024-06-08T08:50:00Z",
+      "endsAt": "2024-06-08T09:10:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": ["5a9d337d-0a79-4c4e-bf99-e33db73885fa"],
+      "categoryItems": [248142, 248145],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": false,
+      "isConfirmed": false
+    },
+    {
+      "id": "649907",
+      "title": "Making Sense of How Rangefunc Works: Just 1 Tip in 5 Minutes",
+      "description": "Go 1.22 contains a preliminary implementation of Rangefunc. The Go team is considering adding this feature for a future Go release, so it's a good idea to start getting the hang of it now. However, its behavior does not seem to be straightforward. In this lightning talk, I'll introduce just one tip that can serve as a key to understanding, all in five minutes.\r\n\r\nGo 1.22にはRangefuncの仮実装が含まれます。Go チームは将来の Go リリースにこの機能を追加することを検討しているため、今のうちから使いこなす準備をしておきたいところです。しかし、その動作は決して分かりやすいものではないように感じます。そこで、理解の糸口となる1つのコツを5分で紹介します。",
+      "startsAt": "2024-06-08T09:50:00Z",
+      "endsAt": "2024-06-08T09:55:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": ["02b2d508-7fd1-4946-b2a9-3cfe848ba052"],
+      "categoryItems": [248144, 248147],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "649096",
+      "title": "go get で考慮しているファイルシステムの挙動について",
+      "description": "Goでのアプリケーション開発で外部の公開されているライブラリを使用したい場合は go get を使用してパッケージをダウンロードします。\r\nこのときダウンロードされるライブラリは $GOPATH/pkg/mod 配下にフォルダが作成されGoのファイルが保存されます。\r\n例を挙げる `go get golang.org/x/sync` を実行すると `$GOPATH/pkg/mod/golang.org/x/sync` の形で保存されます。\r\nこのときにフォルダやファイルが保存されるということは保存先のOSのファイルシステムの挙動を考慮する必要があります。代表なOSだとmacOSやWindowsだと大文字と小文字を区別しない設定が可能です。[1][2]\r\n\r\n一方で、Goのライブラリを公開できるGitHubではユーザ名とリポジトリ名には大文字を使用することができます。\r\nこのような場合、大文字と小文字だけの違いがあるライブラリをダウンロードできない可能性があります。\r\n\r\nこの発表では go get で実行されるコードを紹介しつつ、この問題をどのように解消しているのかを紹介したいと思います。\r\nこれに加えて発表の中では実際にどのように処理の流れを理解したのかもお伝えすることで Go 自体のコードを読むことのハードルの低さを少しでもお伝えしたいと考えています。\r\n\r\n発表スライドの章立ては以下を考えています。\r\n1. 自己紹介\r\n2. go get の仕組みを簡単に紹介\r\n    2.1. ファイルシステムの大文字/小文字の区別にも言及\r\n3. ファイルシステムの考慮をどのように行っているコードを示しつつ紹介\r\n4. どのように処理の流れを追って理解していったのか\r\n\r\n参考文献\r\n[1] https://learn.microsoft.com/ja-jp/windows/wsl/case-sensitivity\r\n[2] https://support.apple.com/ja-jp/guide/disk-utility/dsku19ed921c/mac\r\n",
+      "startsAt": "2024-06-08T09:55:00Z",
+      "endsAt": "2024-06-08T10:00:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": ["16fbd19f-7402-47c3-9174-deb338e647a8"],
+      "categoryItems": [248144, 248147],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "648614",
+      "title": "golang/goのbuiltin packageを覗いてみる",
+      "description": "github.com/golang/goにはコンパイラやgofmtをはじめとする各種ツール、標準ライブラリなどが含まれています。その中から、builtin package (src/builtin/) を紹介します。Goを実装している際、エディタやIDEの機能で組み込み型の定義を開いたことがある方は少なくないと思います。そのときにたどり着くのがこのpackageです。\r\n\r\nbuiltin packageは、predeclared identifiers (直訳すると事前に宣言された識別子) が定義されたpackageです。bool, uint8, float64, stringといった組み込み型や、append, lenといった組み込み関数が定義されていますが、その実装はこのpackageには含まれていません。本LTでは、これらの定義がpackage内でどのように書かれているか紹介し、このpackageが存在する理由を簡単に説明します。\r\n",
+      "startsAt": "2024-06-08T10:00:00Z",
+      "endsAt": "2024-06-08T10:05:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": ["afda40a5-45e1-4907-aed0-f7137fef3ec4"],
+      "categoryItems": [248144, 248146],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "632985",
+      "title": "deadcode超解剖",
+      "description": "2023年末にGo公式が「Finding unreachable functions with deadcode」（ https://go.dev/blog/deadcode ）というブログを通して、使用されていない関数を見つけ出すためのdeadcodeというツールを紹介しました。\r\n\r\nこのブログでdeadcodeが紹介されたことをきっかけに、複数のlinterを同時に設定することができるツールであるgolangci-lint( https://github.com/golangci/golangci-lint )に対して、Go公式のものであるdeadcodeを採用するのはどうかというissueが複数挙げられました。\r\n\r\nしかし、golangci-lintはこのdeadcodeを採用せず、代わりにunusedという類似の機能を持つlinterと比較してこの提案を棄却しました。その理由と2つのlinterの違いについて深ぼることで、それぞれのlinterの特徴と使い分けが理解できると思っています。\r\n\r\nまた、私自身deadcodeを使用し、あるOSSのコードをリファクタリングするPRを送りました。ただ、そのPRが不要なリファクタリングという指摘を受け、deadcodeで検知して削除するべきではないinterfaceの中のメソッドの役割を学びました。\r\n\r\nそこで、その経験を通して、現段階のdeadcodeを使う際の注意点についてもお伝えしたいと思っています。\r\n\r\n具体的にはこのセッションで以下の項目についてお話しします。\r\n\r\n1. deadcodeの概要と内部の仕組み\r\n2. golangci-lintのissueを通したdeadcodeとunusedの比較\r\n3. 現段階でdeadcodeを使用する際の注意\r\n\r\nこのセッションは、Goで使用されていない関数をlintしたい方や、Goのlint自体に興味がある方に対して特にお話ししたい内容です。\r\n",
+      "startsAt": "2024-06-08T10:05:00Z",
+      "endsAt": "2024-06-08T10:10:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": ["66f326bd-0b7d-441a-a749-b7f829032016"],
+      "categoryItems": [248144, 248145],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "649897",
+      "title": "Table-driven testing に縛られないGoのテストパターン",
+      "description": "本LTでは、Table-driven testingに縛られないGoのテストパターンを紹介します。\r\n\r\nTable-driven testingはGoでしばしば利用されるパターンで、\r\nシンプルな入出力が期待されるテストでは扱いやすく効果的です。\r\n\r\n一方で、データベースの状態に依存するテストやモックを活用したテストを書きたい場合、\r\n工夫をこらす必要があり、場合によっては認知負荷の高いコードになってしまうことがあります。\r\n\r\nArrange-Act-Assertパターンなど、Table-driven testingに縛られないパターンをGoで採用することを考察し、\r\nその使い分けのベストプラクティスを紹介します。",
+      "startsAt": "2024-06-08T10:10:00Z",
+      "endsAt": "2024-06-08T10:15:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": ["19aa1c89-39e6-4263-9d0f-5ca1ee722b40"],
+      "categoryItems": [248144, 248146],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "648689",
+      "title": "自作HTTPルーターから新しいServeMuxへ",
+      "description": "Go1.22からnet/httpにおけるServeMuxのルーティングが大きく進化を遂げました。\r\n\r\nこれまでのServeMuxとGo1.22のServeMuxで何が変わったのか？を踏まえ、自作HTTPルーターとのパフォーマンス比較検証を行ってみます。おまけで他のメジャーなHTTPルーターとの比較結果もシェアします。\r\n\r\nこのトークでは、\r\n・Go1.22から追加された便利なルーティング機能\r\n・ServeMuxと自作HTTPルーターを比較した結果から得られた学び\r\n・これからのHTTPルーター選定方針についての私見\r\nを5分でみっちりお話したいと思います。\r\n\r\n\r\n",
+      "startsAt": "2024-06-08T10:15:00Z",
+      "endsAt": "2024-06-08T10:20:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": ["56cda3a9-327e-4609-9bf7-ff70bcb86087"],
+      "categoryItems": [248144, 248145],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "647566",
+      "title": "自動生成されたhttpエンドポイントごとにカスタムミドルウェアを挿入したい話",
+      "description": "### 目的\r\nOpenAPI に準拠したファイルから生成された REST API サーバにて、生成ファイルを編集せずに、http エンドポイントごとに任意のカスタムミドルウェア相当の処理を挿入したい人へ向けた Tips を共有したいです。\r\n\r\n### 詳細\r\nGo では OpenAPI 準拠のスキーマファイルから、ボイラープレートコードを生成する oapi-codegen という OSS が提供されています。\r\n\r\n2024/06 時点では、生成された http エンドポイントごとに、任意のミドルウェアを割り当てる仕組みがありません。\r\n\r\nこの問題は issue で報告されており、独自の実装が PR で上がっていますが、正式な機能の提供は先送りになっています。\r\n\r\nhttps://github.com/deepmap/oapi-codegen/issues/518\r\n\r\nLT では、以下の項目に絞って説明しようと思います。\r\n\r\n1. OpenAPI に準拠したファイルから REST API サーバを自動生成できる oapi-codegen を紹介\r\n2. issue で報告されている問題について\r\n    - oapi-codegen によって生成された http エンドポイントごとに、任意のミドルウェアを割り当てられない\r\n3. 独自の解決案を紹介\r\n    - http ルーティングエンジンは Echo を使います\r\n    - ミドルウェアで echo.Context をラップして、各コントローラーにてミドルウェア相当の処理を実行する仕組みの説明\r\n    - 参考: https://codehex.hateblo.jp/entry/echo-context\r\n\r\n### Appendix\r\n\r\noapi-codegen:\r\n\r\nhttps://github.com/deepmap/oapi-codegen\r\n",
+      "startsAt": "2024-06-08T10:20:00Z",
+      "endsAt": "2024-06-08T10:25:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": ["796c09ac-9a0f-4b6a-8ad4-5d2ace452aa0"],
+      "categoryItems": [248144, 248145],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "649845",
+      "title": "通信の不安定さに悩んでいたらシュッとプロキシを書けて改善できちゃった話",
+      "description": "自分たちでは手を入れられないHTTPのある通信先において、同時に複数のリクエストを送ると一部が失敗する問題に頭を悩ませていました。\r\n「Goでプロキシを作ってそれを介せば、通信並列度を抑えたりリトライの仕組みを入れられるのでは？」と思いつき、調べつつやってみたところ着想から2日程度で動くものができてしまい、\"一つのことをうまくやるツール\"をシュッと作れる言語だなとあらためて感じました。\r\n\r\nソースコードはこちらにあります。\r\nhttps://github.com/bellwood4486/flow-limit-proxy\r\n\r\nLTでは主に以下を話す予定です。\r\n* 悩んでいた状況(概要)とアイディアの説明\r\n* 次を組み合わせるだけで簡単に並列抑制を実現できた仕組みの紹介(実装のスニペットを見せつつ、ポイントを絞りながら)\r\n    * \"http.RoundTripper\"\r\n    * \"golang.org/x/sync/semaphore\"",
+      "startsAt": "2024-06-08T10:25:00Z",
+      "endsAt": "2024-06-08T10:30:00Z",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": ["65362ad7-ae35-4eab-a606-a6d8784b66b2"],
+      "categoryItems": [248144, 248146],
+      "questionAnswers": [
+        {
+          "questionId": 70052,
+          "answerValue": "false"
+        },
+        {
+          "questionId": 70053,
+          "answerValue": "true"
+        }
+      ],
+      "roomId": 44252,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    }
+  ],
+  "speakers": [
+    {
+      "id": "5a9d337d-0a79-4c4e-bf99-e33db73885fa",
+      "firstName": "Akira",
+      "lastName": "Uchihara",
+      "bio": "古くはパソコン通信時代からシステム開発に携わり、その後ヤフーやかつての頓智ドットでセカイカメラの開発をしたりCTOやったりとなんだかんだで今にいたる。エブリー入社後はDELISH KITCHENでインフラ基盤刷新やプッシュ通知機構構築や課金システム構築など主にバックエンド、インフラ系で手広くやってます。",
+      "tagLine": "株式会社エブリー開発本部 TIMELINE開発部部長, DELISH KITCHEN開発部副部長",
+      "profilePicture": "https://sessionize.com/image/89c6-400o400o1-NvSppqRoJiMDhVZyJV87c8.jpg",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [701753],
+      "fullName": "Akira Uchihara",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "fffe7623-17b8-4a25-b1f6-819ce00b7384",
+      "firstName": "Kazuhiro",
+      "lastName": "Sakurayama",
+      "bio": "2020年 ヤフー株式会社入社",
+      "tagLine": "LINEヤフー株式会社",
+      "profilePicture": "https://sessionize.com/image/6bfc-400o400o1-pxtndoNkp3YcpUmXeoeMgm.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/haruyama480",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [649626],
+      "fullName": "Kazuhiro Sakurayama",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "0028ec2b-7cc7-436e-8cc6-302cf8d4e752",
+      "firstName": "Ken'ichiro",
+      "lastName": "Oyama",
+      "bio": "少し実用的で小さなOSSを書くのが趣味。",
+      "tagLine": "GMOペパボ株式会社 技術部技術基盤チーム プリンシパルエンジニア",
+      "profilePicture": "https://sessionize.com/image/fae8-400o400o1-aLWFrqkCA9K7Afrq7DodJA.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/k1LoW",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [648209],
+      "fullName": "Ken'ichiro Oyama",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "56cda3a9-327e-4609-9bf7-ff70bcb86087",
+      "firstName": "Kenta",
+      "lastName": "Takeuchi",
+      "bio": "好きな標準ライブラリはnet/httpです。",
+      "tagLine": "ソフトウェアエンジニア",
+      "profilePicture": "https://sessionize.com/image/a577-400o400o1-4AoRYEWzBtVoAKLrudXf6A.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/bmf_san",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [648689],
+      "fullName": "Kenta Takeuchi",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "91a3208f-3835-4ed5-ba69-179e915b156a",
+      "firstName": "Kiki",
+      "lastName": "Utagawa",
+      "bio": "普段は京都でビールを飲んでいます",
+      "tagLine": "Web Application Engineer at Hatena inc.",
+      "profilePicture": "https://sessionize.com/image/eaae-400o400o1-XqdyMgJnQyXV5Vj6H7Hmnm.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/utgwkk",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [649102],
+      "fullName": "Kiki Utagawa",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "afda40a5-45e1-4907-aed0-f7137fef3ec4",
+      "firstName": "Koki",
+      "lastName": "Senda",
+      "bio": "株式会社Voicyのソフトウェアエンジニア。\r\n楽天にてオンライン決済システムの開発・運用に携わったのち、Voicyのヘビーリスナーを経て、2021年12月にVoicyに入社。モバイルアプリのバックエンドAPIや、通知・音声処理等の基盤システムを開発する。また、KubernetesやAWS上の各種リソース管理、モニタリング、CI/CDの整備等も担当。\r\n最近の趣味は将棋とギターとオムライス作り。",
+      "tagLine": "Voicy, Inc.",
+      "profilePicture": "https://sessionize.com/image/b809-400o400o1-GwZjqfuB33jbJrtF8KGhZH.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/thousan_da",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [648614],
+      "fullName": "Koki Senda",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "19aa1c89-39e6-4263-9d0f-5ca1ee722b40",
+      "firstName": "Kotaro",
+      "lastName": "Abe",
+      "bio": "治験業務支援のSaaSを開発しております。",
+      "tagLine": "株式会社MICIN ソフトウェアエンジニア",
+      "profilePicture": "https://sessionize.com/image/bd31-400o400o1-Tf982nuG13LPratEENuXG2.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/abekoh_bcky",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [649897],
+      "fullName": "Kotaro Abe",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "55c66d31-401c-4b53-b074-e476a4d84d6b",
+      "firstName": "Miki",
+      "lastName": "Masumoto",
+      "bio": "Engineering Manager and back-end engineer in UPSIDER, Inc., a startup company providing B2B payment services for businesses mainly in Japan. \r\n\r\n",
+      "tagLine": "UPSIDER Inc.",
+      "profilePicture": "https://sessionize.com/image/60e9-400o400o1-J2J4ysMBtk57pYeK4BYeuB.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/m_miki0108",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [649848],
+      "fullName": "Miki Masumoto",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "66f326bd-0b7d-441a-a749-b7f829032016",
+      "firstName": "Naoki",
+      "lastName": "Kuroda",
+      "bio": "株式会社サイバーエージェント2023卒で、AI事業本部で広告プロダクトのエンジニアをしています。",
+      "tagLine": "株式会社サイバーエージェント",
+      "profilePicture": "https://sessionize.com/image/e355-400o400o1-pcZSfa5iZrtPnyPSErBYXF.jpeg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/knkurokuro7",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [632985],
+      "fullName": "Naoki Kuroda",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "e09e96c9-e540-4592-b510-6b1f08022328",
+      "firstName": "Natsumi",
+      "lastName": "Kojima",
+      "bio": "社内開発者向けの分散DB基盤の運用・ライブコマースサービスの開発・toB向けサービスの開発を経て、2021年6月にANDPADに入社。 現在はバックエンドエンジニアとして、マイクロサービスの基盤開発に従事。",
+      "tagLine": "ANDPAD Inc.",
+      "profilePicture": "https://sessionize.com/image/e06b-400o400o1-LjwJCmzZWeSs1663GAEXGN.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/replu5",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [646478],
+      "fullName": "Natsumi Kojima",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "fb4134f3-9529-482a-aceb-ec259fa71291",
+      "firstName": "Nobishii",
+      "lastName": "N/A",
+      "bio": "Software engineer who wants to study programming, software engineering, computer science, math/physics.",
+      "tagLine": "Software engineer",
+      "profilePicture": "https://sessionize.com/image/5c50-400o400o1-GqU9q9jMsdE9DvqCamjqKt.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/shino_nobishii",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [649860],
+      "fullName": "Nobishii N/A",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "796c09ac-9a0f-4b6a-8ad4-5d2ace452aa0",
+      "firstName": "Reo",
+      "lastName": "Uehara",
+      "bio": "Goとサウナが好き",
+      "tagLine": "株式会社Finatext",
+      "profilePicture": "https://sessionize.com/image/239d-400o400o1-4a31fc01-c070-4e20-9703-ffcf634d6352.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/_uhzz_",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [647566],
+      "fullName": "Reo Uehara",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "fc5fcbb6-163c-4110-b688-c77bcbdc9a0a",
+      "firstName": "Ryosei",
+      "lastName": "Karaki",
+      "bio": "ゲームのバックエンドエンジニアです。\r\nボーカロイドが好きです。",
+      "tagLine": "CyberAgent, Inc.",
+      "profilePicture": "https://sessionize.com/image/083a-400o400o1-DXaNk9UpKUm7xot33gV5nY.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/karamaru_alpha",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [647542],
+      "fullName": "Ryosei Karaki",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "8f41fb17-3d01-48fe-914f-a0f69d4d1213",
+      "firstName": "Satoru",
+      "lastName": "Kawahara",
+      "bio": "関数型プログラミングやコントロールオペレータ､型システム､言語処理系など｡Go歴1年弱｡",
+      "tagLine": "株式会社カンム",
+      "profilePicture": "https://sessionize.com/image/2eed-400o400o1-Tm6kz6jKAczpAoMiurfFXr.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/nymphium",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [649710],
+      "fullName": "Satoru Kawahara",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "16fbd19f-7402-47c3-9174-deb338e647a8",
+      "firstName": "Shinnosuke",
+      "lastName": "Kishida",
+      "bio": "2021年にSO Technologies株式会社に入社。ATOM事業本部プロダクト開発グループに配属。ATOMのAPIの開発や媒体APIの対応、レポート生成の基盤部分の改修に従事。毎週ボルダリングに通っている。",
+      "tagLine": "SO Technologies株式会社,バックエンドエンジニア",
+      "profilePicture": "https://sessionize.com/image/90d0-400o400o1-BDPoGYrXVpj7FDvPkezqJW.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/mwudo",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [649096],
+      "fullName": "Shinnosuke Kishida",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "4ae43c21-4c2b-4757-944d-d95236895312",
+      "firstName": "Shoki",
+      "lastName": "Hata",
+      "bio": "Software Engineer at Kanmu, Inc.",
+      "tagLine": "株式会社カンム",
+      "profilePicture": "https://sessionize.com/image/ff14-400o400o1-HJgwQjsrgCAHwmSKxaM9Qx.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/sho_hata_",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [649675],
+      "fullName": "Shoki Hata",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "88a51b9c-0162-4c4e-aaa5-cced43a7f44d",
+      "firstName": "Shota",
+      "lastName": "Iwami",
+      "bio": "株式会社サイバーエージェント所属。普段はDX的なことをしています。\r\nドローンが好きです。\r\n自動生成や自動計装周りに関心があります",
+      "tagLine": "CyberAgent, Inc.",
+      "profilePicture": "https://sessionize.com/image/4a4f-400o400o1-Mqm8kLk2i4WZShXVt6yUuL.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/B_Sardine",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [648864],
+      "fullName": "Shota Iwami",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "2c2bcde7-c49f-4c65-a998-ac4c8c2ecdfe",
+      "firstName": "Takahito",
+      "lastName": "Yamatoya",
+      "bio": "2007年早稲田大学社会科学部卒業後、NECネクサソリューションズ株式会社に新卒として入社。その後、ゲーム制作会社でデータベーススペシャリスト、株式会社ホワイトプラスで開発マネージャーを経て、2018年bitFlyerに入社。SRE部長、執行役員システム開発本部長を歴任。2024年1月株式会社メルコイン執行役員 VP of Engineeringに就任。",
+      "tagLine": "株式会社メルコイン, VP of Engineering",
+      "profilePicture": "https://sessionize.com/image/68e3-400o400o1-4NdFY2xxHT5zXXZViBMoWu.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/t_yamatoya",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [637496],
+      "fullName": "Takahito Yamatoya",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "899d1bf7-e2c2-4333-b9f1-c07788bca0c7",
+      "firstName": "Takuya",
+      "lastName": "Ueda",
+      "bio": "Takuya Ueda is one of organizer of Go Conference in Japan. He is Google Developer Expert (Go). He works for the growth of the Go community in Japan. He also loves the Go Gopher and drawing Gopher illustrations.",
+      "tagLine": "Knowledge Work Inc.",
+      "profilePicture": "https://sessionize.com/image/a3e1-400o400o1-55dc647a-d774-42bc-9974-d0262cc0af92.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/tenntenn",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [644546],
+      "fullName": "Takuya Ueda",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "64bc44d2-39b3-4740-a51f-e00649e59f13",
+      "firstName": "Vaibhav",
+      "lastName": "Gupta",
+      "bio": "As a backend engineer with 2 years of experience, I have a passion for technology and a strong understanding of development concepts. I have developed expertise in Go, gRPC, and DevOps concepts.",
+      "tagLine": "Backend Engineer | Golang Developer ",
+      "profilePicture": "https://sessionize.com/image/f7a7-400o400o1-wq1oA98cGxXHdTrHiAA5G4.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/97GuptaVaibhav",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [646485],
+      "fullName": "Vaibhav Gupta",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "65362ad7-ae35-4eab-a606-a6d8784b66b2",
+      "firstName": "Yoshiharu",
+      "lastName": "Suzuki",
+      "bio": "大手精密機器メーカーにて約14年間、Windowsアプリケーションやライブラリ、Webサービスなど幅広くソフトウェア開発に携わる。またそのなかで、プログラマ、アーキテクト、プロジェクトマネージャーを経験。その後、モバイル決済スタートアップを経て、2020年に(株)HRBrainに入社。バックエンドエンジニアとしてGoを用いてサービスの可用性強化や新機能開発を行いながら、テックリードとして技術面からのチームビルディングも推進する。",
+      "tagLine": "株式会社HRBrain",
+      "profilePicture": "https://sessionize.com/image/e24a-400o400o1-9RjPuwEc6FAe3t4iMhvNSr.jpg",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [649845],
+      "fullName": "Yoshiharu Suzuki",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "02b2d508-7fd1-4946-b2a9-3cfe848ba052",
+      "firstName": "Yuki",
+      "lastName": "Bobier Koshimizu",
+      "bio": "Yuki Bobier Koshimizu is a software engineer at ZOZO. He is passionate about Go and how to develop truly \"soft\" software.",
+      "tagLine": "Software Engineer at ZOZO",
+      "profilePicture": "https://sessionize.com/image/0dac-400o400o1-ninN5PsSMAZgFspykYMzs7.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/YukiBobier",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [649907],
+      "fullName": "Yuki Bobier Koshimizu",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "af931ed9-d101-401c-acec-7f9844cb6ca6",
+      "firstName": "Yuya",
+      "lastName": "Okumura",
+      "bio": "低レイヤや暗号関連の技術に興味があります",
+      "tagLine": "株式会社LayerX",
+      "profilePicture": "https://sessionize.com/image/6ac5-400o400o1-4267faff-b45c-4867-868f-3dcca0492d3e.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/convto",
+          "linkType": "Twitter"
+        }
+      ],
+      "sessions": [649858],
+      "fullName": "Yuya Okumura",
+      "categoryItems": [],
+      "questionAnswers": []
+    }
+  ],
+  "questions": [
+    {
+      "id": 70052,
+      "question": "登壇時に写真撮影がNGです/Photo is not allowed when speaking",
+      "questionType": "Checkbox",
+      "sort": 3
+    },
+    {
+      "id": 70053,
+      "question": "実費での参加に同意します/agree to participate by yourself cost",
+      "questionType": "Checkbox",
+      "sort": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": 70235,
+      "title": "Session Type",
+      "items": [
+        {
+          "id": 248141,
+          "name": "Long Session(40min)",
+          "sort": 1
+        },
+        {
+          "id": 248142,
+          "name": "Short Session(20min)",
+          "sort": 2
+        },
+        {
+          "id": 248143,
+          "name": "Challenge Session(20min)",
+          "sort": 3
+        },
+        {
+          "id": 248144,
+          "name": "LT(5min)",
+          "sort": 4
+        }
+      ],
+      "sort": 0,
+      "type": "session"
+    },
+    {
+      "id": 70236,
+      "title": "Session Level",
+      "items": [
+        {
+          "id": 248145,
+          "name": "all",
+          "sort": 1
+        },
+        {
+          "id": 248146,
+          "name": "beginner",
+          "sort": 2
+        },
+        {
+          "id": 248147,
+          "name": "intermediate",
+          "sort": 3
+        },
+        {
+          "id": 248148,
+          "name": "advanced",
+          "sort": 4
+        }
+      ],
+      "sort": 1,
+      "type": "session"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 44252,
+      "name": "Room 1",
+      "sort": 0
+    },
+    {
+      "id": 44253,
+      "name": "Room 2",
+      "sort": 1
+    }
+  ]
+}
