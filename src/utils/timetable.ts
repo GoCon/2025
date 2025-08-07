@@ -10,7 +10,7 @@ export const getSessionLabel = (
   session: (typeof sessions.sessions)[0],
   index: number,
 ) => {
-  const roomType = getSessionRoom(session.roomId) === "RoomA" ? "A" : "B";
+  const roomType = session.roomId === sessions.rooms.at(0)?.id ? "A" : "B";
   // TODO: セッションのラベルを取得
   return `${roomType}${index + 1}-SP`;
 };

@@ -4,7 +4,6 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import sessions from "../data/sessions.json";
 import {
   getFormattedTime,
-  getSessionRoom,
   getSessionSpeakerName,
   getSessionSpeakerThumbnailSrc,
   getSessionTime,
@@ -15,7 +14,7 @@ interface Props {
    * セッションのID
    * @example 649102
    */
-  id: string;
+  id?: string;
   /**
    * セッションの識別子
    * @example A1-SP
@@ -121,14 +120,14 @@ if (!session) return null;
 </style>
 
 <section
-  class={`timetable-card ${getSessionRoom(session.roomId) === "RoomA" ? "room-a" : "room-b"}`}
+  class={`timetable-card ${session.roomId === sessions.rooms.at(0)?.id ? "room-a" : "room-b"}`}
 >
   <div class="card-header">
     <p class="card-header-time">
       {getFormattedTime(session.startsAt)} - {getFormattedTime(session.endsAt)}
     </p>
     <p
-      class={`card-header-session-id ${getSessionRoom(session.roomId) === "RoomA" ? "room-a" : "room-b"}`}
+      class={`card-header-session-id ${session.roomId === sessions.rooms.at(0)?.id ? "room-a" : "room-b"}`}
     >
       {sessionLabel}
     </p>
