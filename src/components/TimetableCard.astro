@@ -1,12 +1,18 @@
 ---
 import { Image } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 interface Props {
+  /**
+   * セッションのID
+   * @example 649102
+   */
+  id: string;
   /**
    * セッションの識別子
    * @example A1-SP
    */
-  sessionId: string;
+  sessionLabel: string;
   /**
    * セッションのタイトル
    * @example タクシーアプリ『GO』高速マッチングシステムで実践したGoチューニングテクニック
@@ -30,7 +36,7 @@ interface Props {
   /**
    * セッションの部屋
    */
-  room: "RoomA" | "RoomB";
+  room: string;
   /**
    * セッションの講演者名
    */
@@ -42,7 +48,8 @@ interface Props {
 }
 
 const {
-  sessionId,
+  id,
+  sessionLabel,
   title,
   timeStart,
   timeEnd,
@@ -51,12 +58,15 @@ const {
   speakerName,
   speakerThumbnailSrc,
 } = Astro.props;
+
+const currentLocale = Astro.currentLocale || "ja";
 ---
 
 <style>
   .timetable-card {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 4px;
     padding: 16px 24px;
     border-radius: 16px;
@@ -103,6 +113,11 @@ const {
     line-height: 1.75;
   }
 
+  .card-title-link {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
   .card-footer {
     display: flex;
     justify-content: space-between;
@@ -140,10 +155,15 @@ const {
     <p
       class={`card-header-session-id ${room === "RoomA" ? "room-a" : "room-b"}`}
     >
-      {sessionId}
+      {sessionLabel}
     </p>
   </div>
-  <h3 class="card-title">{title}</h3>
+  <h3 class="card-title">
+    <a
+      href={getRelativeLocaleUrl(currentLocale, `/timetable/${id}`)}
+      class="card-title-link">{title}</a
+    >
+  </h3>
   <div class="card-footer">
     <div class="speaker-info">
       <Image
