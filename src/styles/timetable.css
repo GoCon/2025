@@ -1,0 +1,18 @@
+.time-slot {
+  display: flex;
+  align-items: flex-start;
+
+  span {
+    position: sticky;
+    top: calc(88px + 16px);
+    left: 0;
+    z-index: 1;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.session-cell {
+  display: flex;
+  height: 100%;
+}
