@@ -1,0 +1,84 @@
+---
+import sessions from "../data/sessions.json";
+import "../styles/timetable.css";
+import TimetableCard from "./TimetableCard.astro";
+
+interface Props {
+  hour: number;
+}
+
+const { hour } = Astro.props;
+
+/**
+ * 指定した時間のセッションを分類する
+ * @param hour 時間
+ * @returns セッションの配列[roomA, roomB][]
+ */
+const getClassifiedSessions = (hour: number) => {
+  // セッションを開始時間でソート
+  const sortedSessions = sessions.sessions.sort((a, b) => {
+    return new Date(a.startsAt).getTime() - new Date(b.startsAt).getTime();
+  });
+
+  // 部屋ごとにセッションを抽出
+  const roomA = sortedSessions.filter((session) => {
+    return session.roomId === sessions.rooms.at(0)?.id;
+  });
+  const roomB = sortedSessions.filter((session) => {
+    return session.roomId === sessions.rooms.at(1)?.id;
+  });
+
+  // 指定した開始時間のセッションを抽出
+  const currentHourSessionsA = roomA.filter((session) => {
+    return new Date(session.startsAt).getHours() === hour;
+  });
+  const currentHourSessionsB = roomB.filter((session) => {
+    return new Date(session.startsAt).getHours() === hour;
+  });
+
+  // 2列になるようにセッションを配列に格納
+  // MEMO: レイアウトが崩れないようにセッションがない場合はundefinedを格納
+  return [
+    ...Array(
+      Math.max(currentHourSessionsA.length, currentHourSessionsB.length),
+    ).keys(),
+  ].map((index) => {
+    // 部屋ごとのセッションの順番を取得
+    const a = currentHourSessionsA.at(index);
+    const aIdx = roomA.findIndex((s) => s.id === a?.id) + 1;
+    const b = currentHourSessionsB.at(index);
+    const bIdx = roomB.findIndex((s) => s.id === b?.id) + 1;
+
+    return [
+      a ? { ...a, sessionIdx: aIdx } : undefined,
+      b ? { ...b, sessionIdx: bIdx } : undefined,
+    ];
+  });
+};
+
+const classifiedSessions = getClassifiedSessions(hour);
+---
+
+<div class="time-slot" style={`grid-row: span ${classifiedSessions.length};`}>
+  <span>{hour.toString().padStart(2, "0")}:00</span>
+</div>
+{
+  classifiedSessions.map((session) => {
+    return (
+      <>
+        <div class="session-cell">
+          <TimetableCard
+            id={session.at(0)?.id}
+            sessionLabel={`A${session.at(0)?.sessionIdx}-SP`}
+          />
+        </div>
+        <div class="session-cell">
+          <TimetableCard
+            id={session.at(1)?.id}
+            sessionLabel={`B${session.at(1)?.sessionIdx}-SP`}
+          />
+        </div>
+      </>
+    );
+  })
+}

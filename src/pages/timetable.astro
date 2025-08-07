@@ -1,6 +1,6 @@
 ---
 import Button from "../components/Button.astro";
-import TimetableCard from "../components/TimetableCard.astro";
+import TimetableList from "../components/TimetableList.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/sub-page.css";
 import "../styles/timetable.css";
@@ -69,35 +69,11 @@ import "../styles/timetable.css";
       <div></div>
       <div class="room-title room-a">RoomA</div>
       <div class="room-title room-b">RoomB</div>
-
-      <!-- コンテンツ行 -->
-      <div class="time-slot" style="grid-row: span 3;">
-        <span>10:00</span>
-      </div>
-
-      <div class="session-cell">
-        <TimetableCard id="649s102" sessionLabel="A1-SP" />
-      </div>
-
-      <div class="session-cell">
-        <TimetableCard id="649102" sessionLabel="B1-SP" />
-      </div>
-
-      <div class="session-cell">
-        <TimetableCard id="649102" sessionLabel="A1-SP" />
-      </div>
-
-      <div class="session-cell">
-        <TimetableCard id="649102" sessionLabel="B1-SP" />
-      </div>
-
-      <div class="session-cell">
-        <TimetableCard id="649102" sessionLabel="A1-SP" />
-      </div>
-
-      <div class="session-cell">
-        <TimetableCard id="649102" sessionLabel="B1-SP" />
-      </div>
+      <TimetableList hour={10} />
+      <TimetableList hour={11} />
+      <TimetableList hour={13} />
+      <TimetableList hour={14} />
+      <TimetableList hour={15} />
     </div>
   </article>
 </Layout>
