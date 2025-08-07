@@ -1,36 +1,46 @@
 ---
 import JobBoardCard from "../components/JobBoardCard.astro";
 import Layout from "../layouts/Layout.astro";
-import { constants } from "../constants";
+import { AllSponsors, constants } from "../constants";
 import NoImage from "../assets/sponsors/no-image.png";
 import Image from "astro/components/Image.astro";
 ---
 
 <style>
   .job-board {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding: 20px;
     gap: 24px;
+  }
+
+  @media (max-width: 900px) {
+    .job-board {
+      grid-template-columns: 1fr 1fr; /* 画面が900px以下なら2列 */
+    }
+  }
+  @media (max-width: 600px) {
+    .job-board {
+      grid-template-columns: 1fr; /* 600px以下なら1列 */
+    }
   }
 </style>
 
 <Layout title="ジョブボード" titleEn="Job Board">
   <div class="job-board">
     {
-      constants.jobBoard.platinumGoldSponsors.map(
-        (sponsor) =>
-          sponsor.imageSrc !== NoImage && (
-            <JobBoardCard
-              src={sponsor.imageSrc}
-              alt={sponsor.name}
-              width={sponsor.width}
-              height={sponsor.height}
-              description={sponsor.dialog.description}
-            />
-          ),
-      )
+      AllSponsors().map((sponsor) => {
+        if (sponsor.jobBoard === null) return null;
+        return (
+          <JobBoardCard
+            src={sponsor.imageSrc}
+            alt={sponsor.name}
+            width={sponsor.width}
+            height={sponsor.height}
+            description={sponsor.jobBoard.description}
+          />
+        );
+      })
     }
   </div>
 </Layout>

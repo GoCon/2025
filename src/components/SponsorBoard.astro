@@ -149,22 +149,22 @@ const currentLocale = Astro.currentLocale || "ja";
     <ul>
       <li>
         <Image
-          src={constants.jobBoard.specialSponsor.imageSrc}
-          alt={constants.jobBoard.specialSponsor.name}
-          width={constants.jobBoard.specialSponsor.width}
-          height={constants.jobBoard.specialSponsor.height}
+          src={constants.sponsors.specialSponsor.imageSrc}
+          alt={constants.sponsors.specialSponsor.name}
+          width={constants.sponsors.specialSponsor.width}
+          height={constants.sponsors.specialSponsor.height}
           loading="lazy"
           priority
           style="cursor:pointer"
-          onclick={`const dialog = document.getElementById('${constants.jobBoard.specialSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+          onclick={`const dialog = document.getElementById('${constants.sponsors.specialSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
         />
 
         <Dialog
-          openId={constants.jobBoard.specialSponsor.dialog.openId}
+          openId={constants.sponsors.specialSponsor.dialog.openId}
           sponsorSectionTitle={currentLocale === "ja"
             ? "スペシャルスポンサー"
             : `Special Sponsor`}
-          sponsor={constants.jobBoard.specialSponsor}
+          sponsor={constants.sponsors.specialSponsor}
         />
       </li>
     </ul>
@@ -174,7 +174,7 @@ const currentLocale = Astro.currentLocale || "ja";
     <h2>Platinum "<span class="accent">Go</span> "ld</h2>
     <ul class="platinum-gold-sponsor-list">
       {
-        constants.jobBoard.platinumGoldSponsors.map((sponsor) => (
+        constants.sponsors.platinumGoldSponsors.map((sponsor) => (
           <li>
             <Image
               src={sponsor.imageSrc}
@@ -206,7 +206,7 @@ const currentLocale = Astro.currentLocale || "ja";
     <h2>Gold</h2>
     <ul class="gold-sponsor-list">
       {
-        constants.jobBoard.goldSponsors.map((sponsor) => (
+        constants.sponsors.goldSponsors.map((sponsor) => (
           <li>
             <Image
               src={sponsor.imageSrc}
@@ -235,7 +235,7 @@ const currentLocale = Astro.currentLocale || "ja";
     <h2>Silver</h2>
     <ul class="silver-sponsor-list">
       {
-        constants.jobBoard.silverSponsors.map(
+        constants.sponsors.silverSponsors.map(
           (sponsor) =>
             sponsor.imageSrc !== NoImage && (
               <li>
@@ -300,10 +300,10 @@ const currentLocale = Astro.currentLocale || "ja";
       (
         <li>
           <Image
-            src={constants.jobBoard.toolSponsor.imageSrc}
-            alt={constants.jobBoard.toolSponsor.name}
-            width={constants.jobBoard.toolSponsor.width}
-            height={constants.jobBoard.toolSponsor.height}
+            src={constants.sponsors.toolSponsor.imageSrc}
+            alt={constants.sponsors.toolSponsor.name}
+            width={constants.sponsors.toolSponsor.width}
+            height={constants.sponsors.toolSponsor.height}
             loading="lazy"
             priority
           />

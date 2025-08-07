@@ -29,8 +29,9 @@ const { src, alt, width, height, description } = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: stretch;
     width: 100%;
+    flex: 1;
   }
 
   .board-card img {
@@ -53,14 +54,16 @@ const { src, alt, width, height, description } = Astro.props;
 
 <div class="board-card">
   <div class="board-card-inner">
-    <Image
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      loading="lazy"
-      priority
-    />
+    <div style="flex: 1">
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading="lazy"
+        priority
+      />
+    </div>
 
     {description && <p>{description}</p>}
 
