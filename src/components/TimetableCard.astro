@@ -2,6 +2,13 @@
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import sessions from "../data/sessions.json";
+import {
+  getFormattedTime,
+  getSessionRoom,
+  getSessionSpeakerName,
+  getSessionSpeakerThumbnailSrc,
+  getSessionTime,
+} from "../utils/timetable";
 
 interface Props {
   /**
@@ -20,52 +27,10 @@ const { id, sessionLabel } = Astro.props;
 
 const currentLocale = Astro.currentLocale || "ja";
 
-/**
- * セッションの時間区分を取得
- * @param categoryItems カテゴリー
- * @returns セッションの時間区分
- */
-const getSessionTime = (categoryItems: number[]) => {
-  // セッションのタイプを取得
-  const sessionType = sessions.categories.find(
-    (category) => category.title === "Session Type",
-  );
-
-  return (
-    sessionType?.items.find((item) => categoryItems.includes(item.id))?.name ||
-    ""
-  );
-};
-
-/**
- * 日時を時間フォーマットに変換
- * @param time 日時
- * @returns フォーマットされた時間
- */
-const getFormattedTime = (time: string) => {
-  const date = new Date(time);
-  return new Intl.DateTimeFormat("ja-JP", {
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(date);
-};
-
 // 現在のセッションを取得
 const session = sessions.sessions.find((session) => session.id === id);
-if (!session) return null;
 
-const title = session.title;
-const timeStart = getFormattedTime(session.startsAt);
-const timeEnd = getFormattedTime(session.endsAt);
-const sessionTime = getSessionTime(session.categoryItems);
-const room =
-  sessions.rooms.find((room) => room.id === session.roomId)?.name || "";
-const speakerName =
-  sessions.speakers.find((speaker) => speaker.id === session.speakers.at(0))
-    ?.fullName || "";
-const speakerThumbnailSrc =
-  sessions.speakers.find((speaker) => speaker.id === session.speakers.at(0))
-    ?.profilePicture || "";
+if (!session) return null;
 ---
 
 <style>
@@ -155,11 +120,15 @@ const speakerThumbnailSrc =
   }
 </style>
 
-<section class={`timetable-card ${room === "RoomA" ? "room-a" : "room-b"}`}>
+<section
+  class={`timetable-card ${getSessionRoom(session.roomId) === "RoomA" ? "room-a" : "room-b"}`}
+>
   <div class="card-header">
-    <p class="card-header-time">{timeStart} - {timeEnd}</p>
+    <p class="card-header-time">
+      {getFormattedTime(session.startsAt)} - {getFormattedTime(session.endsAt)}
+    </p>
     <p
-      class={`card-header-session-id ${room === "RoomA" ? "room-a" : "room-b"}`}
+      class={`card-header-session-id ${getSessionRoom(session.roomId) === "RoomA" ? "room-a" : "room-b"}`}
     >
       {sessionLabel}
     </p>
@@ -167,21 +136,23 @@ const speakerThumbnailSrc =
   <h3 class="card-title">
     <a
       href={getRelativeLocaleUrl(currentLocale, `/timetable/${id}`)}
-      class="card-title-link">{title}</a
+      class="card-title-link">{session.title}</a
     >
   </h3>
   <div class="card-footer">
     <div class="speaker-info">
       <Image
-        src={speakerThumbnailSrc}
-        alt={speakerName}
+        src={getSessionSpeakerThumbnailSrc(session.speakers.at(0))}
+        alt={getSessionSpeakerName(session.speakers.at(0))}
         width={24}
         height={24}
         loading="lazy"
         class="speaker-thumbnail"
       />
-      <p class="speaker-name">{speakerName}</p>
+      <p class="speaker-name">
+        {getSessionSpeakerName(session.speakers.at(0))}
+      </p>
     </div>
-    <p class="session-time">{sessionTime}</p>
+    <p class="session-time">{getSessionTime(session.categoryItems)}</p>
   </div>
 </section>
