@@ -12,7 +12,7 @@ const currentLocale = Astro.currentLocale || "ja";
   <div class="footer-navigation">
     <div class="footer-body">
       <div class="link-list">
-        <div class="link-column">
+        <div class="link-column site-link-group">
           <div class="link-group">
             <a href={getRelativeLocaleUrl(currentLocale)} class="text-link"
               >Home</a
@@ -140,7 +140,7 @@ const currentLocale = Astro.currentLocale || "ja";
     width: 100%;
     margin: 0 auto;
     gap: 24px;
-    padding: 0 20px;
+    padding: 0 24px;
     box-sizing: border-box;
   }
 
@@ -266,17 +266,15 @@ const currentLocale = Astro.currentLocale || "ja";
     background: var(--gradient);
   }
 
+  @media (max-width: 860px) {
+    .site-link-group {
+      display: none;
+    }
+  }
+
   @media (max-width: 768px) {
     .footer-navigation {
       border-radius: 20px 20px 0 0;
-    }
-
-    .link-list {
-      display: none;
-    }
-
-    hr {
-      display: none;
     }
 
     .footer-info {
