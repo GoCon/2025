@@ -15,7 +15,6 @@ const currentLocale = Astro.currentLocale || "ja";
   }
 
   .venue-sponsor img,
-  .special-sponsor img,
   .platinum-gold-sponsor-list img,
   .gold-sponsor-list img,
   .silver-sponsor-list img,
@@ -24,6 +23,15 @@ const currentLocale = Astro.currentLocale || "ja";
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .special-sponsor img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
     margin: 0 auto;
   }
@@ -62,6 +70,7 @@ const currentLocale = Astro.currentLocale || "ja";
     max-height: 100px;
     min-width: 120px;
     width: 100%;
+    margin: 0;
   }
   .tool-sponsor-list li {
     max-width: 320px;
@@ -74,7 +83,6 @@ const currentLocale = Astro.currentLocale || "ja";
   .platinum-gold-sponsor-list,
   .gold-sponsor-list,
   .silver-sponsor-list,
-  .bronze-sponsor-list,
   .tool-sponsor-list {
     display: flex;
     flex-wrap: wrap;
@@ -84,6 +92,18 @@ const currentLocale = Astro.currentLocale || "ja";
     list-style: none;
     text-align: center;
     padding: 0;
+  }
+
+  .bronze-sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
   }
 
   @media (max-width: 1024px) {
@@ -114,32 +134,6 @@ const currentLocale = Astro.currentLocale || "ja";
 </style>
 
 <div class="sponsor-section">
-  <div>
-    <h2>{currentLocale === "ja" ? "会場スポンサー" : "Venue Sponsor"}</h2>
-    <ul class="venue-sponsor">
-      <li>
-        <Image
-          src={constants.sponsors.venueSponsor.imageSrc}
-          alt={constants.sponsors.venueSponsor.name}
-          width={constants.sponsors.venueSponsor.width}
-          height={constants.sponsors.venueSponsor.height}
-          loading="lazy"
-          priority
-          style="cursor:pointer"
-          onclick={`const dialog = document.getElementById('${constants.sponsors.venueSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
-        />
-
-        <Dialog
-          openId={constants.sponsors.venueSponsor.dialog.openId}
-          sponsorSectionTitle={currentLocale === "ja"
-            ? "会場スポンサー"
-            : "Venue Sponsor"}
-          sponsor={constants.sponsors.venueSponsor}
-        />
-      </li>
-    </ul>
-  </div>
-
   <div class="special-sponsor">
     <h2>
       {currentLocale === "ja" ? "スペシャルスポンサー" : "Special Sponsor"}
@@ -163,6 +157,32 @@ const currentLocale = Astro.currentLocale || "ja";
             ? "スペシャルスポンサー"
             : `Special Sponsor`}
           sponsor={constants.sponsors.specialSponsor}
+        />
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>{currentLocale === "ja" ? "会場スポンサー" : "Venue Sponsor"}</h2>
+    <ul class="venue-sponsor">
+      <li>
+        <Image
+          src={constants.sponsors.venueSponsor.imageSrc}
+          alt={constants.sponsors.venueSponsor.name}
+          width={constants.sponsors.venueSponsor.width}
+          height={constants.sponsors.venueSponsor.height}
+          loading="lazy"
+          priority
+          style="cursor:pointer"
+          onclick={`const dialog = document.getElementById('${constants.sponsors.venueSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+        />
+
+        <Dialog
+          openId={constants.sponsors.venueSponsor.dialog.openId}
+          sponsorSectionTitle={currentLocale === "ja"
+            ? "会場スポンサー"
+            : "Venue Sponsor"}
+          sponsor={constants.sponsors.venueSponsor}
         />
       </li>
     </ul>
@@ -251,13 +271,12 @@ const currentLocale = Astro.currentLocale || "ja";
       }
     </ul>
   </div>
-  <!--
-  08/31 の締め切り終了後に対応する
+
   <div>
     <h2>Bronze</h2>
     <ul class="bronze-sponsor-list">
       {
-        constants.jobBoard.bronzeSponsors.map((sponsor) => (
+        constants.sponsors.bronzeSponsors.map((sponsor) => (
           <li>
             <Image
               src={sponsor.imageSrc}
@@ -273,6 +292,8 @@ const currentLocale = Astro.currentLocale || "ja";
     </ul>
   </div>
 
+  <!--
+  08/31 の締め切り終了後に対応する
   <div>
     <h2>Gopher</h2>
     <ul class="gopher-sponsor-list">
