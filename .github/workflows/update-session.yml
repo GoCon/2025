@@ -1,0 +1,56 @@
+name: Update Sessionize Data
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch session data
+        run: |
+          curl -sSL "$SESSIONIZE_SESSION_API" > src/data/sessions.json
+        env:
+          SESSIONIZE_SESSION_API: ${{ secrets.SESSIONIZE_SESSION_API }}
+
+      - name: Fetch speaker data
+        run: |
+          curl -sSL "$SESSIONIZE_SPEAKER_API" > src/data/speakers.json
+        env:
+          SESSIONIZE_SPEAKER_API: ${{ secrets.SESSIONIZE_SPEAKER_API }}
+
+      - name: Fetch timetable data
+        run: |
+          curl -sSL "$SESSIONIZE_TIMETABLE_API" > src/data/timetable.json
+        env:
+          SESSIONIZE_TIMETABLE_API: ${{ secrets.SESSIONIZE_TIMETABLE_API }}
+
+      - name: Check for changes
+        id: git_diff
+        run: |
+          if [[ -n "$(git status --porcelain src/data/)" ]]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Set branch name
+        id: set_branch
+        run: |
+          echo "branch=update-session-$(date +'%H%M%S')" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        if: steps.git_diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          branch: ${{ steps.set_branch.outputs.branch }}
+          title: "【$(date +'%Y/%m/%d')】セッション情報更新"
+          commit-message: "Update sessionize data"
+          body: "Sessionize APIから最新データを取得し、sessions/speakers/timetable.jsonを更新しました。"
+          add-paths: |
+            src/data/sessions.json
+            src/data/speakers.json
+            src/data/timetable.json
