@@ -1,0 +1,154 @@
+---
+import TimetableCard from "./TimetableCard.astro";
+import CommonTimetableCard from "./CommonTimetableCard.astro";
+import {
+  getClassifiedSessions,
+  getFormattedTime,
+  getTimeSlotSpanCount,
+  isTimeSlotOccupied,
+} from "../../utils/timetable";
+import WorkshopCard from "./WorkshopCard.astro";
+
+interface Props {
+  /**
+   * イベントの日付
+   * @example "2025-01-01"
+   */
+  eventDate: string;
+}
+
+const { eventDate } = Astro.props;
+
+// 指定した時間帯内の各部屋のセッション情報を所得する
+const classifiedSessions = getClassifiedSessions(eventDate);
+
+// セッションがない場合は何も表示しない
+if (classifiedSessions.length === 0) {
+  return null;
+}
+---
+
+<style>
+  .time-slot {
+    display: flex;
+    align-items: flex-start;
+
+    span {
+      position: sticky;
+      top: calc(88px + 16px);
+      left: 0;
+      z-index: 1;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    @media screen and (max-width: 860px) {
+      display: none;
+    }
+  }
+
+  .session-cell {
+    display: flex;
+    height: 100%;
+
+    @media screen and (max-width: 860px) {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      &.empty {
+        display: none;
+      }
+    }
+  }
+</style>
+
+{
+  // 1時間毎にセッション情報を描画
+  classifiedSessions.map((timeSlotHour) => {
+    return (
+      <>
+        {/* 1時間毎の時間帯のタイトル */}
+        <div
+          class="time-slot"
+          style={`grid-row: span ${timeSlotHour.timeSlots.length};`}
+        >
+          <span>{timeSlotHour.hour.toString().padStart(2, "0")}:00</span>
+        </div>
+        {/* 各部屋のセッション情報を描画 */}
+        {timeSlotHour.timeSlots.map((slot) => {
+          // 列ごと（部屋ごと）に取得
+          const room1 = slot.room1?.session;
+          const room2 = slot.room2?.session;
+          const workshop = slot.workshop;
+
+          // 跨ぐ行数を計算
+          const room2RowSpan = getTimeSlotSpanCount(
+            eventDate,
+            room2?.startsAt,
+            room2?.endsAt,
+          );
+
+          // 前のセッションが跨がっているかどうかを確認
+          const room2Occupancy = isTimeSlotOccupied(
+            eventDate,
+            67045,
+            slot.slotStart,
+          );
+
+          return (
+            <>
+              {/* Room 1 */}
+              {/* MEMO: スマホ時はGrid表示ではなくなるので要素ごと表示させない */}
+              <div class={`session-cell room1 active ${room1 ? "" : "empty"}`}>
+                {/* MEMO: isServiceSessionがtrueの場合は休憩かWorkshopなのでCommonTimetableCardを使用 */}
+                {room1?.isServiceSession ? (
+                  <CommonTimetableCard
+                    id={room1.id}
+                    title={room1.title}
+                    startAt={getFormattedTime(room1.startsAt)}
+                    endAt={getFormattedTime(room1.endsAt)}
+                  />
+                ) : (
+                  <TimetableCard session={room1} />
+                )}
+              </div>
+              {/* Room 2 */}
+              {/* MEMO: 前の時間帯のセッションが跨がる場合は描画しない */}
+              {!room2Occupancy && (
+                // MEMO: スマホ時はGrid表示ではなくなるので要素ごと表示させない
+                <div
+                  class={`session-cell room2 ${room2 ? "" : "empty"}`}
+                  style={
+                    // セッションが跨がる場合は行を跨ぐ
+                    room2RowSpan > 1
+                      ? `grid-row: span ${room2RowSpan};`
+                      : undefined
+                  }
+                >
+                  {workshop.length > 0 ? (
+                    // ワークショップセッションの場合
+                    <WorkshopCard rooms={workshop} />
+                  ) : room2?.isServiceSession ? (
+                    // 休憩の場合
+                    <CommonTimetableCard
+                      id={room2.id}
+                      title={room2.title}
+                      startAt={getFormattedTime(room2.startsAt)}
+                      endAt={getFormattedTime(room2.endsAt)}
+                    />
+                  ) : (
+                    // 通常のセッションの場合
+                    <TimetableCard session={room2} />
+                  )}
+                </div>
+              )}
+            </>
+          );
+        })}
+      </>
+    );
+  })
+}

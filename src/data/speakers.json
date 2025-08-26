@@ -1,0 +1,858 @@
+[
+  {
+    "id": "a5f2fdf2-4459-4f50-982e-686d4e9832aa",
+    "firstName": "Asuka",
+    "lastName": "Yagi",
+    "fullName": "Asuka Yagi",
+    "bio": "株式会社モニクル所属のSWE．\r\nクロスプラットフォームの文脈でWasmに興味があり，Wasmに関する同人誌や商業誌を執筆しています．",
+    "tagLine": "株式会社モニクル",
+    "profilePicture": "https://sessionize.com/image/496a-400o400o1-RwVgnKXw5yunuWcDFZ9vko.png",
+    "sessions": [
+      {
+        "id": 959057,
+        "name": "Pure Goで体験するWasmの未来"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/a_skua",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "fde8dc5c-840f-450c-81d1-19d0f40a4c11",
+    "firstName": "Daiki",
+    "lastName": "Kubo",
+    "fullName": "Daiki Kubo",
+    "bio": "バックエンドエンジニアです。 ゲームが好きです。",
+    "tagLine": "CyberAgent, Inc.",
+    "profilePicture": "https://sessionize.com/image/a6fa-400o400o1-fXqChC8qA5esbtR1kErFoS.png",
+    "sessions": [
+      {
+        "id": 957911,
+        "name": "Deep Dive Into testing/synctest"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "ed8f4fa1-fcde-46e3-81d3-d89b31fa12e6",
+    "firstName": "Itsuki",
+    "lastName": "Shirahige",
+    "fullName": "Itsuki Shirahige",
+    "bio": "学生だったり働いてたり。とにかく技術が好きです。",
+    "tagLine": "Software Engineer",
+    "profilePicture": "https://sessionize.com/image/5dd0-400o400o1-hUPetvSbYAWLJvPHsagQHn.png",
+    "sessions": [
+      {
+        "id": 959054,
+        "name": "math/rand/v2への移行と実践"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/shiron_dev",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "1356ac8d-2eb2-415b-8aff-70b2c3556a4d",
+    "firstName": "Jyotsna",
+    "lastName": "Gupta",
+    "fullName": "Jyotsna Gupta",
+    "bio": "Jyotsna is an Open Source Enthusiast, previously worked as a Senior Software Engineer at Gojek, Bangalore. She has been a TechSpeaker at Mozilla and volunteers to Mozilla in her free time as an Add-on Content Reviewer & Recommended Extensions Community Board. She has served on the judging panel for the Firefox Quantum Extensions Challenge. She is also a Firefox Add-ons Mentor and has published a privacy-themed add-on PrivateX.  Also, she is the founder/organizer at Women Who Go Bangalore.\r\n\r\nFor her contributions to Mozilla, her name is also listed in about:credits and the credits page of every shipped Firefox browser. She energizes herself by playing Badminton, TT, Carrom, Chess, and Basketball. She prefers to spend most of the time in her room, else she feels to travel the world. If you don’t see her doing any of the above, then you’ll find probably find her sleeping and dreaming for hours, maybe days?",
+    "tagLine": "Ex-Senior Software Engineer at Gojek | Mozilla Tech Speaker",
+    "profilePicture": "https://sessionize.com/image/c630-400o400o1-8d-2eb2-415b-8aff-70b2c3556a4d.acdedae8-07ea-45d9-a50e-0fe57480f129.jpg",
+    "sessions": [
+      {
+        "id": 957799,
+        "name": "Decoding the Black Box: Understanding the Go Compiler"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/imJenal",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "f02c223f-8e2f-4e8c-9051-98185b28e81a",
+    "firstName": "Kanata",
+    "lastName": "Miyahana",
+    "fullName": "Kanata Miyahana",
+    "bio": "2021年からGoの開発に関わっています\r\nGoの中でも特に仕様や静的解析に強い興味関心があり、調べたことは https://zenn.dev/kkkxxx にアウトプットしています。",
+    "tagLine": "Engineer",
+    "profilePicture": "https://sessionize.com/image/63c0-400o400o1-JVJDgfoXnSXi5wW1njJfAn.jpg",
+    "sessions": [
+      {
+        "id": 958977,
+        "name": "Go1.25新機能 testing/synctest で高速＆確実な並列テストを実現する方法"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "eac23b7f-0027-485a-973e-b7e6158e04da",
+    "firstName": "Kaoru",
+    "lastName": "Muta",
+    "fullName": "Kaoru Muta",
+    "bio": "弊社の新規事業であるリユースプラットフォームCosmosの開発に携わっているBackend Engineerです。メントスと呼ばれています。",
+    "tagLine": "株式会社BuySell Technologies",
+    "profilePicture": "https://sessionize.com/image/dfed-400o400o1-rsgcNP1ktVhgxduu8qz37V.png",
+    "sessions": [
+      {
+        "id": 959035,
+        "name": "私達はmodernize packageに夢を見るか feat. go/analysis, go/ast"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/m_t_tion1",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "4926b4e4-5468-4cf7-abdf-2b5b05eca1b7",
+    "firstName": "Kazuto",
+    "lastName": "Maeda",
+    "fullName": "Kazuto Maeda",
+    "bio": "2023/04 からGo言語を始めました。主にWebシステムのサーバサイドの開発を行っています。",
+    "tagLine": "Morisawa inc.",
+    "profilePicture": "https://sessionize.com/image/69db-400o400o1-Eq5vvYaFAjj4pFEvBw4Ub5.jpg",
+    "sessions": [
+      {
+        "id": 997075,
+        "name": "Goを使ってTDDを体験しよう！！"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/chiroruxxxx",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "d8d975e3-efe8-4b14-9afa-1baed8a9c4dd",
+    "firstName": "Keisuke",
+    "lastName": "Hidaka",
+    "fullName": "Keisuke Hidaka",
+    "bio": "楽しいEbitengineを広めたいです",
+    "tagLine": "ソフトウェアエンジニア",
+    "profilePicture": "https://sessionize.com/image/5667-400o400o1-pwMbwtYbyxgS4o2P1HYQxL.png",
+    "sessions": [
+      {
+        "id": 956553,
+        "name": "全てGoで作るP2P対戦ゲーム入門"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/ponyo877",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "10deefb8-2f9d-4bc7-a19e-28733f5aa445",
+    "firstName": "Keisuke",
+    "lastName": "Ishigami",
+    "fullName": "Keisuke Ishigami",
+    "bio": "CyberAgent でソフトウェアエンジニアをしています。技術のトレードオフについて議論を重ねながらシステム設計をすることが好きです。",
+    "tagLine": "CyberAgent, Inc.",
+    "profilePicture": "https://sessionize.com/image/d47d-400o400o1-DtkaKSWKc8myQEL7vB5ace.jpg",
+    "sessions": [
+      {
+        "id": 959006,
+        "name": "Swiss Table の実装に Deep Dive !"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/kei01234kei",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "88468bff-1de7-454b-a688-df25c8c086ae",
+    "firstName": "Kengo",
+    "lastName": "Sato",
+    "fullName": "Kengo Sato",
+    "bio": "飲フラエンジニア兼TinyGo Keeb運営スタッフ兼TinyGo Keebook編集長",
+    "tagLine": "satoken",
+    "profilePicture": "https://sessionize.com/image/16a3-400o400o1-VffEmiubvwUj2GoaRcUUor.png",
+    "sessions": [
+      {
+        "id": 998166,
+        "name": "TinyGo + Gopherくん基板で遊ぼう"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/ken5owata",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "0028ec2b-7cc7-436e-8cc6-302cf8d4e752",
+    "firstName": "Ken'ichiro",
+    "lastName": "Oyama",
+    "fullName": "Ken'ichiro Oyama",
+    "bio": "少し実用的で小さなOSSを書くのが趣味。",
+    "tagLine": "Tailor Inc.",
+    "profilePicture": "https://sessionize.com/image/fae8-400o400o1-aLWFrqkCA9K7Afrq7DodJA.png",
+    "sessions": [
+      {
+        "id": 959053,
+        "name": "analysis パッケージの仕組みの上でMulti linter with configを実現する"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/k1LoW",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "0d2cf6e6-b9d2-4efd-bb40-0fc8d43a5eaf",
+    "firstName": "Koga",
+    "lastName": "Mochiduki",
+    "fullName": "Koga Mochiduki",
+    "bio": "普段はJavaを使用するシステムの設計開発をしています。好きな標準ライブラリはsync。",
+    "tagLine": "System Engineer",
+    "profilePicture": "https://sessionize.com/image/5925-400o400o1-Pdnu9Ru4gQ87zvnLZkPkHc.jpg",
+    "sessions": [
+      {
+        "id": 939749,
+        "name": "defer f()とdefer fの挙動を誤解していた話"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/M4338_nami",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "84837a15-d9bf-4e0e-8e3e-f2c63777aa2a",
+    "firstName": "Masaaki",
+    "lastName": "Goshima",
+    "fullName": "Masaaki Goshima",
+    "bio": "I am a software engineer at Merpay, and a member of the Engineering Productivity team.\r\n\r\nI love develop OSS and I made a lot of work (Here are examples).\r\n\r\n- [2012] gperl: a fast Perl5 language\r\n- [2013] PerlMotion: a toolchain for iOS and OS X development using the Perl5\r\n- [2019] go-yaml: a yet another YAML parser written in Go\r\n- [2020] go-json: a fast JSON serializer in Go\r\n- [2022] bigquery-emulator: a emulator of BigQuery\r\n- [2023] mercari/grpc-federation",
+    "tagLine": "Software Engineer at Merpay",
+    "profilePicture": "https://sessionize.com/image/163d-400o400o1-G57AFNZwzKQMUer2aHrhfc.jpg",
+    "sessions": [
+      {
+        "id": 958532,
+        "name": "Go で WebAssembly を利用した実用的なプラグインシステムの構築方法"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/goccy54",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "221beeb2-9d4f-41f8-9f86-c9818e137d72",
+    "firstName": "Masaaki",
+    "lastName": "Takasago",
+    "fullName": "Masaaki Takasago",
+    "bio": "Embedded software engineer who writes Go for work and hobby. Recently I've been working as a member of the TinyGo project. Author of the TinyGo book.",
+    "tagLine": "tinygo.org",
+    "profilePicture": "https://sessionize.com/image/751c-400o400o1-QBdgEXq79qHj5tWE2pVvo1.png",
+    "sessions": [
+      {
+        "id": 998804,
+        "name": "TinyGo Keeb Workshop"
+      },
+      {
+        "id": 959047,
+        "name": "TinyGo Keeb Tour から始まる OSS 初コントリビュートの物語"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/sago35tk",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "3850c72b-bc9a-40a3-8e99-7094f27364d2",
+    "firstName": "Masahiro",
+    "lastName": "Morinaga",
+    "fullName": "Masahiro Morinaga",
+    "bio": "2024年1月より、株式会社Voicyでバックエンドエンジニアをしています。\r\nモバイルアプリ向けのAPIを主に作っています。\r\n最近はKubernetesなどのコンテナ技術にもハマっています。",
+    "tagLine": "株式会社Voicy",
+    "profilePicture": "https://sessionize.com/image/7211-400o400o1-7M8EZyY3MLZzNRok9VCqgp.jpg",
+    "sessions": [
+      {
+        "id": 958892,
+        "name": "Goの字句解析を覗いてみる"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "66f326bd-0b7d-441a-a749-b7f829032016",
+    "firstName": "Naoki",
+    "lastName": "Kuroda",
+    "fullName": "Naoki Kuroda",
+    "bio": "I'm working at CyberAgent, Inc. \r\nAfter initially working as an engineer on advertising products in the AI Division, I'm currently developing a feature flag system called \"bucketeer\" (https://github.com/bucketeer-io/bucketeer) in the Developer Productivity department.",
+    "tagLine": "CyberAgent, Inc.",
+    "profilePicture": "https://sessionize.com/image/e355-400o400o1-pcZSfa5iZrtPnyPSErBYXF.jpeg",
+    "sessions": [
+      {
+        "id": 939638,
+        "name": "サプライチェーン攻撃に学ぶmoduleの仕組みとセキュリティ対策"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/knkurokuro7",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "796c09ac-9a0f-4b6a-8ad4-5d2ace452aa0",
+    "firstName": "Reo",
+    "lastName": "Uehara",
+    "fullName": "Reo Uehara",
+    "bio": "Goとサウナが好き",
+    "tagLine": "株式会社Finatext",
+    "profilePicture": "https://sessionize.com/image/239d-400o400o1-4a31fc01-c070-4e20-9703-ffcf634d6352.jpg",
+    "sessions": [
+      {
+        "id": 957443,
+        "name": "Goで実現するgraceful shutdown: 実運用での課題と解決策"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/_uhzz_",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "89770bbf-216e-496f-b94b-4e63229ad8af",
+    "firstName": "Ryoko",
+    "lastName": "Tominaga",
+    "fullName": "Ryoko Tominaga",
+    "bio": "システムを安定させるため日々奮闘しています。",
+    "tagLine": "株式会社ZOZOバックエンドエンジニア",
+    "profilePicture": "https://sessionize.com/image/8757-400o400o1-RSSTaSPmUqesf4VjqqAC7H.jpg",
+    "sessions": [
+      {
+        "id": 951608,
+        "name": "GoのinterfaceとGenericsの内部構造と進化"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/turbofish_",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "fc5fcbb6-163c-4110-b688-c77bcbdc9a0a",
+    "firstName": "Ryosei",
+    "lastName": "Karaki",
+    "fullName": "Ryosei Karaki",
+    "bio": "I love Vocaloid.",
+    "tagLine": "CyberAgent, inc.",
+    "profilePicture": "https://sessionize.com/image/bb51-400o400o1-Mm2TTtzv8xKUei5f8J5j1X.jpg",
+    "sessions": [
+      {
+        "id": 958503,
+        "name": "コード生成なしでモック処理を実現！ovechkin-dm/mockioで学ぶメタプログラミング"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/karamaru_alpha",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "335be0e7-36af-4db1-afa2-21fba4af6c36",
+    "firstName": "Ryotaro",
+    "lastName": "Suzuki",
+    "fullName": "Ryotaro Suzuki",
+    "bio": "ゲームのバックエンドエンジニアです。圏論が好きです。",
+    "tagLine": "CyberAgent, Inc.",
+    "profilePicture": "https://sessionize.com/image/4812-400o400o1-4Ldkyz9c8ApkwNPcwhd5S5.jpg",
+    "sessions": [
+      {
+        "id": 958641,
+        "name": "なぜGoのジェネリクスはこの形なのか？ - Featherweight Goが明かす設計の核心"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "4ae43c21-4c2b-4757-944d-d95236895312",
+    "firstName": "Shoki",
+    "lastName": "Hata",
+    "fullName": "Shoki Hata",
+    "bio": "Software Engineer at Kanmu, Inc.",
+    "tagLine": "株式会社カンム",
+    "profilePicture": "https://sessionize.com/image/ff14-400o400o1-HJgwQjsrgCAHwmSKxaM9Qx.jpg",
+    "sessions": [
+      {
+        "id": 959021,
+        "name": "panicと向き合うGo開発 - nilawayで探る見逃されるnil参照とその対策"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/sho_hata_",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "b109987f-9b94-40d7-ba33-6385a63fd45a",
+    "firstName": "Shotaro",
+    "lastName": "Watanabe",
+    "fullName": "Shotaro Watanabe",
+    "bio": "Goと音楽が好きです。GENIEE CHATを開発しています。",
+    "tagLine": "株式会社ジーニー",
+    "profilePicture": "https://sessionize.com/image/d557-400o400o1-wERiLHpVa4jAXek7wJfHpS.jpg",
+    "sessions": [
+      {
+        "id": 958919,
+        "name": "Go1.24時代のユニットテスト品質向上"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "fe172802-a8f8-4ff5-ba0c-99a9d6a4b14e",
+    "firstName": "Shunsuke",
+    "lastName": "Nagano",
+    "fullName": "Shunsuke Nagano",
+    "bio": "Go歴は4年ぐらいです。業務ではTypescriptをメインで各ことが多いです。最近WebAssemblyについて勉強中です。",
+    "tagLine": "Ubie, Inc",
+    "profilePicture": "https://sessionize.com/image/499b-400o400o1-XpQEA1RDU76gh6eWYCg8DH.jpeg",
+    "sessions": [
+      {
+        "id": 958036,
+        "name": "encoding/json/v2で何が変わる? - v1からv2への変化を徹底比較"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/glassmonekey",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "104bcaaa-4f8a-4a41-b026-87f0e6c91aab",
+    "firstName": "Shunsuke",
+    "lastName": "Wakamatsu",
+    "fullName": "Shunsuke Wakamatsu",
+    "bio": "株式会社ディー・エヌ・エー所属。普段はGoでWebバックエンドアプリケーションの開発を行う。また、OSSとしてツールやライブラリの開発を行う。",
+    "tagLine": "DeNA Co.,Ltd.",
+    "profilePicture": "https://sessionize.com/image/3765-400o400o1-UcbbeZtEhHPqHJTNhRyxdQ.jpg",
+    "sessions": [
+      {
+        "id": 1000109,
+        "name": "作って理解するGOCACHEPROG"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/mazrean22",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "aceb7644-e5b5-42de-8757-dad5ec94734d",
+    "firstName": "Takeru",
+    "lastName": "Hayasaka",
+    "fullName": "Takeru Hayasaka",
+    "bio": "Seconded from Sakura Internet to BBSakura Networks Inc., currently working on developing a dataplane for mobile networks using eBPF.",
+    "tagLine": "BBSakura Networks.Inc, Senior Software Engineer",
+    "profilePicture": "https://sessionize.com/image/257d-400o400o1-9cmWZt8eTnsMuHcNcy3Ma2.jpg",
+    "sessions": [
+      {
+        "id": 958952,
+        "name": "Goで体感するMultipath TCP ― Go 1.24 時代の MPTCP Listener を理解する"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/takemioIO",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "fc2a76e4-1744-42f6-b6e0-182c48847422",
+    "firstName": "Tatsuya",
+    "lastName": "Kaneko",
+    "fullName": "Tatsuya Kaneko",
+    "bio": "株式会社PR TIMES PR TIMES事業ユニット第一開発部長CTO。ISUCON本の著者の1人。ISUCON練習用の https://github.com/catatsuy/private-isu など、数々のOSSを作成・メンテナンスを行っている。",
+    "tagLine": "株式会社PR TIMES PR TIMES事業ユニット第一開発部長CTO",
+    "profilePicture": "https://sessionize.com/image/ba61-400o400o1-M6XSdobzekuZXa8CHYaA26.png",
+    "sessions": [
+      {
+        "id": 945921,
+        "name": "公式singleflightを約2倍高速化したGenerics対応実装と最適化"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/catatsuy",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "64bc44d2-39b3-4740-a51f-e00649e59f13",
+    "firstName": "Vaibhav",
+    "lastName": "Gupta",
+    "fullName": "Vaibhav Gupta",
+    "bio": "Working as a backend engineer with experience in Python, Golang, and distributed systems. I previously worked at  ANDPAD Inc Japan , and now builds scalable energy optimization platforms at Qenest Holdings Hanwha Japan.\r\nA returning GoConference speaker, I enjoys exploring Go’s internals from a beginner’s lens—this time focusing on how goroutines and the scheduler work behind go func().",
+    "tagLine": "Backend Engineer | Golang Developer ",
+    "profilePicture": "https://sessionize.com/image/6cc1-400o400o1-q5DxUBcXT8R8qCHeLpoNi.jpg",
+    "sessions": [
+      {
+        "id": 948071,
+        "name": "After go func(): Goroutines Through a Beginner’s Eye"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/97GuptaVaibhav",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "4e681ac2-97ae-4441-b973-e0397cde0994",
+    "firstName": "Yoichiro",
+    "lastName": "Shimizu",
+    "fullName": "Yoichiro Shimizu",
+    "bio": "Goが好きなソフトウェアエンジニアです。",
+    "tagLine": "株式会社LayerX, テックリード",
+    "profilePicture": "https://sessionize.com/image/f62a-400o400o1-W4PST9iULBMBKpb2xBmwTJ.png",
+    "sessions": [
+      {
+        "id": 958590,
+        "name": "それでも私は Contextに値を詰めたい"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/budougumi0617",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "398a776b-adf3-48b6-8510-7891a404302d",
+    "firstName": "Yoshi",
+    "lastName": "Yamaguchi",
+    "fullName": "Yoshi Yamaguchi",
+    "bio": "アマゾンウェブサービスジャパン合同会社シニアデベロッパーアドボケイト。AWS製品の普及と技術支援を担当し、特にオブザーバビリティ、SRE、DevOpsといった領域を専門とする。",
+    "tagLine": "アマゾンウェブサービスジャパン合同会社 シニアデベロッパーアドボケイト",
+    "profilePicture": "https://sessionize.com/image/d3eb-400o400o1-DSUTejxyYJ9x3wuuxcuKo2.jpg",
+    "sessions": [
+      {
+        "id": 952323,
+        "name": "Goのビルドシステムの変遷"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/ymotongpoo",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "f11fdfa9-b120-4fb1-8d89-48564ef645c2",
+    "firstName": "Yu",
+    "lastName": "Serizawa",
+    "fullName": "Yu Serizawa",
+    "bio": "2018年に株式会社メルペイに入社し、コード決済システムのバックエンドを担当。その後、2022年に株式会社LayerXにソフトウェアエンジニアとして入社し、現在はバクラク勤怠のテックリードを担当。 Go言語が好きで、最近はよくAI Coding周りのCLIツールを開発している。ちなみに \"upamune\" は 「うぱみゅん」と読む。",
+    "tagLine": "LayerX, Inc. / Software Engineer",
+    "profilePicture": "https://sessionize.com/image/7c48-400o400o1-Xpw8aB9xjx42aKTyWQQApU.png",
+    "sessions": [
+      {
+        "id": 958624,
+        "name": "Flaky Testへの現実解をGoのプロポーザルから考える"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/upamune",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "ad229220-4337-45b0-b144-3e7241a1cb3c",
+    "firstName": "Yuki",
+    "lastName": "Hamagami",
+    "fullName": "Yuki Hamagami",
+    "bio": "Backend Engineer",
+    "tagLine": "DMM.com LLC",
+    "profilePicture": "https://sessionize.com/image/c3da-400o400o1-TK4kaLDFdeGGNdHstHyPWR.png",
+    "sessions": [
+      {
+        "id": 959061,
+        "name": "Go1.24で進化したmap型について理解する"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/ao0000dev",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "f7a00995-59de-41e2-94bf-aa249046889e",
+    "firstName": "Yuki",
+    "lastName": "Ito",
+    "fullName": "Yuki Ito",
+    "bio": "newmo株式会社｜移動で地域をカラフルに",
+    "tagLine": "newmo 株式会社",
+    "profilePicture": "https://sessionize.com/image/b55c-400o400o1-sqVAEzoZrutSxmioFPTPdK.jpg",
+    "sessions": [
+      {
+        "id": 1013431,
+        "name": "†開発を加速させる黒魔術講座†"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "67ebc04e-eeac-45a2-813a-a675ff34595b",
+    "firstName": "Yuuki",
+    "lastName": "Magawa",
+    "fullName": "Yuuki Magawa",
+    "bio": "I'm developing 'SNKRDUNK' a marketplace app for sneakers and TCG used by over 6 million people monthly!",
+    "tagLine": "Software Engineer",
+    "profilePicture": "https://sessionize.com/image/ce1f-400o400o1-TrwagpT9ETdJwRg4kfsMYS.png",
+    "sessions": [
+      {
+        "id": 959089,
+        "name": "uniqueパッケージの内部実装を支えるweak pointerの話"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "dd19a405-bd09-44d1-a261-03cdcea1d545",
+    "firstName": "泰智",
+    "lastName": "前田",
+    "fullName": "泰智 前田",
+    "bio": "インペリアルカレッジロンドン",
+    "tagLine": "インペリアルカレッジロンドン",
+    "profilePicture": "https://sessionize.com/image/7dab-400o400o1-YEvG47JatHPAMfPGA8B2ua.png",
+    "sessions": [
+      {
+        "id": 958432,
+        "name": "カリカリなMutexを作る"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "8d6dd0bb-35f1-4e7b-81fc-e6899fe327e7",
+    "firstName": "瑛太郎",
+    "lastName": "横山",
+    "fullName": "瑛太郎 横山",
+    "bio": "ディップ株式会社 新卒1年目 バックエンド兼インフラ",
+    "tagLine": "ディップ株式会社",
+    "profilePicture": "https://sessionize.com/image/3ead-400o400o1-4sMArA9N7dzLt8JonitRHY.jpg",
+    "sessions": [
+      {
+        "id": 958986,
+        "name": "Go 1.24の新機能:tool directivesでツールの環境構築の効率性・再現性を高める"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/komugi8448",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "356bd74e-ffb6-4ddc-83ff-006ba9973f27",
+    "firstName": "白石",
+    "lastName": "耕一 (zchee)",
+    "fullName": "白石 耕一 (zchee)",
+    "bio": "独学でエンジニアリングを学び、2018年にメルペイ立ち上げに参画。アーキテクトを経験。2023年4月、Gaudiy入社。開発横断チームで、バックエンドとインフラ基盤のリードを務める。",
+    "tagLine": "株式会社Gaudiy, Head of Backend Enabling",
+    "profilePicture": "https://sessionize.com/image/3252-400o400o1-WW2vu1ipmDZBJnE4rBGT6Z.png",
+    "sessions": [
+      {
+        "id": 958992,
+        "name": "Green Tea Garbage Collector の今：Go言語のコアチームによる試行錯誤の過程と共にメモリ管理最適化の実装を読み解く"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/_zchee_",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  }
+]

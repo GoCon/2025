@@ -1,0 +1,72 @@
+---
+interface Props {
+  /**
+   * セッションのID
+   * @example "session-1"
+   */
+  id: string;
+  /**
+   * セッションのタイトル
+   * @example 休憩
+   */
+  title: string;
+  /**
+   * セッションの開始時間
+   * @example 10:00
+   */
+  startAt: string;
+  /**
+   * セッションの終了時間
+   * @example 10:15
+   */
+  endAt: string;
+}
+
+const { id, title, startAt, endAt } = Astro.props;
+---
+
+<style>
+  .timetable-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+    padding: 16px 24px;
+    border-radius: 16px;
+    background-color: var(--surface-primary);
+    color: var(--text-primary);
+    border: 2px solid var(--surface-tertiary);
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-header-time {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .card-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.75;
+  }
+</style>
+
+<article class={`timetable-card`} aria-labelledby={`card-title-${id}`}>
+  <div class="card-header">
+    <p class="card-header-time">
+      {startAt} - {endAt}
+    </p>
+  </div>
+  <h3 id={`card-title-${id}`} class="card-title">
+    {title}
+  </h3>
+</article>

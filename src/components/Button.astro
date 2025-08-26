@@ -2,7 +2,7 @@
 import DoubleArrow from "../assets/icon/double-arrow.svg";
 
 interface Props {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "primitive-blue" | "primitive-cyan";
   size?: "small" | "large";
   fullWidth?: boolean;
   disabled?: boolean;
@@ -51,6 +51,14 @@ const {
       color: var(--surface-primary-dark);
     }
 
+    &.active {
+      &:hover {
+        background-color: var(--surface-primary);
+        border: 2px solid var(--surface-primary-dark);
+        color: var(--surface-primary-dark);
+      }
+    }
+
     & .arrow {
       fill: var(--surface-primary-dark);
     }
@@ -67,8 +75,58 @@ const {
       color: var(--surface-secondary-dark);
     }
 
+    &.active {
+      background-color: var(--surface-primary);
+      border: 2px solid var(--surface-secondary-dark);
+      color: var(--surface-secondary-dark);
+    }
+
     & .arrow {
       fill: var(--surface-secondary-dark);
+    }
+  }
+
+  .button--primitive-blue {
+    background-color: var(--primitive-blue);
+    border: 2px solid var(--primitive-blue);
+    color: var(--text-on-fill);
+
+    &:hover {
+      background-color: var(--surface-primary);
+      border: 2px solid var(--primitive-blue);
+      color: var(--primitive-blue);
+    }
+
+    &.active {
+      background-color: var(--surface-primary);
+      border: 2px solid var(--primitive-blue);
+      color: var(--primitive-blue);
+    }
+
+    & .arrow {
+      fill: var(--primitive-blue);
+    }
+  }
+
+  .button--primitive-cyan {
+    background-color: var(--primitive-cyan);
+    border: 2px solid var(--primitive-cyan);
+    color: var(--text-on-fill);
+
+    &:hover {
+      background-color: var(--surface-primary);
+      border: 2px solid var(--primitive-cyan);
+      color: var(--primitive-cyan);
+    }
+
+    &.active {
+      background-color: var(--surface-primary);
+      border: 2px solid var(--primitive-cyan);
+      color: var(--primitive-cyan);
+    }
+
+    & .arrow {
+      fill: var(--primitive-cyan);
     }
   }
 

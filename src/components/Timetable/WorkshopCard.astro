@@ -1,0 +1,134 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import {
+  getFormattedTime,
+  type getClassifiedSessions,
+} from "../../utils/timetable";
+
+interface Props {
+  /**
+   * ワークショップが開催される部屋ごとのセッション情報
+   */
+  rooms: ReturnType<
+    typeof getClassifiedSessions
+  >[0]["timeSlots"][0]["workshop"];
+}
+
+const { rooms } = Astro.props;
+
+const currentLocale = Astro.currentLocale || "ja";
+---
+
+<style>
+  .workshop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background-color: var(--primitive-light-cyan);
+    overflow: hidden;
+  }
+
+  .workshop-title {
+    margin: 0;
+    padding: 10px 24px;
+    background-color: #61b2c2;
+    color: var(--text-on-fill);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.75;
+  }
+
+  .workshop-rooms {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .timetable-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    padding: 14px 24px 20px;
+    border-radius: 10px;
+    background-color: var(--surface-primary);
+    border: 2px solid var(--primitive-cyan);
+    color: var(--text-primary);
+    box-sizing: border-box;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-header-time {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .card-header-room {
+    margin: 0;
+    padding: 4px 12px;
+    border-radius: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-on-fill);
+    background-color: #61b2c2;
+  }
+
+  .card-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.75;
+  }
+
+  .card-title-link {
+    color: var(--text-primary);
+    transition: ease color 0.3s;
+
+    &:hover {
+      color: var(--text-accent);
+    }
+  }
+</style>
+
+<section class="workshop">
+  <h3 class="workshop-title">Workshop</h3>
+  <div class="workshop-rooms">
+    {
+      rooms.map((room) => (
+        <article
+          class="timetable-card"
+          aria-labelledby={`card-title-${room.session.id}`}
+        >
+          <div class="card-header">
+            <p class="card-header-time">
+              {getFormattedTime(room.session.startsAt)} -{" "}
+              {getFormattedTime(room.session.endsAt)}
+            </p>
+            <p class="card-header-room">{room.name}</p>
+          </div>
+          <h4 id={`card-title-${room.session.id}`} class="card-title">
+            <a
+              href={getRelativeLocaleUrl(
+                currentLocale,
+                `/workshop/${room.session.id}`,
+              )}
+              class="card-title-link"
+            >
+              {room.session.title}
+            </a>
+          </h4>
+        </article>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,301 @@
+---
+import Button from "../Button.astro";
+import TimetableList from "./TimetableList.astro";
+---
+
+<script>
+  // PCとSPの境界の画面幅の閾値
+  const TRIGGER_WIDTH = 860;
+
+  // 表示する開催日のタイムテーブルを切り替える関数
+  const toggleDayNav = (e: Event, targetClassName: string) => {
+    // PCではクリックイベントを無効化
+    if (window.innerWidth > TRIGGER_WIDTH) return;
+
+    e.preventDefault();
+    // タイムテーブルの開催日ボタンの活性状況の切り替え
+    document
+      .querySelector(".timetable-day-nav-item.day1 > a")
+      ?.classList.remove("active");
+    document
+      .querySelector(".timetable-day-nav-item.day2 > a")
+      ?.classList.remove("active");
+    document
+      .querySelector(`.timetable-day-nav-item.${targetClassName} > a`)
+      ?.classList.add("active");
+
+    // タイムテーブルの開催日コンテンツの活性状況の切り替え
+    document
+      .querySelector(".timetable-section.day1")
+      ?.classList.remove("active");
+    document
+      .querySelector(".timetable-section.day2")
+      ?.classList.remove("active");
+    document
+      .querySelector(`.timetable-section.${targetClassName}`)
+      ?.classList.add("active");
+
+    // 選択状態をRoom 1に戻す
+    toggleRoomNav("room1");
+  };
+
+  // 表示する会場のタイムテーブルを切り替える関数
+  const toggleRoomNav = (targetClassName: string) => {
+    // タイムテーブルの会場ボタンの活性状況の切り替え
+    document
+      .querySelector(".timetable-room-nav-item.room1 > a")
+      ?.classList.remove("active");
+    document
+      .querySelector(".timetable-room-nav-item.room2 > a")
+      ?.classList.remove("active");
+    document;
+    document
+      .querySelector(`.timetable-room-nav-item.${targetClassName} > a`)
+      ?.classList.add("active");
+
+    // タイムテーブルの会場コンテンツの活性状況の切り替え
+    document
+      .querySelectorAll(".session-cell.room1")
+      ?.forEach((el) => el.classList.remove("active"));
+    document
+      .querySelectorAll(".session-cell.room2")
+      ?.forEach((el) => el.classList.remove("active"));
+    document
+      .querySelectorAll(`.session-cell.${targetClassName}`)
+      ?.forEach((el) => el.classList.add("active"));
+  };
+
+  // DAY1のクリックイベント
+  document
+    .querySelector(".timetable-day-nav-item.day1 > a")
+    ?.addEventListener("click", (e) => toggleDayNav(e, "day1"));
+
+  // DAY2のクリックイベント
+  document
+    .querySelector(".timetable-day-nav-item.day2 > a")
+    ?.addEventListener("click", (e) => toggleDayNav(e, "day2"));
+
+  // Room 1のクリックイベント
+  document
+    .querySelector(".timetable-room-nav-item.room1 > a")
+    ?.addEventListener("click", (e) => {
+      // PCではクリックイベントを無効化
+      if (window.innerWidth > TRIGGER_WIDTH) return;
+
+      e.preventDefault();
+      toggleRoomNav("room1");
+    });
+
+  // Room 2のクリックイベント
+  document
+    .querySelector(".timetable-room-nav-item.room2 > a")
+    ?.addEventListener("click", (e) => {
+      // PCではクリックイベントを無効化
+      if (window.innerWidth > TRIGGER_WIDTH) return;
+
+      e.preventDefault();
+      toggleRoomNav("room2");
+    });
+
+  // 切り替えボタンの初期状態を設定
+  const resizeObserver = new ResizeObserver(() => {
+    // PCでは開催日の活性状況を取り除く
+    if (window.innerWidth > TRIGGER_WIDTH) {
+      document
+        .querySelector(".timetable-day-nav-item.day1 > a")
+        ?.classList.remove("active");
+      document
+        .querySelector(".timetable-day-nav-item.day2 > a")
+        ?.classList.remove("active");
+
+      return;
+    }
+
+    // 開催日の切り替えボタンの活性状態を確認
+    const isDay1Active = document
+      .querySelector(".timetable-day-nav-item.day1 > a")
+      ?.classList.contains("active");
+    const isDay2Active = document
+      .querySelector(".timetable-day-nav-item.day2 > a")
+      ?.classList.contains("active");
+
+    // どちらも非アクティブな場合はDAY1をアクティブにする
+    if (!isDay1Active && !isDay2Active) {
+      document
+        .querySelector(".timetable-day-nav-item.day1 > a")
+        ?.classList.add("active");
+    }
+
+    // 会場の切り替えボタンの活性状態を確認
+    const isRoom1Active = document
+      .querySelector(".timetable-room-nav-item.room1 > a")
+      ?.classList.contains("active");
+    const isRoom2_1Active = document
+      .querySelector(".timetable-room-nav-item.room2 > a")
+      ?.classList.contains("active");
+
+    // どの会場も非アクティブな場合はRoom 1をアクティブにする
+    if (!isRoom1Active && !isRoom2_1Active) {
+      document
+        .querySelector(".timetable-room-nav-item.room1 > a")
+        ?.classList.add("active");
+    }
+  });
+  resizeObserver.observe(document.body);
+</script>
+
+<style>
+  .section-title {
+    & .day-date {
+      margin-left: 16px;
+      font-size: 24px;
+      vertical-align: text-bottom;
+    }
+    @media screen and (max-width: 860px) {
+      display: none;
+    }
+  }
+
+  .timetable-day-nav {
+    margin-bottom: 40px;
+
+    & ul {
+      display: flex;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media screen and (max-width: 860px) {
+      margin-bottom: 16px;
+
+      & ul {
+        gap: 16px;
+      }
+    }
+  }
+
+  .timetable-room-nav {
+    display: none;
+    margin-bottom: 24px;
+
+    & ul {
+      display: flex;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media screen and (max-width: 860px) {
+      display: block;
+
+      & ul {
+        gap: 12px 16px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .timetable-section {
+    @media screen and (max-width: 860px) {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  .timetable-section + .timetable-section {
+    margin-top: 80px;
+
+    @media screen and (max-width: 860px) {
+      margin-top: 0;
+    }
+  }
+
+  .timetable-grid {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 8px 16px;
+    width: 100%;
+    @media screen and (max-width: 860px) {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      & .time-slot {
+        display: none;
+      }
+    }
+  }
+
+  .room-title {
+    padding: 16px 40px;
+    border-radius: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    background-color: var(--primitive-cyan);
+    color: var(--text-on-fill);
+    text-align: center;
+
+    &.room1 {
+      background-color: var(--primitive-blue);
+    }
+
+    @media screen and (max-width: 860px) {
+      display: none;
+    }
+  }
+</style>
+
+<nav class="timetable-day-nav">
+  <ul>
+    <li class="timetable-day-nav-item day1">
+      <Button href="#day1" size="small" variant="secondary">DAY1</Button>
+    </li>
+    <li class="timetable-day-nav-item day2">
+      <Button href="#day2" size="small" variant="secondary">DAY2</Button>
+    </li>
+  </ul>
+</nav>
+
+<nav class="timetable-room-nav">
+  <ul>
+    <li class="timetable-room-nav-item room1">
+      <Button size="small" variant="primitive-blue">Room 1</Button>
+    </li>
+    <li class="timetable-room-nav-item room2">
+      <Button size="small" variant="primitive-cyan">Room 2</Button>
+    </li>
+  </ul>
+</nav>
+
+<section class="timetable-section day1 active">
+  <h2 id="day1" class="section-title">
+    DAY1<span class="day-date">9.27 SAT</span>
+  </h2>
+  <div class="timetable-grid">
+    <!-- ヘッダー行 -->
+    <div class="time-slot"></div>
+    <div class="room-title room1 active">Room 1</div>
+    <div class="room-title room2">Room 2</div>
+    <TimetableList eventDate="2025-09-27" />
+  </div>
+</section>
+
+<section class="timetable-section day2">
+  <h2 id="day2" class="section-title">
+    DAY2<span class="day-date">9.28 SUN</span>
+  </h2>
+  <div class="timetable-grid">
+    <!-- ヘッダー行 -->
+    <div class="time-slot"></div>
+    <div class="room-title room1 active">Room 1</div>
+    <div class="room-title room2">Room 2</div>
+    <TimetableList eventDate="2025-09-28" />
+  </div>
+</section>

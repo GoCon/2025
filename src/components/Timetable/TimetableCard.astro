@@ -1,0 +1,158 @@
+---
+import { Image } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import timetable from "../../data/timetable.json";
+import { getFormattedTime, getSessionSpeaker } from "../../utils/timetable";
+
+interface Props {
+  /**
+   * セッション情報
+   */
+  session?: (typeof timetable)[0]["timeSlots"][0]["rooms"][0]["session"];
+}
+
+const { session } = Astro.props;
+
+const currentLocale = Astro.currentLocale || "ja";
+
+// セッション情報がない場合は何も表示しない
+if (!session) return null;
+
+// スピーカー情報
+const speaker = getSessionSpeaker(session.speakers.at(0)?.id);
+const profileImageUrl = speaker?.profilePicture;
+const speakerName = speaker?.fullName ?? "";
+---
+
+<style>
+  .timetable-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+    padding: 16px 24px;
+    border-radius: 16px;
+    background-color: var(--primitive-light-cyan);
+    color: var(--text-primary);
+    height: 100%;
+    box-sizing: border-box;
+
+    &.room-a {
+      background-color: var(--primitive-light-blue);
+    }
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-header-time {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .card-header-session-id {
+    margin: 0;
+    padding: 4px 16px;
+    border-radius: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-on-fill);
+    background-color: var(--primitive-cyan);
+
+    &.room-a {
+      background-color: var(--primitive-blue);
+    }
+  }
+
+  .card-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.75;
+  }
+
+  .card-title-link {
+    color: var(--text-primary);
+    transition: ease color 0.3s;
+
+    &:hover {
+      color: var(--text-accent);
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+  }
+
+  .speaker-info {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .speaker-thumbnail {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .speaker-name {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .session-time {
+    margin: 0;
+    font-size: 12px;
+  }
+</style>
+
+<article
+  class={`timetable-card ${session.roomId === 67044 ? "room-a" : "room-b"}`}
+  aria-labelledby={`card-title-${session.id}`}
+>
+  <div class="card-header">
+    <p class="card-header-time">
+      {getFormattedTime(session.startsAt)} - {getFormattedTime(session.endsAt)}
+    </p>
+  </div>
+  <h3 id={`card-title-${session.id}`} class="card-title">
+    <a
+      href={getRelativeLocaleUrl(currentLocale, `/timetable/${session.id}`)}
+      class="card-title-link">{session.title}</a
+    >
+  </h3>
+  <div class="card-footer">
+    {
+      profileImageUrl && (
+        <div class="speaker-info">
+          <Image
+            src={profileImageUrl}
+            alt={speakerName}
+            width={24}
+            height={24}
+            loading="lazy"
+            class="speaker-thumbnail"
+          />
+          <p class="speaker-name">{speakerName}</p>
+        </div>
+      )
+    }
+    <p class="session-time">
+      {
+        session.categories
+          .find((category) => category.id === 101938)
+          ?.categoryItems.at(0)?.name
+      }
+    </p>
+  </div>
+</article>
