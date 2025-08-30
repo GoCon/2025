@@ -18,6 +18,10 @@ const currentLocale = Astro.currentLocale || "ja";
               >Home</a
             >
             <a
+              href={getRelativeLocaleUrl(currentLocale, "timetable")}
+              class="text-link">Timetable</a
+            >
+            <a
               href={getRelativeLocaleUrl(currentLocale, "sponsorship")}
               class="text-link">Sponsorship</a
             >

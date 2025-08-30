@@ -233,6 +233,11 @@ const currentLocale = Astro.currentLocale || "ja";
     <ul class="navigation-menu">
       <li><a href={getRelativeLocaleUrl(currentLocale)}>Home</a></li>
       <li>
+        <a href={getRelativeLocaleUrl(currentLocale, "timetable")}>
+          Timetable
+        </a>
+      </li>
+      <li>
         <a href={getRelativeLocaleUrl(currentLocale, "sponsorship")}>
           Sponsorship
         </a>
