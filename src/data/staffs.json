@@ -676,5 +676,20 @@
         "name": "Go Conference"
       }
     ]
+  },
+  {
+    "id": "43",
+    "name": "ogiogi",
+    "company": "金沢大学",
+    "avatar": "ogiogi_dayo.jpg",
+    "sns": {
+      "link": "https://x.com/ogiogi_dayo",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
   }
 ]
