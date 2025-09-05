@@ -1,4 +1,4 @@
-.section-title > .accent {
+.accent {
   color: var(--text-accent);
 }
 
@@ -85,6 +85,54 @@
     width: 80px;
     text-align: left;
   }
+}
+
+.attend {
+  background-color: var(--surface-secondary);
+  border-radius: 80px;
+  max-width: 1200px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.workshop-cards {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.workshop-card {
+  width: 340px;
+  padding: 24px;
+  background-color: var(--surface-primary);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.workshop-card h4 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: left;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.workshop-card ul {
+  width: 100%;
+  color: var(--text-secondary);
+  text-align: left;
+  padding-inline-start: unset;
+  margin-block-start: unset;
+  margin-block-end: unset;
+  margin-bottom: 16px;
+  padding-left: 24px;
+  min-height: 72px;
 }
 
 .sponsorship {
