@@ -28,6 +28,7 @@
           {
             "id": "46694633-a044-40ae-9d1b-58a48d8afe1a",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-27T10:30:00",
             "endsAt": "2025-09-27T10:40:00",
@@ -103,6 +104,7 @@
           {
             "id": "b0ef8fcd-50e8-416d-860a-5ae251dfefc4",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-27T11:00:00",
             "endsAt": "2025-09-27T11:10:00",
@@ -178,6 +180,7 @@
           {
             "id": "7bf3d1c7-54c3-4724-8ff2-ad41fa1c1fe5",
             "title": "お昼休憩",
+            "titleEn": "Lunch Break",
             "description": null,
             "startsAt": "2025-09-27T11:30:00",
             "endsAt": "2025-09-27T13:10:00",
@@ -310,6 +313,7 @@
           {
             "id": "32b70489-25b2-47f9-8686-6bb46ae40524",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-27T13:20:00",
             "endsAt": "2025-09-27T13:30:00",
@@ -385,6 +389,7 @@
           {
             "id": "6a5d08ca-e24f-466f-8cae-cd329fc013d5",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-27T13:50:00",
             "endsAt": "2025-09-27T14:00:00",
@@ -460,6 +465,7 @@
           {
             "id": "765a5f3d-f6ed-494c-bd8a-54f15c58b8b8",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-27T14:40:00",
             "endsAt": "2025-09-27T14:50:00",
@@ -535,6 +541,7 @@
           {
             "id": "afc4ef38-c23f-42f0-8a1d-848e6087d243",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-27T15:30:00",
             "endsAt": "2025-09-27T15:40:00",
@@ -610,6 +617,7 @@
           {
             "id": "1404e105-fc34-41a0-b9f4-ebd3828a5413",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-27T16:20:00",
             "endsAt": "2025-09-27T16:30:00",
@@ -685,6 +693,7 @@
           {
             "id": "e527fe1c-c97f-4f2a-8b53-caf33cf7e17a",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-27T16:50:00",
             "endsAt": "2025-09-27T17:00:00",
@@ -760,6 +769,7 @@
           {
             "id": "28c34a91-0a92-4b35-bf77-2f1d47ad1212",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-27T17:20:00",
             "endsAt": "2025-09-27T17:30:00",
@@ -1480,6 +1490,7 @@
             "session": {
               "id": "46694633-a044-40ae-9d1b-58a48d8afe1a",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-27T10:30:00",
               "endsAt": "2025-09-27T10:40:00",
@@ -1575,6 +1586,7 @@
             "session": {
               "id": "b0ef8fcd-50e8-416d-860a-5ae251dfefc4",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-27T11:00:00",
               "endsAt": "2025-09-27T11:10:00",
@@ -1670,6 +1682,7 @@
             "session": {
               "id": "7bf3d1c7-54c3-4724-8ff2-ad41fa1c1fe5",
               "title": "お昼休憩",
+              "titleEn": "Lunch Break",
               "description": null,
               "startsAt": "2025-09-27T11:30:00",
               "endsAt": "2025-09-27T13:10:00",
@@ -2018,6 +2031,7 @@
             "session": {
               "id": "32b70489-25b2-47f9-8686-6bb46ae40524",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-27T13:20:00",
               "endsAt": "2025-09-27T13:30:00",
@@ -2113,6 +2127,7 @@
             "session": {
               "id": "6a5d08ca-e24f-466f-8cae-cd329fc013d5",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-27T13:50:00",
               "endsAt": "2025-09-27T14:00:00",
@@ -2208,6 +2223,7 @@
             "session": {
               "id": "765a5f3d-f6ed-494c-bd8a-54f15c58b8b8",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-27T14:40:00",
               "endsAt": "2025-09-27T14:50:00",
@@ -2489,6 +2505,7 @@
             "session": {
               "id": "afc4ef38-c23f-42f0-8a1d-848e6087d243",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-27T15:30:00",
               "endsAt": "2025-09-27T15:40:00",
@@ -2584,6 +2601,7 @@
             "session": {
               "id": "1404e105-fc34-41a0-b9f4-ebd3828a5413",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-27T16:20:00",
               "endsAt": "2025-09-27T16:30:00",
@@ -2865,6 +2883,7 @@
             "session": {
               "id": "e527fe1c-c97f-4f2a-8b53-caf33cf7e17a",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-27T16:50:00",
               "endsAt": "2025-09-27T17:00:00",
@@ -2960,6 +2979,7 @@
             "session": {
               "id": "28c34a91-0a92-4b35-bf77-2f1d47ad1212",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-27T17:20:00",
               "endsAt": "2025-09-27T17:30:00",
@@ -3236,6 +3256,7 @@
           {
             "id": "a143a40e-bfcf-4cb9-a578-54f5b5a6a207",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-28T11:00:00",
             "endsAt": "2025-09-28T11:10:00",
@@ -3311,6 +3332,7 @@
           {
             "id": "90dbeefd-d4d5-46a5-8473-47985f5e5c41",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-28T11:30:00",
             "endsAt": "2025-09-28T11:40:00",
@@ -3386,6 +3408,7 @@
           {
             "id": "acec4be1-2bc9-4e1f-8c1a-78bfa4c35123",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-28T12:00:00",
             "endsAt": "2025-09-28T12:10:00",
@@ -3461,6 +3484,7 @@
           {
             "id": "88c700da-2ec3-4874-ba5e-e51e28809ebe",
             "title": "昼休憩",
+            "titleEn": "Lunch Break",
             "description": null,
             "startsAt": "2025-09-28T12:30:00",
             "endsAt": "2025-09-28T14:00:00",
@@ -3536,6 +3560,7 @@
           {
             "id": "6fc323bc-7b10-4c13-b30a-b638f5021b35",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-28T14:20:00",
             "endsAt": "2025-09-28T14:30:00",
@@ -3611,6 +3636,7 @@
           {
             "id": "92c5f336-388e-43c4-a134-743431a11ea0",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-28T14:50:00",
             "endsAt": "2025-09-28T15:00:00",
@@ -3686,6 +3712,7 @@
           {
             "id": "3f4b1440-38b9-4b5e-8b37-a1582cdb4f99",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-28T15:20:00",
             "endsAt": "2025-09-28T15:30:00",
@@ -3761,6 +3788,7 @@
           {
             "id": "857895eb-7fd5-43db-a389-55a9ee0e135d",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-28T15:50:00",
             "endsAt": "2025-09-28T16:00:00",
@@ -3836,6 +3864,7 @@
           {
             "id": "d14b9256-ba9f-44f5-9e81-4916f85d735f",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-28T16:20:00",
             "endsAt": "2025-09-28T16:30:00",
@@ -3911,6 +3940,7 @@
           {
             "id": "0521b45f-2f00-414e-9c73-a1daf9ec24a2",
             "title": "場面転換",
+            "titleEn": "Stage Change",
             "description": null,
             "startsAt": "2025-09-28T17:10:00",
             "endsAt": "2025-09-28T17:30:00",
@@ -3986,6 +4016,7 @@
           {
             "id": "f0741335-d09a-421a-8291-f5abe3e96d25",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-28T17:50:00",
             "endsAt": "2025-09-28T18:00:00",
@@ -4022,6 +4053,7 @@
           {
             "id": "c7cb3d88-a9d5-4539-8673-7ad61e44f2c1",
             "title": "休憩",
+            "titleEn": "Break",
             "description": null,
             "startsAt": "2025-09-28T18:20:00",
             "endsAt": "2025-09-28T18:30:00",
@@ -4987,6 +5019,7 @@
             "session": {
               "id": "a143a40e-bfcf-4cb9-a578-54f5b5a6a207",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-28T11:00:00",
               "endsAt": "2025-09-28T11:10:00",
@@ -5082,6 +5115,7 @@
             "session": {
               "id": "90dbeefd-d4d5-46a5-8473-47985f5e5c41",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-28T11:30:00",
               "endsAt": "2025-09-28T11:40:00",
@@ -5177,6 +5211,7 @@
             "session": {
               "id": "acec4be1-2bc9-4e1f-8c1a-78bfa4c35123",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-28T12:00:00",
               "endsAt": "2025-09-28T12:10:00",
@@ -5272,6 +5307,7 @@
             "session": {
               "id": "88c700da-2ec3-4874-ba5e-e51e28809ebe",
               "title": "昼休憩",
+              "titleEn": "Lunch Break",
               "description": null,
               "startsAt": "2025-09-28T12:30:00",
               "endsAt": "2025-09-28T14:00:00",
@@ -5429,6 +5465,7 @@
             "session": {
               "id": "6fc323bc-7b10-4c13-b30a-b638f5021b35",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-28T14:20:00",
               "endsAt": "2025-09-28T14:30:00",
@@ -5586,6 +5623,7 @@
             "session": {
               "id": "92c5f336-388e-43c4-a134-743431a11ea0",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-28T14:50:00",
               "endsAt": "2025-09-28T15:00:00",
@@ -5704,6 +5742,7 @@
             "session": {
               "id": "3f4b1440-38b9-4b5e-8b37-a1582cdb4f99",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-28T15:20:00",
               "endsAt": "2025-09-28T15:30:00",
@@ -5861,6 +5900,7 @@
             "session": {
               "id": "857895eb-7fd5-43db-a389-55a9ee0e135d",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-28T15:50:00",
               "endsAt": "2025-09-28T16:00:00",
@@ -6018,6 +6058,7 @@
             "session": {
               "id": "d14b9256-ba9f-44f5-9e81-4916f85d735f",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-28T16:20:00",
               "endsAt": "2025-09-28T16:30:00",
@@ -6175,6 +6216,7 @@
             "session": {
               "id": "0521b45f-2f00-414e-9c73-a1daf9ec24a2",
               "title": "場面転換",
+              "titleEn": "Stage Change",
               "description": null,
               "startsAt": "2025-09-28T17:10:00",
               "endsAt": "2025-09-28T17:30:00",
@@ -6270,6 +6312,7 @@
             "session": {
               "id": "f0741335-d09a-421a-8291-f5abe3e96d25",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-28T17:50:00",
               "endsAt": "2025-09-28T18:00:00",
@@ -6326,6 +6369,7 @@
             "session": {
               "id": "c7cb3d88-a9d5-4539-8673-7ad61e44f2c1",
               "title": "休憩",
+              "titleEn": "Break",
               "description": null,
               "startsAt": "2025-09-28T18:20:00",
               "endsAt": "2025-09-28T18:30:00",

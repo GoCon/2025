@@ -92,6 +92,27 @@ export const getFormattedTime = (time: string) => {
 };
 
 /**
+ * Try to get localized property ("propertyEn"), if not found fall back to property.
+ * @param obj an object
+ * @param prop a property name
+ * @param locale locale code (e.g. "en")
+ * @returns localized or fallback property content
+ */
+export const getLocalized = (
+  obj: { [key: string]: any },
+  prop: string,
+  locale: string,
+) => {
+  locale =
+    locale.toLowerCase().charAt(0).toUpperCase() +
+    locale.toLowerCase().slice(1);
+  if (prop + locale in obj) {
+    return obj[prop + locale];
+  }
+  return obj[prop];
+};
+
+/**
  * 登壇者のプロフィール情報を取得
  * @param speakerId 登壇者のID
  * @returns 登壇者
