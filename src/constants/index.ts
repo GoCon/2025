@@ -698,7 +698,7 @@ export const constants = {
         width: bronzeSponsorImageSize.width,
         jobBoard: {
           imageSrc: S431JobLogo,
-          link: undefined,
+          link: "https://herp.careers/v1/canaryinc/requisition-groups/acefcf1f-7bd9-4eec-8ece-fa1a3d43f76f",
         },
       },
       {
@@ -748,7 +748,7 @@ export const constants = {
         width: bronzeSponsorImageSize.width,
         jobBoard: {
           imageSrc: S436JobLogo,
-          link: undefined,
+          link: "https://safie.co.jp/",
         },
       },
       {
