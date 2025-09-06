@@ -4,6 +4,7 @@ import MainVisual from "../components/MainVisual.astro";
 import FluidLayout from "../layouts/FluidLayout.astro";
 import "../styles/top-page.css";
 import SponsorBoard from "../components/SponsorBoard.astro";
+import Button from "../components/Button.astro";
 ---
 
 <FluidLayout>
@@ -39,6 +40,63 @@ import SponsorBoard from "../components/SponsorBoard.astro";
       </tbody>
     </table>
   </section>
+
+  <section class="section attend">
+    <h2 class="section-title">
+      <span class="accent">ワ</span>ークショップ
+    </h2>
+    <div>ワークショップはconnpassより参加登録ができます。</div>
+    <div class="workshop-cards">
+      <div class="workshop-card">
+        <h4>Workshop <span class="accent">Part 1</span></h4>
+        <ul>
+          <li>今日から始めるpprof</li>
+          <li>TinyGo Keeb Workshop</li>
+          <li>Goを使ってTDDを体験しよう！！</li>
+        </ul>
+        <Button
+          href="https://gocon.connpass.com/event/367002"
+          target="_blank"
+          size="large"
+          variant="secondary"
+        >
+          参加登録
+        </Button>
+      </div>
+      <div class="workshop-card">
+        <h4>Workshop <span class="accent">Part 2</span></h4>
+        <ul>
+          <li>†開発を加速させる黒魔術講座†</li>
+          <li>TinyGo + Gopherくん基板で遊ぼう</li>
+          <li>作って理解するGOCACHEPROG</li>
+        </ul>
+        <Button
+          href="https://gocon.connpass.com/event/367006"
+          target="_blank"
+          size="large"
+          variant="secondary"
+        >
+          参加登録
+        </Button>
+      </div>
+      <div class="workshop-card">
+        <h4>Workshop <span class="accent">Part 3</span></h4>
+        <ul>
+          <li>Goのカードゲームで遊ぼう</li>
+          <li>Go Quiz Workshop</li>
+        </ul>
+        <Button
+          href="https://gocon.connpass.com/event/367007"
+          target="_blank"
+          size="large"
+          variant="secondary"
+        >
+          参加登録
+        </Button>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <h2 class="section-title">
       <span class="accent">ス</span>ポンサー
