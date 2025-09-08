@@ -70,6 +70,7 @@ import S452Logo from "../assets/sponsors/S452.png";
 import S453Logo from "../assets/sponsors/S453.png";
 import S454Logo from "../assets/sponsors/S454.png";
 import S456Logo from "../assets/sponsors/S456.png";
+import S459Logo from "../assets/sponsors/S459.png";
 import S460Logo from "../assets/sponsors/S460.png";
 import S462Logo from "../assets/sponsors/S462.png";
 import S463Logo from "../assets/sponsors/S463.png";
@@ -127,8 +128,10 @@ import S452JobLogo from "../assets/sponsors/S452-jb.png";
 import S453JobLogo from "../assets/sponsors/S453-jb.png";
 import S454JobLogo from "../assets/sponsors/S454-jb.png";
 import S456JobLogo from "../assets/sponsors/S456-jb.png";
+import S459JobLogo from "../assets/sponsors/S459-jb.png";
 import S460JobLogo from "../assets/sponsors/S460-jb.png";
 import S462JobLogo from "../assets/sponsors/S462-jb.png";
+import S463JobLogo from "../assets/sponsors/S463-jb.png";
 
 const venueSponsorImageSize = {
   height: 242,
@@ -922,6 +925,16 @@ export const constants = {
         },
       },
       {
+        name: "株式会社miive",
+        imageSrc: S459Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: S459JobLogo,
+          link: "https://hrmos.co/pages/miive/jobs?category=2055484142645866497,2055484142645866498 ",
+        },
+      },
+      {
         name: "株式会社テックオーシャン",
         imageSrc: S460Logo,
         height: bronzeSponsorImageSize.height,
@@ -947,8 +960,8 @@ export const constants = {
         height: bronzeSponsorImageSize.height,
         width: bronzeSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: S463JobLogo,
+          link: "https://geekneer.com/recruit",
         },
       },
     ],
