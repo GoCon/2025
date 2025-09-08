@@ -134,34 +134,6 @@ const currentLocale = Astro.currentLocale || "ja";
 </style>
 
 <div class="sponsor-section">
-  <div class="special-sponsor">
-    <h2>
-      {currentLocale === "ja" ? "スペシャルスポンサー" : "Special Sponsor"}
-    </h2>
-    <ul>
-      <li>
-        <Image
-          src={constants.sponsors.specialSponsor.imageSrc}
-          alt={constants.sponsors.specialSponsor.name}
-          width={constants.sponsors.specialSponsor.width}
-          height={constants.sponsors.specialSponsor.height}
-          loading="lazy"
-          priority
-          style="cursor:pointer"
-          onclick={`const dialog = document.getElementById('${constants.sponsors.specialSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
-        />
-
-        <Dialog
-          openId={constants.sponsors.specialSponsor.dialog.openId}
-          sponsorSectionTitle={currentLocale === "ja"
-            ? "スペシャルスポンサー"
-            : `Special Sponsor`}
-          sponsor={constants.sponsors.specialSponsor}
-        />
-      </li>
-    </ul>
-  </div>
-
   <div>
     <h2>{currentLocale === "ja" ? "会場スポンサー" : "Venue Sponsor"}</h2>
     <ul class="venue-sponsor">
@@ -330,4 +302,32 @@ const currentLocale = Astro.currentLocale || "ja";
       )
     }
   </ul>
+
+  <div class="special-sponsor">
+    <h2>
+      {currentLocale === "ja" ? "スペシャルスポンサー" : "Special Sponsor"}
+    </h2>
+    <ul>
+      <li>
+        <Image
+          src={constants.sponsors.specialSponsor.imageSrc}
+          alt={constants.sponsors.specialSponsor.name}
+          width={constants.sponsors.specialSponsor.width}
+          height={constants.sponsors.specialSponsor.height}
+          loading="lazy"
+          priority
+          style="cursor:pointer"
+          onclick={`const dialog = document.getElementById('${constants.sponsors.specialSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+        />
+
+        <Dialog
+          openId={constants.sponsors.specialSponsor.dialog.openId}
+          sponsorSectionTitle={currentLocale === "ja"
+            ? "スペシャルスポンサー"
+            : `Special Sponsor`}
+          sponsor={constants.sponsors.specialSponsor}
+        />
+      </li>
+    </ul>
+  </div>
 </div>
