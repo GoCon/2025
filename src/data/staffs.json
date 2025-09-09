@@ -691,5 +691,45 @@
         "name": "Go Conference"
       }
     ]
+  },
+  {
+    "id": "44",
+    "name": "ゆーせい",
+    "company": "石川工業高等専門学校",
+    "avatar": "yusei9027.jpg",
+    "sns": {
+      "link": "https://x.com/yusei9027",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Kanazawa.go"
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "name": "lestrrat",
+    "company": "株式会社メルカリ",
+    "avatar": "lestrrat.jpg",
+    "sns": {
+      "link": "https://bsky.app/profile/lestrrat.bsky.social",
+      "type": "bluesky"
+    },
+    "communities": []
+  },
+  {
+    "id": "46",
+    "name": "hutoboshi",
+    "company": "燈株式会社",
+    "avatar": "hutoccho_boshi.png",
+    "sns": {
+      "link": "https://x.com/hutoccho_boshi",
+      "type": "x"
+    },
+    "communities": []
   }
 ]
