@@ -4,7 +4,7 @@ import { concatWithBase } from "../utils/concatWithBase";
 import XLogo from "../assets/x-logo.svg";
 import GitHubLogo from "../assets/github-mark.svg";
 import MastodonLogo from "../assets/mastodon-logo.svg";
-import LinkIcon from "../assets/icon/link.svg";
+import BlueskyLogo from "../assets/bluesky-logo.svg";
 import CompanyIcon from "../assets/icon/company.svg";
 
 const staffs = await getCollection("staffs");
@@ -44,6 +44,7 @@ const staffs = await getCollection("staffs");
                   {staff.data.sns.type === "x" && <XLogo />}
                   {staff.data.sns.type === "github" && <GitHubLogo />}
                   {staff.data.sns.type === "mastodon" && <MastodonLogo />}
+                  {staff.data.sns.type === "bluesky" && <BlueskyLogo />}
                 </a>
               </div>
             )}

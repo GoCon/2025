@@ -10,7 +10,7 @@ const staffs = defineCollection({
     sns: z
       .object({
         link: z.string().url(),
-        type: z.enum(["x", "github", "mastodon"]),
+        type: z.enum(["x", "github", "mastodon", "bluesky"]),
       })
       .optional(),
     communities: z
