@@ -351,6 +351,31 @@
     "categories": []
   },
   {
+    "id": "e365e322-39fd-42a9-9f4a-48022d444e0a",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Koki Ide",
+    "bio": "CEO",
+    "tagLine": "GMO Flatt Security株式会社",
+    "profilePicture": "https://sessionize.com/image/4a88-400o400o1-hzAMMedCofxvgowZCYApdV.jpg",
+    "sessions": [
+      {
+        "id": 1022070,
+        "name": "Goに育てられ開発者向けセキュリティ事業を立ち上げた僕が今向き合う、AI × セキュリティの最前線"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/niconegoto",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "23f61b5d-8318-4950-81c9-c62d924ea580",
     "firstName": "",
     "lastName": "",
@@ -441,6 +466,25 @@
       {
         "id": 958892,
         "name": "Goの字句解析を覗いてみる"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "2f6551a2-606c-41da-82cb-135172cd7c73",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Masato Hommaru",
+    "bio": "株式会社エブリーでバックエンドエンジニアをやっています",
+    "tagLine": "株式会社エブリー, backend engineer",
+    "profilePicture": "https://sessionize.com/image/69ea-400o400o1-474PSMF3qoaJGMC3pjHev5.jpg",
+    "sessions": [
+      {
+        "id": 1027892,
+        "name": "10年もののAPIサーバーにおけるCI/CDの改善の奮闘"
       }
     ],
     "isTopSpeaker": false,
@@ -779,7 +823,7 @@
     "firstName": "",
     "lastName": "",
     "fullName": "Vaibhav Gupta ",
-    "bio": "Working as a backend engineer with experience in Python, Golang, and distributed systems. I previously worked at  ANDPAD Inc Japan , and now builds scalable energy optimization platforms at Qenest Holdings Hanwha Japan.\r\nA returning GoConference speaker, I enjoys exploring Go’s internals from a beginner’s lens—this time focusing on how goroutines and the scheduler work behind go func().",
+    "bio": "Working as a backend engineer with experience in Python, Golang, and distributed systems. I previously worked at  ANDPAD Inc Japan , and now builds scalable energy optimization platforms at Qenest Holdings Hanwha Japan.\r\nA returning GoConference speaker, I enjoys exploring Go’s internals from a beginner’s lens this time focusing on how goroutines and the scheduler work behind go func().",
     "tagLine": "Backend Engineer | Golang Developer ",
     "profilePicture": "https://sessionize.com/image/6cc1-400o400o1-q5DxUBcXT8R8qCHeLpoNi.jpg",
     "sessions": [
@@ -882,8 +926,8 @@
     "id": "ad229220-4337-45b0-b144-3e7241a1cb3c",
     "firstName": "",
     "lastName": "",
-    "fullName": "Yuki Hamagami",
-    "bio": "Backend Engineer",
+    "fullName": "ao",
+    "bio": "Software Engineer",
     "tagLine": "DMM.com LLC",
     "profilePicture": "https://sessionize.com/image/c3da-400o400o1-TK4kaLDFdeGGNdHstHyPWR.png",
     "sessions": [
@@ -934,25 +978,6 @@
       {
         "id": 959089,
         "name": "uniqueパッケージの内部実装を支えるweak pointerの話"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [],
-    "categories": []
-  },
-  {
-    "id": "0bb030df-6018-46e2-b08e-6e6dca113329",
-    "firstName": "",
-    "lastName": "",
-    "fullName": "康貴 井手",
-    "bio": "CEO",
-    "tagLine": "GMO Flatt Security株式会社",
-    "profilePicture": "https://sessionize.com/image/4a88-400o400o1-hzAMMedCofxvgowZCYApdV.jpg",
-    "sessions": [
-      {
-        "id": 1022070,
-        "name": "Goに育てられ開発者向けセキュリティ事業を立ち上げた僕が今向き合う、AI × セキュリティの最前線"
       }
     ],
     "isTopSpeaker": false,

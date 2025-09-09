@@ -10,7 +10,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -24,7 +24,7 @@
         "speakers": [
           {
             "id": "ad229220-4337-45b0-b144-3e7241a1cb3c",
-            "name": "Yuki Hamagami"
+            "name": "ao"
           }
         ],
         "categories": [
@@ -77,7 +77,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -144,7 +144,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -211,7 +211,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -278,7 +278,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -345,7 +345,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -412,7 +412,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -479,7 +479,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -545,8 +545,8 @@
             "id": 109751,
             "question": "Sponsored Session",
             "questionType": "Checkbox",
-            "answer": null,
-            "sort": 45,
+            "answer": "false",
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -613,7 +613,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -680,7 +680,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -747,7 +747,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -814,7 +814,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -881,7 +881,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -948,7 +948,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1015,7 +1015,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1082,7 +1082,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1149,7 +1149,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1216,7 +1216,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1283,7 +1283,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1350,7 +1350,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1417,7 +1417,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": "true",
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1430,8 +1430,8 @@
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "0bb030df-6018-46e2-b08e-6e6dca113329",
-            "name": "康貴 井手"
+            "id": "e365e322-39fd-42a9-9f4a-48022d444e0a",
+            "name": "Koki Ide"
           }
         ],
         "categories": [
@@ -1475,7 +1475,7 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
       },
       {
         "questionAnswers": [
@@ -1484,7 +1484,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1551,7 +1551,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1618,7 +1618,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1685,7 +1685,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1752,7 +1752,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1819,7 +1819,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1886,7 +1886,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": "true",
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -1953,7 +1953,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2020,7 +2020,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2087,7 +2087,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2154,13 +2154,13 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
         "id": "948071",
         "title": "After go func(): Goroutines Through a Beginner’s Eye",
-        "description": "Have you ever wondered how Goroutines actually run behind the scenes? Why your concurrent Go code works… or sometimes doesn’t?\r\n\r\n- Background\r\n When I first started writing concurrent programs in Go, I was amazed by how simple it was to launch a Goroutine—just one keyword!  But soon I found myself asking:\r\n“What really happens after I write go func()?”\r\n\r\nThis talk is a beginner-friendly dive into how Go schedules Goroutines using its lightweight runtime scheduler. We’ll explore how Goroutines are mapped onto OS threads, what M:N scheduling really means, how Go handles preemption, and why your code may behave differently than expected under load.\r\n\r\nAs someone who transitioned from traditional programming models to Go’s concurrency model, I’ll share my personal learning journey—including moments of confusion and clarity—and how understanding Go’s scheduler helped me write better, more efficient code.\r\n\r\nThis session is especially helpful for those who have used Goroutines without really knowing what’s under the hood—and want to take that first step toward understanding concurrency the Go way.\r\n\r\n- Expected Effect on Audience\r\nAttendees especially beginners will leave with:\r\n    •\tA clear mental model of how Go schedules Goroutines\r\n    •\tAn understanding of key concepts like G, M, P, and work-stealing\r\n    •\tTips for writing more predictable and efficient concurrent Go code\r\n    •\tCuriosity to explore Go’s runtime deeper with tools like GODEBUG and scheduler traces\r\n\r\nThis talk will definitely bridges the gap between “I can write Goroutines” and “I understand how they run.”",
+        "description": "Have you ever wondered how Goroutines actually run behind the scenes? Why your concurrent Go code works… or sometimes doesn’t?\r\n\r\n- Background\r\n When I first started writing concurrent programs in Go, I was amazed by how simple it was to launch a Goroutine just one keyword!  But soon I found myself asking:\r\n“What really happens after I write go func()?”\r\n\r\nThis talk is a beginner-friendly dive into how Go schedules Goroutines using its lightweight runtime scheduler. We’ll explore how Goroutines are mapped onto OS threads, what M:N scheduling really means, how Go handles preemption, and why your code may behave differently than expected under load.\r\n\r\nAs someone who transitioned from traditional programming models to Go’s concurrency model, I’ll share my personal learning journey including moments of confusion and clarity and how understanding Go’s scheduler helped me write better, more efficient code.\r\n\r\nThis session is especially helpful for those who have used Goroutines without really knowing what’s under the hood and want to take that first step toward understanding concurrency the Go way.\r\n\r\n- Expected Effect on Audience\r\nAttendees especially beginners will leave with:\r\n    •\tA clear mental model of how Go schedules Goroutines\r\n    •\tAn understanding of key concepts like G, M, P, and work-stealing\r\n    •\tTips for writing more predictable and efficient concurrent Go code\r\n    •\tCuriosity to explore Go’s runtime deeper with tools like GODEBUG and scheduler traces\r\n\r\nThis talk will definitely bridges the gap between “I can write Goroutines” and “I understand how they run.”",
         "startsAt": "2025-09-28T16:00:00",
         "endsAt": "2025-09-28T16:20:00",
         "isServiceSession": false,
@@ -2221,7 +2221,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2288,7 +2288,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2355,7 +2355,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2422,7 +2422,74 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": "true",
-            "sort": 45,
+            "sort": 40,
+            "answerExtra": null
+          }
+        ],
+        "id": "1027892",
+        "title": "10年もののAPIサーバーにおけるCI/CDの改善の奮闘",
+        "description": "エブリーのメインサービスであるデリッシュキッチンのAPIサーバーは、Go・echoで構成されており、約10年の歴史の中で肥大化していくつも技術的な負債を抱えています。\r\n本セッションでは、実際に直面している課題に焦点を当て、その解決策として取り組んだCI/CD高速化の全貌をお話します。\r\n具体的な取り組みとして、デッドコードの削除や差分だけのテストへの変更などでビルドやテストを高速化する際に試行錯誤したことについて紹介します。",
+        "startsAt": "2025-09-28T18:00:00",
+        "endsAt": "2025-09-28T18:20:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "2f6551a2-606c-41da-82cb-135172cd7c73",
+            "name": "Masato Hommaru"
+          }
+        ],
+        "categories": [
+          {
+            "id": 101938,
+            "name": "Session Type",
+            "categoryItems": [
+              {
+                "id": 367239,
+                "name": "Short Session(20min)"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 101939,
+            "name": "Session Level",
+            "categoryItems": [
+              {
+                "id": 367242,
+                "name": "all"
+              }
+            ],
+            "sort": 1
+          },
+          {
+            "id": 102474,
+            "name": "言語 / Language",
+            "categoryItems": [
+              {
+                "id": 369632,
+                "name": "japanese"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": 67044,
+        "room": "Room 1",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": "true",
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2489,7 +2556,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2556,7 +2623,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2623,7 +2690,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2690,7 +2757,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2757,7 +2824,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2824,7 +2891,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2891,7 +2958,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
@@ -2958,7 +3025,7 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 45,
+            "sort": 40,
             "answerExtra": null
           }
         ],
