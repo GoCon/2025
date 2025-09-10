@@ -6,8 +6,11 @@ import {
   getFormattedTime,
   getTimeSlotSpanCount,
   isTimeSlotOccupied,
+  getTranslated,
 } from "../../utils/timetable";
 import WorkshopCard from "./WorkshopCard.astro";
+
+const currentLocale = Astro.currentLocale || "ja";
 
 interface Props {
   /**
@@ -119,7 +122,7 @@ if (classifiedSessions.length === 0) {
                 {room1?.isServiceSession ? (
                   <CommonTimetableCard
                     id={room1.id}
-                    title={room1.title}
+                    title={getTranslated(room1.title, currentLocale)}
                     startAt={getFormattedTime(room1.startsAt)}
                     endAt={getFormattedTime(room1.endsAt)}
                   />
@@ -147,7 +150,7 @@ if (classifiedSessions.length === 0) {
                     // 休憩の場合
                     <CommonTimetableCard
                       id={room2.id}
-                      title={room2.title}
+                      title={getTranslated(room2.title, currentLocale)}
                       startAt={getFormattedTime(room2.startsAt)}
                       endAt={getFormattedTime(room2.endsAt)}
                     />
@@ -177,7 +180,7 @@ if (classifiedSessions.length === 0) {
                     // 休憩の場合
                     <CommonTimetableCard
                       id={room3.id}
-                      title={room3.title}
+                      title={getTranslated(room3.title, currentLocale)}
                       startAt={getFormattedTime(room3.startsAt)}
                       endAt={getFormattedTime(room3.endsAt)}
                     />
