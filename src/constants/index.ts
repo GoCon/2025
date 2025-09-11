@@ -281,7 +281,7 @@ export const constants = {
         },
       },
       {
-        name: "株式会社OPTiM",
+        name: "株式会社オプティム",
         imageSrc: OPTiMLogo,
         height: goldSponsorImageSize.height,
         width: goldSponsorImageSize.width,
