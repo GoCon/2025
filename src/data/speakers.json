@@ -1011,17 +1011,42 @@
     "categories": []
   },
   {
-    "id": "e45f49f2-02b6-4a1b-a81b-1b8009852989",
+    "id": "b46b46f3-c13c-405a-8f27-0227e7d2ccd4",
     "firstName": "",
     "lastName": "",
     "fullName": "輝彦 彌冨",
-    "bio": "テックリード",
-    "tagLine": "株式会社Resilire",
-    "profilePicture": "https://sessionize.com/image/41c1-400o400o1-Pzah1Bo4tgZHq9NreZz4Bs.jpg",
+    "bio": "2012年にグローバルエンジニアになるべくモルガン・スタンレーのエンジニアとしてキャリアスタート。苦手な英語に悪戦苦闘しながらも、株・FXの電子取引システムの開発・運用に従事。2018年8月に「もっと太い経験を！」と思い、建設ベンチャーのアンドパッドのエンジニアとして転職。採用・組織・PM・開発を経験しながらANDPAD受発注を0から設計・実装。2022年11月に「グローバルプロダクト・開発組織を作りたい！」という思いとともにサプライチェーンのリスク管理SaaSを開発・提供する「Resilire」に開発組織の立ち上げメンバーとして参画。",
+    "tagLine": "Resilire",
+    "profilePicture": "https://sessionize.com/image/412f-400o400o1-NxCuQGe6Sviw1RQJvsyurA.png",
     "sessions": [
       {
         "id": 1022065,
         "name": "メガエンプラSaaSを支えるシリーズAスタートアップのGoアーキテクチャ"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/trhk_ytm",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "8705e2a3-e441-4826-a5bd-7eac19bca631",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "OPTiM 上原",
+    "bio": "マネージャー",
+    "tagLine": "株式会社オプティム",
+    "profilePicture": "https://sessionize.com/image/4ed8-400o400o1-9Gp8scqGRehwzyMMdSLhGS.png",
+    "sessions": [
+      {
+        "id": 1030797,
+        "name": "0→1製品の毎週リリースを支えるGoパッケージ戦略——AI時代のPackage by Feature実践"
       }
     ],
     "isTopSpeaker": false,
