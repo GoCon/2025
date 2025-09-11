@@ -1899,7 +1899,7 @@
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "e45f49f2-02b6-4a1b-a81b-1b8009852989",
+            "id": "b46b46f3-c13c-405a-8f27-0227e7d2ccd4",
             "name": "輝彦 彌冨"
           }
         ],
@@ -1944,7 +1944,74 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [
+          {
+            "id": 109751,
+            "question": "Sponsored Session",
+            "questionType": "Checkbox",
+            "answer": "true",
+            "sort": 40,
+            "answerExtra": null
+          }
+        ],
+        "id": "1030797",
+        "title": "0→1製品の毎週リリースを支えるGoパッケージ戦略——AI時代のPackage by Feature実践",
+        "description": "Golangを用いて新規開発したプロダクトの高頻度リリースを実現するために採用しているプラクティスをAIの活用を交えて紹介します",
+        "startsAt": "2025-09-28T15:00:00",
+        "endsAt": "2025-09-28T15:20:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "8705e2a3-e441-4826-a5bd-7eac19bca631",
+            "name": "OPTiM 上原"
+          }
+        ],
+        "categories": [
+          {
+            "id": 101938,
+            "name": "Session Type",
+            "categoryItems": [
+              {
+                "id": 367239,
+                "name": "Short Session(20min)"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 101939,
+            "name": "Session Level",
+            "categoryItems": [
+              {
+                "id": 367242,
+                "name": "all"
+              }
+            ],
+            "sort": 1
+          },
+          {
+            "id": 102474,
+            "name": "言語 / Language",
+            "categoryItems": [
+              {
+                "id": 369632,
+                "name": "japanese"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": 67045,
+        "room": "Room 2",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [
