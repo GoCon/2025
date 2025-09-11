@@ -72,6 +72,7 @@ import S454Logo from "../assets/sponsors/S454.png";
 import S456Logo from "../assets/sponsors/S456.png";
 import S459Logo from "../assets/sponsors/S459.png";
 import S460Logo from "../assets/sponsors/S460.png";
+import S461Logo from "../assets/sponsors/S461.png";
 import S462Logo from "../assets/sponsors/S462.png";
 import S463Logo from "../assets/sponsors/S463.png";
 
@@ -130,6 +131,7 @@ import S454JobLogo from "../assets/sponsors/S454-jb.png";
 import S456JobLogo from "../assets/sponsors/S456-jb.png";
 import S459JobLogo from "../assets/sponsors/S459-jb.png";
 import S460JobLogo from "../assets/sponsors/S460-jb.png";
+import S461JobLogo from "../assets/sponsors/S461-jb.png";
 import S462JobLogo from "../assets/sponsors/S462-jb.png";
 import S463JobLogo from "../assets/sponsors/S463-jb.png";
 
@@ -942,6 +944,16 @@ export const constants = {
         jobBoard: {
           imageSrc: S460JobLogo,
           link: "https://recruit.techocean.co.jp/",
+        },
+      },
+      {
+        name: "株式会社BuySell Technologies",
+        imageSrc: S461Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: S461JobLogo,
+          link: "https://buysell-technologies.com/recruit/engineer/",
         },
       },
       {
