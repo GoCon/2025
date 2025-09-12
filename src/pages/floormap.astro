@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/sub-page.css";
+import { Image } from "astro:assets";
+import FloorMapImage from "../assets/floor-map.png";
+---
+
+<style>
+  .floor-map-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .floor-map {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+<Layout title="フロアマップ" titleEn="Floor Map">
+  <div class="floor-map-wrapper">
+    <Image
+      src={FloorMapImage}
+      alt="Floor Map"
+      sizes="(max-width: 768px) 100vw, 80vw"
+      priority
+      class="floor-map"
+    />
+  </div>
+</Layout>
