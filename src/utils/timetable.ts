@@ -208,3 +208,23 @@ export const isSponsoredSession = (
   // answerが"true"の場合はスポンサーセッションと判定
   return sponsoredSession?.answer === "true" || false;
 };
+
+/**
+ * Try to translate session related string to locale. Fallback to given string
+ * if translation does not exist.
+ * @param str a string to translate
+ * @param locale a locale to translate to
+ * @returns translated string or str if translation not found
+ */
+export const getTranslated = (str: string, locale: string) => {
+  // TODO: leaving translation table here because it is small, but can be moved
+  // to json if needed
+  const transl: { [key: string]: { [key: string]: string } } = {
+    en: {
+      休憩: "Break",
+      お昼休憩: "Lunch Break",
+      場面転換: "Stage Setup",
+    },
+  };
+  return locale in transl && str in transl[locale] ? transl[locale][str] : str;
+};
