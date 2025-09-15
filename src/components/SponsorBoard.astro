@@ -160,6 +160,34 @@ const currentLocale = Astro.currentLocale || "ja";
     </ul>
   </div>
 
+  <div class="special-sponsor">
+    <h2>
+      {currentLocale === "ja" ? "スペシャルスポンサー" : "Special Sponsor"}
+    </h2>
+    <ul>
+      <li>
+        <Image
+          src={constants.sponsors.specialSponsor.imageSrc}
+          alt={constants.sponsors.specialSponsor.name}
+          width={constants.sponsors.specialSponsor.width}
+          height={constants.sponsors.specialSponsor.height}
+          loading="lazy"
+          priority
+          style="cursor:pointer"
+          onclick={`const dialog = document.getElementById('${constants.sponsors.specialSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
+        />
+
+        <Dialog
+          openId={constants.sponsors.specialSponsor.dialog.openId}
+          sponsorSectionTitle={currentLocale === "ja"
+            ? "スペシャルスポンサー"
+            : `Special Sponsor`}
+          sponsor={constants.sponsors.specialSponsor}
+        />
+      </li>
+    </ul>
+  </div>
+
   <div>
     <h2>Platinum "<span class="accent">Go</span>"ld</h2>
     <ul class="platinum-gold-sponsor-list">
@@ -285,49 +313,23 @@ const currentLocale = Astro.currentLocale || "ja";
       }
     </ul> -->
 
-  <h3>{currentLocale === "ja" ? "ツールスポンサー" : "Tool Sponsor"}</h3>
-  <ul class="tool-sponsor-list">
-    {
-      (
-        <li>
-          <Image
-            src={constants.sponsors.toolSponsor.imageSrc}
-            alt={constants.sponsors.toolSponsor.name}
-            width={constants.sponsors.toolSponsor.width}
-            height={constants.sponsors.toolSponsor.height}
-            loading="lazy"
-            priority
-          />
-        </li>
-      )
-    }
-  </ul>
-
-  <div class="special-sponsor">
-    <h2>
-      {currentLocale === "ja" ? "スペシャルスポンサー" : "Special Sponsor"}
-    </h2>
-    <ul>
-      <li>
-        <Image
-          src={constants.sponsors.specialSponsor.imageSrc}
-          alt={constants.sponsors.specialSponsor.name}
-          width={constants.sponsors.specialSponsor.width}
-          height={constants.sponsors.specialSponsor.height}
-          loading="lazy"
-          priority
-          style="cursor:pointer"
-          onclick={`const dialog = document.getElementById('${constants.sponsors.specialSponsor.dialog.openId}'); if (dialog) dialog.showModal();`}
-        />
-
-        <Dialog
-          openId={constants.sponsors.specialSponsor.dialog.openId}
-          sponsorSectionTitle={currentLocale === "ja"
-            ? "スペシャルスポンサー"
-            : `Special Sponsor`}
-          sponsor={constants.sponsors.specialSponsor}
-        />
-      </li>
+  <div>
+    <h3>{currentLocale === "ja" ? "ツールスポンサー" : "Tool Sponsor"}</h3>
+    <ul class="tool-sponsor-list">
+      {
+        (
+          <li>
+            <Image
+              src={constants.sponsors.toolSponsor.imageSrc}
+              alt={constants.sponsors.toolSponsor.name}
+              width={constants.sponsors.toolSponsor.width}
+              height={constants.sponsors.toolSponsor.height}
+              loading="lazy"
+              priority
+            />
+          </li>
+        )
+      }
     </ul>
   </div>
 </div>
