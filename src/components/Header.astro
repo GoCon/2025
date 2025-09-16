@@ -37,7 +37,7 @@ const currentLocale = Astro.currentLocale || "ja";
     & img {
       vertical-align: middle;
 
-      @media screen and (max-width: 1180px) {
+      @media screen and (max-width: 1249px) {
         & {
           height: 50px;
           width: auto;
@@ -70,7 +70,7 @@ const currentLocale = Astro.currentLocale || "ja";
       }
     }
 
-    @media screen and (max-width: 1180px) {
+    @media screen and (max-width: 1249px) {
       & {
         position: fixed;
         top: 66px;
@@ -114,7 +114,7 @@ const currentLocale = Astro.currentLocale || "ja";
     border-radius: 100%;
     cursor: pointer;
 
-    @media screen and (max-width: 1180px) {
+    @media screen and (max-width: 1249px) {
       & {
         display: inline-flex;
       }
@@ -149,7 +149,7 @@ const currentLocale = Astro.currentLocale || "ja";
     padding: 0;
     list-style: none;
 
-    @media screen and (max-width: 1180px) {
+    @media screen and (max-width: 1249px) {
       & {
         padding: 0 8px;
       }
@@ -196,7 +196,7 @@ const currentLocale = Astro.currentLocale || "ja";
       opacity: 0.7;
     }
 
-    @media screen and (max-width: 1180px) {
+    @media screen and (max-width: 1249px) {
       & {
         padding-left: 16px;
         font-size: 24px;
@@ -209,7 +209,7 @@ const currentLocale = Astro.currentLocale || "ja";
     height: 20px;
     fill: currentColor;
 
-    @media screen and (max-width: 1180px) {
+    @media screen and (max-width: 1249px) {
       & {
         width: 24px;
         height: 24px;
@@ -251,6 +251,15 @@ const currentLocale = Astro.currentLocale || "ja";
         </a>
       </li>
     </ul>
+    <a
+      href={getRelativeLocaleUrl(currentLocale, "help")}
+      class="external-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>Help</span>
+      <OpenInNewIcon class="external-icon" />
+    </a>
     <a
       href="https://docs.google.com/document/d/1LxjzxHK23aTAFvGZeR-BpHf8sC6RKAqbImtnUtxQ3Yo/edit?tab=t.0#heading=h.n5j5dks9hlev"
       class="external-link"
