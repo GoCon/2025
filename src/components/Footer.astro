@@ -30,6 +30,15 @@ const currentLocale = Astro.currentLocale || "ja";
               class="text-link">Staff</a
             >
             <a
+              href={getRelativeLocaleUrl(currentLocale, "help")}
+              class="text-link external-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Help</span>
+              <OpenInNewIcon class="external-icon" />
+            </a>
+            <a
               href="https://docs.google.com/document/d/1LxjzxHK23aTAFvGZeR-BpHf8sC6RKAqbImtnUtxQ3Yo/edit?tab=t.0#heading=h.n5j5dks9hlev"
               class="text-link external-link"
               target="_blank"
@@ -272,7 +281,7 @@ const currentLocale = Astro.currentLocale || "ja";
     background: var(--gradient);
   }
 
-  @media (max-width: 1180px) {
+  @media (max-width: 1249px) {
     .site-link-group {
       display: none;
     }
