@@ -11,8 +11,4 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
-  redirects: {
-    "/help":
-      "https://docs.google.com/document/d/e/2PACX-1vTND_zm397IJTp4cbZwR3tpOhnsTtLIkDwcqDfMTg1K0jjWrHJ7i70ukkwukW2nL0nioqdCbOUG8E6I/pub",
-  },
 });
