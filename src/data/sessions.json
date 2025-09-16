@@ -551,8 +551,8 @@
           }
         ],
         "id": "1021904",
-        "title": "Gopherたちのパネルディスカッション",
-        "description": "本セッションはGo Conference2025の運営が主催するパネルディスカッションです。\r\n多様な「〇〇×Go」のコミュティを運営し、Goコミュニティを引っ張っているパネラー4名が登壇します。\r\n\r\n- パネラー兼ファシリテーター\r\n tenntenn\r\n- パネラー\r\n micchie\r\n momi\r\n logica",
+        "title": "パネルディスカッション: Goコミュニティ これまでとこれから",
+        "description": "概要\r\n日本におけるGo言語コミュニティの歩みを振り返り、未来を展望するパネルディスカッションです。世代や立場を超えた視点でコミュニティの魅力や課題、これからの可能性を語り合います。\r\n経験と新しい挑戦が交差する場を通じて、Goコミュニティの多様な未来像を探ります。\r\n\r\nパネラー兼ファシリテーター\r\n・tenntenn\r\nパネラー\r\n・micchie\r\n・momi\r\n・Takuto Nagami",
         "startsAt": "2025-09-27T14:00:00",
         "endsAt": "2025-09-27T14:40:00",
         "isServiceSession": false,
@@ -560,7 +560,7 @@
         "speakers": [
           {
             "id": "335f95ea-cb9d-4f25-b991-bd17603d4566",
-            "name": "Go Conference Event team"
+            "name": "tenntenn / micchie / momi / Takuto Nagami _"
           }
         ],
         "categories": [
@@ -2342,73 +2342,6 @@
         ],
         "roomId": 67044,
         "room": "Room 1",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [
-          {
-            "id": 109751,
-            "question": "Sponsored Session",
-            "questionType": "Checkbox",
-            "answer": null,
-            "sort": 40,
-            "answerExtra": null
-          }
-        ],
-        "id": "957799",
-        "title": "Decoding the Black Box: Understanding the Go Compiler",
-        "description": "Abstract:\r\nDive into the core of Go development as we unravel the mysteries of the Go compiler. This talk aims to demystify the intricacies of the compiler, offering insights into its inner workings, optimization strategies, and the impact on your code. From the compilation pipeline to performance tuning\r\n\r\nDescription:\r\n## Decoding the Black Box: Understanding the Go Compiler\r\n\r\nEmbark on an illuminating journey into the heart of Go development with \"Decoding the Black Box: Understanding the Go Compiler.\" Uncover the secrets behind the magic of Go's compilation process, demystifying the compiler's inner workings, and revealing optimization strategies that can supercharge your code.\r\n\r\n### What You'll Learn:\r\n\r\n- **Navigate the Compilation Pipeline**: \r\n  - Gain insights into the intricate steps that turn your Go code into efficient machine-executable binaries.\r\n\r\n- **Optimization Unleashed**: \r\n  - Explore advanced optimization techniques employed by the Go compiler and learn how to harness them for peak performance.\r\n\r\n- **Impact on Your Code**: \r\n  - Understand how compiler decisions impact your code's execution and explore strategies to write code that plays well with the compiler's optimizations.\r\n\r\n- **Real-world Examples and Practical Insights**: \r\n  - Illustrate concepts with real-world examples, providing actionable insights that you can immediately apply to your projects.\r\n\r\nUnlock the full potential of your Go code by gaining a comprehensive understanding of the Go compiler. Whether you're a seasoned Go developer or just starting your journey, this talk promises to demystify the compiler, empowering you to write more efficient, performant, and optimized code. Don't miss this opportunity to decode the black box and elevate your Go development skills!",
-        "startsAt": "2025-09-28T16:30:00",
-        "endsAt": "2025-09-28T17:10:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "1356ac8d-2eb2-415b-8aff-70b2c3556a4d",
-            "name": "Jyotsna Gupta"
-          }
-        ],
-        "categories": [
-          {
-            "id": 101938,
-            "name": "Session Type",
-            "categoryItems": [
-              {
-                "id": 367238,
-                "name": "Long Session(40min)"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 101939,
-            "name": "Session Level",
-            "categoryItems": [
-              {
-                "id": 367244,
-                "name": "intermediate"
-              }
-            ],
-            "sort": 1
-          },
-          {
-            "id": 102474,
-            "name": "言語 / Language",
-            "categoryItems": [
-              {
-                "id": 369633,
-                "name": "English"
-              }
-            ],
-            "sort": 2
-          }
-        ],
-        "roomId": 67045,
-        "room": "Room 2",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",

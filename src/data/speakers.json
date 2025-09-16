@@ -69,25 +69,6 @@
     "categories": []
   },
   {
-    "id": "335f95ea-cb9d-4f25-b991-bd17603d4566",
-    "firstName": "",
-    "lastName": "",
-    "fullName": "Go Conference Event team",
-    "bio": "None",
-    "tagLine": "Go Conference Event team",
-    "profilePicture": "https://sessionize.com/image/d33e-400o400o1-hGYUjUMV2zh467iyQuL48R.jpg",
-    "sessions": [
-      {
-        "id": 1021904,
-        "name": "Gopherたちのパネルディスカッション"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [],
-    "categories": []
-  },
-  {
     "id": "37ae8082-b7e9-4009-af07-3bad0627f74e",
     "firstName": "",
     "lastName": "",
@@ -125,31 +106,6 @@
       {
         "title": "X (Twitter)",
         "url": "https://x.com/shiron_dev",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [],
-    "categories": []
-  },
-  {
-    "id": "1356ac8d-2eb2-415b-8aff-70b2c3556a4d",
-    "firstName": "",
-    "lastName": "",
-    "fullName": "Jyotsna Gupta",
-    "bio": "Jyotsna is an Open Source Enthusiast, currently working as a Staff Software Engineer at Visa. She has been a TechSpeaker at Mozilla and volunteers to Mozilla in her free time as an Add-on Content Reviewer & Recommended Extensions Community Board. She has served on the judging panel for the Firefox Quantum Extensions Challenge. She is also a Firefox Add-ons Mentor and has published a privacy-themed add-on PrivateX.  Also, she is the founder/organizer at Women Who Go Bangalore.\r\n\r\nFor her contributions to Mozilla, her name is also listed in about:credits and the credits page of every shipped Firefox browser. She energizes herself by playing Badminton, TT, Carrom, Chess, and Basketball. She prefers to spend most of the time in her room, else she feels to travel the world. If you don’t see her doing any of the above, then you’ll find probably find her sleeping and dreaming for hours, maybe days?",
-    "tagLine": "Staff Software Engineer at Visa ",
-    "profilePicture": "https://sessionize.com/image/4047-400o400o1-U9EX8TPC49hxPW17H2kMYg.png",
-    "sessions": [
-      {
-        "id": 957799,
-        "name": "Decoding the Black Box: Understanding the Go Compiler"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "X (Twitter)",
-        "url": "https://twitter.com/imJenal",
         "linkType": "Twitter"
       }
     ],
@@ -815,6 +771,25 @@
         "linkType": "Twitter"
       }
     ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "335f95ea-cb9d-4f25-b991-bd17603d4566",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "tenntenn / micchie / momi / Takuto Nagami _",
+    "bio": "・tenntenn\r\nnewmo株式会社所属。バックエンドエンジニアとして日々Goを書いている。Google Developer Expert (Go)。一般社団法人Gophers Japan代表。Go Conference 2代目主宰。大学時代にGoに出会い、それ以来のめり込む。人類をGopherにしたいと考え、Goの普及に取り組んでいる。複数社でGoに関する技術アドバイザーをしている。マスコットのGopherの絵を描くのも好き。\r\n\r\n・micchie\r\n今まで培ってきたエンジニアリングの知識・技術・経験をもとに、現在は 株式会社メルカリで Sales Operation Design という仕事を楽しんでいます。\r\n長らくメインオーガナイザーを務めている Women Who Go Tokyo はなんと来年で 10周年！ \r\n楽しく勢いよく、いろんな角度で Go を楽しんでいます。\r\n\r\n・momi\r\n金沢工業大学 工学部 情報工学科 4年。Go Conference 2024での体験や感動を地方に持ち帰り、北陸のGoコミュニティ「Kanazawa.go」を立ち上げました。\r\n現在はGo Conference 2025や学生団体の運営をはじめ、地域の子どもたちへの情報教育などにも取り組んでいます。エンジニアを志し日々学びながら、学生であり地方に住む今だからこそできる挑戦と日々を楽しんでいます。\r\n\r\n・Takuto Nagami\r\n千葉工業大学 情報科学部 情報ネットワーク学科 学士4年。クラウドプラットフォームの開発に携わるソフトウェアエンジニアを目指し、日々研鑽を積んでいる。\r\n日本Goコミュニティの海外進出を手助けするプロジェクト「Gophers EX」主催。海外カンファレンスでの英語登壇経験を活かし、海外への挑戦を妨げる言語・メンタルの壁を取り除くべく日々奮闘中。\r\n",
+    "tagLine": "None",
+    "profilePicture": "https://sessionize.com/image/9a8e-400o400o1-MsECiDQNAEaLyso1pRQx7K.png",
+    "sessions": [
+      {
+        "id": 1021904,
+        "name": "パネルディスカッション: Goコミュニティ これまでとこれから"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
     "questionAnswers": [],
     "categories": []
   },
