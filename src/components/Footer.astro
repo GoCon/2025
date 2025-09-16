@@ -4,6 +4,7 @@ import Logo from "../assets/logo.svg";
 import OpenInNewIcon from "../assets/icon/open-in-new.svg";
 import XLogo from "../assets/x-logo.svg";
 import { constants } from "../constants";
+import { concatWithBase } from "../utils/concatWithBase";
 
 const currentLocale = Astro.currentLocale || "ja";
 ---
@@ -30,7 +31,7 @@ const currentLocale = Astro.currentLocale || "ja";
               class="text-link">Staff</a
             >
             <a
-              href={getRelativeLocaleUrl(currentLocale, "help")}
+              href={concatWithBase("help")}
               class="text-link external-link"
               target="_blank"
               rel="noopener noreferrer"
