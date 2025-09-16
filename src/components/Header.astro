@@ -7,7 +7,6 @@ import OpenInNewIcon from "../assets/icon/open-in-new.svg";
 import Logo from "../assets/logo.svg";
 import { constants } from "../constants";
 import Button from "./Button.astro";
-import { concatWithBase } from "../utils/concatWithBase";
 
 const currentLocale = Astro.currentLocale || "ja";
 ---
@@ -244,7 +243,7 @@ const currentLocale = Astro.currentLocale || "ja";
         </a>
       </li>
       <li>
-        <a href={getRelativeLocaleUrl(currentLocale, "staffs")}>Staff</a>
+        <a href={getRelativeLocaleUrl(currentLocale, "staffs")}> Staff </a>
       </li>
       <li>
         <a href={getRelativeLocaleUrl(currentLocale, "floormap")}>
@@ -253,7 +252,7 @@ const currentLocale = Astro.currentLocale || "ja";
       </li>
     </ul>
     <a
-      href={concatWithBase("help")}
+      href={getRelativeLocaleUrl(currentLocale, "help")}
       class="external-link"
       target="_blank"
       rel="noopener noreferrer"
