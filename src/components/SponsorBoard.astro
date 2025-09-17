@@ -18,7 +18,23 @@ const currentLocale = Astro.currentLocale || "ja";
   .platinum-gold-sponsor-list img,
   .gold-sponsor-list img,
   .silver-sponsor-list img,
-  .bronze-sponsor-list img,
+  .bronze-sponsor-list img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .gopher-sponsor-list img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+
   .tool-sponsor-list img {
     max-width: 100%;
     max-height: 100%;
@@ -41,7 +57,28 @@ const currentLocale = Astro.currentLocale || "ja";
   .platinum-gold-sponsor-list li,
   .gold-sponsor-list li,
   .silver-sponsor-list li,
-  .bronze-sponsor-list li,
+  .bronze-sponsor-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: none;
+    padding: 10px;
+  }
+
+  .gopher-sponsor-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: none;
+    padding: 10px;
+  }
+
   .tool-sponsor-list li {
     display: flex;
     justify-content: center;
@@ -72,6 +109,19 @@ const currentLocale = Astro.currentLocale || "ja";
     width: 100%;
     margin: 0;
   }
+  .gopher-sponsor-list li {
+    max-width: 220px;
+    height: 200px;
+    min-width: 120px;
+    width: 100%;
+    margin: 0;
+
+    div {
+      color: var(--text-primary);
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
   .tool-sponsor-list li {
     max-width: 320px;
     max-height: 120px;
@@ -94,7 +144,8 @@ const currentLocale = Astro.currentLocale || "ja";
     padding: 0;
   }
 
-  .bronze-sponsor-list {
+  .bronze-sponsor-list,
+  .gopher-sponsor-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -113,6 +164,7 @@ const currentLocale = Astro.currentLocale || "ja";
     .gold-sponsor-list li,
     .silver-sponsor-list li,
     .bronze-sponsor-list li,
+    .gopher-sponsor-list li,
     .tool-sponsor-list li {
       max-width: 100%;
     }
@@ -127,6 +179,7 @@ const currentLocale = Astro.currentLocale || "ja";
     .gold-sponsor-list li,
     .silver-sponsor-list li,
     .bronze-sponsor-list li,
+    .gopher-sponsor-list li,
     .tool-sponsor-list li {
       padding: 6px;
     }
@@ -292,13 +345,11 @@ const currentLocale = Astro.currentLocale || "ja";
     </ul>
   </div>
 
-  <!--
-  08/31 の締め切り終了後に対応する
   <div>
     <h2>Gopher</h2>
     <ul class="gopher-sponsor-list">
       {
-        constants.jobBoard.gopherSponsors.map((sponsor) => (
+        constants.sponsors.gopherSponsors.map((sponsor) => (
           <li>
             <Image
               src={sponsor.imageSrc}
@@ -308,10 +359,12 @@ const currentLocale = Astro.currentLocale || "ja";
               loading="lazy"
               priority
             />
+            <div>{sponsor.name}</div>
           </li>
         ))
       }
-    </ul> -->
+    </ul>
+  </div>
 
   <div>
     <h3>{currentLocale === "ja" ? "ツールスポンサー" : "Tool Sponsor"}</h3>
