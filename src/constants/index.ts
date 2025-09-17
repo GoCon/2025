@@ -76,6 +76,26 @@ import S461Logo from "../assets/sponsors/S461.png";
 import S462Logo from "../assets/sponsors/S462.png";
 import S463Logo from "../assets/sponsors/S463.png";
 
+// Gopher Sponsors
+import S501Logo from "../assets/sponsors/S501.jpg";
+import S502Logo from "../assets/sponsors/S502.png";
+import S503Logo from "../assets/sponsors/S503.png";
+import S504Logo from "../assets/sponsors/S504.png";
+import S505Logo from "../assets/sponsors/S505.jpg";
+import S506Logo from "../assets/sponsors/S506.jpeg";
+import S507Logo from "../assets/sponsors/S507.png";
+import S508Logo from "../assets/sponsors/S508.jpeg";
+import S509Logo from "../assets/sponsors/S509.png";
+import S510Logo from "../assets/sponsors/S510.png";
+import S511Logo from "../assets/sponsors/S511.png";
+import S512Logo from "../assets/sponsors/S512.png";
+import S513Logo from "../assets/sponsors/S513.jpg";
+import S514Logo from "../assets/sponsors/S514.jpg";
+import S515Logo from "../assets/sponsors/S515.jpg";
+import S516Logo from "../assets/sponsors/S516.jpg";
+import S517Logo from "../assets/sponsors/S517.jpg";
+import S518Logo from "../assets/sponsors/S518.png";
+
 // ジョブボード
 import EVERYJobLogo from "../assets/sponsors/S102-jb.jpg";
 import ResilireJobLogo from "../assets/sponsors/S201-jb.jpg";
@@ -979,9 +999,196 @@ export const constants = {
     ],
     gopherSponsors: [
       {
-        number: 30,
-        name: "",
-        imageSrc: NoImage,
+        number: 501,
+        name: "Senoue",
+        imageSrc: S501Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 502,
+        name: "Go Sueyoshi (sue445)",
+        imageSrc: S502Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 503,
+        name: "Masahiro Sakuraba",
+        imageSrc: S503Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 504,
+        name: "SUMIDA, Ippei",
+        imageSrc: S504Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 505,
+        name: "KojiKa",
+        imageSrc: S505Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 506,
+        name: "Songmu",
+        imageSrc: S506Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 507,
+        name: "yoshi-koyama",
+        imageSrc: S507Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 508,
+        name: "momi",
+        imageSrc: S508Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 509,
+        name: "なお",
+        imageSrc: S509Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 510,
+        name: "#local_tech",
+        imageSrc: S510Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 511,
+        name: "utgwkk",
+        imageSrc: S511Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 512,
+        name: "ysaito",
+        imageSrc: S512Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 513,
+        name: "M.K",
+        imageSrc: S513Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 514,
+        name: "chihiro",
+        imageSrc: S514Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 515,
+        name: "turbofish",
+        imageSrc: S515Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 516,
+        name: "名前迷子",
+        imageSrc: S516Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 517,
+        name: "やまと",
+        imageSrc: S517Logo,
+        height: gopherSponsorImageSize.height,
+        width: gopherSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: NoImage,
+          link: undefined,
+        },
+      },
+      {
+        number: 518,
+        name: "Radish",
+        imageSrc: S518Logo,
         height: gopherSponsorImageSize.height,
         width: gopherSponsorImageSize.width,
         jobBoard: {
@@ -1007,5 +1214,6 @@ export const AllSponsors = () => {
     ...constants.sponsors.goldSponsors,
     ...constants.sponsors.silverSponsors,
     ...constants.sponsors.bronzeSponsors,
+    ...constants.sponsors.gopherSponsors,
   ];
 };
