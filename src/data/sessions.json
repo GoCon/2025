@@ -2295,8 +2295,8 @@
         "id": "958992",
         "title": "Green Tea Garbage Collector の今：Go言語のコアチームによる試行錯誤の過程と共にメモリ管理最適化の実装を読み解く",
         "description": "Green Tea Garbage Collector は、現在のメモリ管理（GC）の方法を変えることでCPU効率を高める革新的な技術です。本セッションでは、下記3つの観点から、Go言語の未来を左右する Green Tea Garbage Collector のアルゴリズムと実装内容について迫ります。\r\n\r\n- Goチームが、なぜ現在の Tri-color Parallel Marking アルゴリズムから脱却するために、言語仕様の中核となるGCレイヤーを開発しているか（現在）\r\n- Go チームがどのような試行錯誤を元にこの画期的な技術に辿り着いたか（過去）\r\n- Green Tea Garbage Collector は今後、SIMD AVX512などの具体的なアプローチをどのように取り入れようとしているか（未来）\r\n\r\n本セッションを通じて、参加者の方は Green Tea Garbage Collector のコアアイディアと内部実装を深く理解し、GCの設計が与える影響についての洞察を得ることができます。また、実際のGoチームの検証を分析したこのセッションは、Goのランタイム実装に興味がある方にとって貴重な学びの機会となります。",
-        "startsAt": "2025-09-28T16:30:00",
-        "endsAt": "2025-09-28T17:10:00",
+        "startsAt": "2025-09-28T16:40:00",
+        "endsAt": "2025-09-28T17:20:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [

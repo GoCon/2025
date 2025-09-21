@@ -8,6 +8,24 @@
         "name": "Room 1",
         "sessions": [
           {
+            "id": "28c00986-e24d-4e8b-bdb7-862299eb7cb4",
+            "title": "受付開始",
+            "description": null,
+            "startsAt": "2025-09-27T09:00:00",
+            "endsAt": "2025-09-27T10:00:00",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 67044,
+            "room": "Room 1",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
             "id": "5f8ee798-da65-4889-98e4-e8571cac282b",
             "title": "Opening Session",
             "description": null,
@@ -1443,6 +1461,34 @@
       }
     ],
     "timeSlots": [
+      {
+        "slotStart": "09:00:00",
+        "rooms": [
+          {
+            "id": 67044,
+            "name": "Room 1",
+            "session": {
+              "id": "28c00986-e24d-4e8b-bdb7-862299eb7cb4",
+              "title": "受付開始",
+              "description": null,
+              "startsAt": "2025-09-27T09:00:00",
+              "endsAt": "2025-09-27T10:00:00",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 67044,
+              "room": "Room 1",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
       {
         "slotStart": "10:00:00",
         "rooms": [
@@ -3159,6 +3205,24 @@
         "name": "Room 1",
         "sessions": [
           {
+            "id": "4ce699e7-20c4-4594-9edb-2241dc4a1b8f",
+            "title": "受付開始",
+            "description": null,
+            "startsAt": "2025-09-28T09:00:00",
+            "endsAt": "2025-09-28T10:10:00",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 67044,
+            "room": "Room 1",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
             "id": "ad837fc4-8ebd-465b-830b-a3aec2b43de2",
             "title": "Opening",
             "description": null,
@@ -3834,11 +3898,11 @@
             "isConfirmed": true
           },
           {
-            "id": "d14b9256-ba9f-44f5-9e81-4916f85d735f",
-            "title": "休憩",
+            "id": "0521b45f-2f00-414e-9c73-a1daf9ec24a2",
+            "title": "場面転換",
             "description": null,
             "startsAt": "2025-09-28T16:20:00",
-            "endsAt": "2025-09-28T16:30:00",
+            "endsAt": "2025-09-28T16:40:00",
             "isServiceSession": true,
             "isPlenumSession": true,
             "speakers": [],
@@ -3855,8 +3919,8 @@
             "id": "958992",
             "title": "Green Tea Garbage Collector の今：Go言語のコアチームによる試行錯誤の過程と共にメモリ管理最適化の実装を読み解く",
             "description": "Green Tea Garbage Collector は、現在のメモリ管理（GC）の方法を変えることでCPU効率を高める革新的な技術です。本セッションでは、下記3つの観点から、Go言語の未来を左右する Green Tea Garbage Collector のアルゴリズムと実装内容について迫ります。\r\n\r\n- Goチームが、なぜ現在の Tri-color Parallel Marking アルゴリズムから脱却するために、言語仕様の中核となるGCレイヤーを開発しているか（現在）\r\n- Go チームがどのような試行錯誤を元にこの画期的な技術に辿り着いたか（過去）\r\n- Green Tea Garbage Collector は今後、SIMD AVX512などの具体的なアプローチをどのように取り入れようとしているか（未来）\r\n\r\n本セッションを通じて、参加者の方は Green Tea Garbage Collector のコアアイディアと内部実装を深く理解し、GCの設計が与える影響についての洞察を得ることができます。また、実際のGoチームの検証を分析したこのセッションは、Goのランタイム実装に興味がある方にとって貴重な学びの機会となります。",
-            "startsAt": "2025-09-28T16:30:00",
-            "endsAt": "2025-09-28T17:10:00",
+            "startsAt": "2025-09-28T16:40:00",
+            "endsAt": "2025-09-28T17:20:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -3909,10 +3973,10 @@
             "isConfirmed": true
           },
           {
-            "id": "0521b45f-2f00-414e-9c73-a1daf9ec24a2",
-            "title": "場面転換",
+            "id": "d14b9256-ba9f-44f5-9e81-4916f85d735f",
+            "title": "休憩",
             "description": null,
-            "startsAt": "2025-09-28T17:10:00",
+            "startsAt": "2025-09-28T17:20:00",
             "endsAt": "2025-09-28T17:30:00",
             "isServiceSession": true,
             "isPlenumSession": true,
@@ -4904,6 +4968,34 @@
       }
     ],
     "timeSlots": [
+      {
+        "slotStart": "09:00:00",
+        "rooms": [
+          {
+            "id": 67044,
+            "name": "Room 1",
+            "session": {
+              "id": "4ce699e7-20c4-4594-9edb-2241dc4a1b8f",
+              "title": "受付開始",
+              "description": null,
+              "startsAt": "2025-09-28T09:00:00",
+              "endsAt": "2025-09-28T10:10:00",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 67044,
+              "room": "Room 1",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
       {
         "slotStart": "10:10:00",
         "rooms": [
@@ -6076,11 +6168,11 @@
             "id": 67044,
             "name": "Room 1",
             "session": {
-              "id": "d14b9256-ba9f-44f5-9e81-4916f85d735f",
-              "title": "休憩",
+              "id": "0521b45f-2f00-414e-9c73-a1daf9ec24a2",
+              "title": "場面転換",
               "description": null,
               "startsAt": "2025-09-28T16:20:00",
-              "endsAt": "2025-09-28T16:30:00",
+              "endsAt": "2025-09-28T16:40:00",
               "isServiceSession": true,
               "isPlenumSession": true,
               "speakers": [],
@@ -6098,7 +6190,7 @@
         ]
       },
       {
-        "slotStart": "16:30:00",
+        "slotStart": "16:40:00",
         "rooms": [
           {
             "id": 67044,
@@ -6107,8 +6199,8 @@
               "id": "958992",
               "title": "Green Tea Garbage Collector の今：Go言語のコアチームによる試行錯誤の過程と共にメモリ管理最適化の実装を読み解く",
               "description": "Green Tea Garbage Collector は、現在のメモリ管理（GC）の方法を変えることでCPU効率を高める革新的な技術です。本セッションでは、下記3つの観点から、Go言語の未来を左右する Green Tea Garbage Collector のアルゴリズムと実装内容について迫ります。\r\n\r\n- Goチームが、なぜ現在の Tri-color Parallel Marking アルゴリズムから脱却するために、言語仕様の中核となるGCレイヤーを開発しているか（現在）\r\n- Go チームがどのような試行錯誤を元にこの画期的な技術に辿り着いたか（過去）\r\n- Green Tea Garbage Collector は今後、SIMD AVX512などの具体的なアプローチをどのように取り入れようとしているか（未来）\r\n\r\n本セッションを通じて、参加者の方は Green Tea Garbage Collector のコアアイディアと内部実装を深く理解し、GCの設計が与える影響についての洞察を得ることができます。また、実際のGoチームの検証を分析したこのセッションは、Goのランタイム実装に興味がある方にとって貴重な学びの機会となります。",
-              "startsAt": "2025-09-28T16:30:00",
-              "endsAt": "2025-09-28T17:10:00",
+              "startsAt": "2025-09-28T16:40:00",
+              "endsAt": "2025-09-28T17:20:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -6165,16 +6257,16 @@
         ]
       },
       {
-        "slotStart": "17:10:00",
+        "slotStart": "17:20:00",
         "rooms": [
           {
             "id": 67044,
             "name": "Room 1",
             "session": {
-              "id": "0521b45f-2f00-414e-9c73-a1daf9ec24a2",
-              "title": "場面転換",
+              "id": "d14b9256-ba9f-44f5-9e81-4916f85d735f",
+              "title": "休憩",
               "description": null,
-              "startsAt": "2025-09-28T17:10:00",
+              "startsAt": "2025-09-28T17:20:00",
               "endsAt": "2025-09-28T17:30:00",
               "isServiceSession": true,
               "isPlenumSession": true,
