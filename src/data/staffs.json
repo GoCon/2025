@@ -266,7 +266,7 @@
   {
     "id": "17",
     "name": "momi",
-    "company": "フリー株式会社",
+    "company": "金沢工業大学",
     "avatar": "irdx_m.jpg",
     "sns": {
       "link": "https://x.com/irdx_m",
@@ -731,5 +731,20 @@
       "type": "x"
     },
     "communities": []
+  },
+  {
+    "id": "47",
+    "name": "itsuki",
+    "company": "石川工業高等専門学校",
+    "avatar": "maropook.jpg",
+    "sns": {
+      "link": "https://x.com/maropook",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
   }
 ]
