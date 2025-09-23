@@ -133,6 +133,7 @@ const currentLocale = Astro.currentLocale || "ja";
   .platinum-gold-sponsor-list,
   .gold-sponsor-list,
   .silver-sponsor-list,
+  .wifi-sponsor-list,
   .tool-sponsor-list {
     display: flex;
     flex-wrap: wrap;
@@ -165,6 +166,7 @@ const currentLocale = Astro.currentLocale || "ja";
     .silver-sponsor-list li,
     .bronze-sponsor-list li,
     .gopher-sponsor-list li,
+    .wifi-sponsor-list li,
     .tool-sponsor-list li {
       max-width: 100%;
     }
@@ -180,6 +182,7 @@ const currentLocale = Astro.currentLocale || "ja";
     .silver-sponsor-list li,
     .bronze-sponsor-list li,
     .gopher-sponsor-list li,
+    .wifi-sponsor-list li,
     .tool-sponsor-list li {
       padding: 6px;
     }
@@ -388,7 +391,7 @@ const currentLocale = Astro.currentLocale || "ja";
 
   <div>
     <h3>{currentLocale === "ja" ? "WiFiスポンサー" : "WiFi Sponsor"}</h3>
-    <ul class="tool-sponsor-list">
+    <ul class="wifi-sponsor-list">
       {
         (
           <li>
