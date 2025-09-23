@@ -385,4 +385,24 @@ const currentLocale = Astro.currentLocale || "ja";
       }
     </ul>
   </div>
+
+  <div>
+    <h3>{currentLocale === "ja" ? "WiFiスポンサー" : "WiFi Sponsor"}</h3>
+    <ul class="tool-sponsor-list">
+      {
+        (
+          <li>
+            <Image
+              src={constants.sponsors.wifiSponsor.imageSrc}
+              alt={constants.sponsors.wifiSponsor.name}
+              width={constants.sponsors.wifiSponsor.width}
+              height={constants.sponsors.wifiSponsor.height}
+              loading="lazy"
+              priority
+            />
+          </li>
+        )
+      }
+    </ul>
+  </div>
 </div>
