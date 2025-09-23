@@ -44,6 +44,7 @@ import S421Logo from "../assets/sponsors/S421.png";
 import S422Logo from "../assets/sponsors/S422.png";
 import S423Logo from "../assets/sponsors/S423.png";
 import S425Logo from "../assets/sponsors/S425.png";
+import S426Logo from "../assets/sponsors/S426.png";
 import S427Logo from "../assets/sponsors/S427.png";
 import S428Logo from "../assets/sponsors/S428.png";
 import S429Logo from "../assets/sponsors/S429.png";
@@ -128,6 +129,7 @@ import S421JobLogo from "../assets/sponsors/S421-jb.png";
 import S422JobLogo from "../assets/sponsors/S422-jb.png";
 import S423JobLogo from "../assets/sponsors/S423-jb.png";
 import S425JobLogo from "../assets/sponsors/S425-jb.png";
+import S426JobLogo from "../assets/sponsors/S426-jb.jpg";
 import S428JobLogo from "../assets/sponsors/S428-jb.png";
 import S429JobLogo from "../assets/sponsors/S429-jb.png";
 import S431JobLogo from "../assets/sponsors/S431-jb.png";
@@ -684,6 +686,16 @@ export const constants = {
         jobBoard: {
           imageSrc: S425JobLogo,
           link: undefined,
+        },
+      },
+      {
+        name: "ディップ株式会社",
+        imageSrc: S426Logo,
+        height: bronzeSponsorImageSize.height,
+        width: bronzeSponsorImageSize.width,
+        jobBoard: {
+          imageSrc: S426JobLogo,
+          link: "https://hrmos.co/pages/dip-net/jobs/ENG201",
         },
       },
       {
