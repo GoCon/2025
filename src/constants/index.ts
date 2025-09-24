@@ -157,6 +157,9 @@ import S461JobLogo from "../assets/sponsors/S461-jb.png";
 import S462JobLogo from "../assets/sponsors/S462-jb.png";
 import S463JobLogo from "../assets/sponsors/S463-jb.png";
 
+// wifi sponsor
+import InternetLabo from "../assets/sponsors/TS001.jpg";
+
 const venueSponsorImageSize = {
   height: 242,
   width: 448,
@@ -1212,6 +1215,12 @@ export const constants = {
     toolSponsor: {
       name: "株式会社LayerX",
       imageSrc: LayerXLogo,
+      height: toolSponsorImageSize.height,
+      width: toolSponsorImageSize.width,
+    },
+    wifiSponsor: {
+      name: "インターネットラボ",
+      imageSrc: InternetLabo,
       height: toolSponsorImageSize.height,
       width: toolSponsorImageSize.width,
     },
