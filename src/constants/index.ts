@@ -848,7 +848,7 @@ export const constants = {
         width: bronzeSponsorImageSize.width,
         jobBoard: {
           imageSrc: S443JobLogo,
-          link: undefined,
+          link: "https://herp.careers/v1/belong/requisition-groups/0b7f2dbf-9c14-4ec6-8c6c-e0c166dbe3ba",
         },
       },
       {
