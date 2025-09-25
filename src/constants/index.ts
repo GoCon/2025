@@ -638,7 +638,7 @@ export const constants = {
         width: bronzeSponsorImageSize.width,
         jobBoard: {
           imageSrc: S419JobLogo,
-          link: undefined,
+          link: "https://www.hrbrain.co.jp/recruit",
         },
       },
       {
