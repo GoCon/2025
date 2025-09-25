@@ -746,5 +746,51 @@
         "name": "Go Conference"
       }
     ]
+  },
+  {
+    "id": "48",
+    "name": "miki",
+    "avatar": "miki_sjk.jpg",
+    "sns": {
+      "link": "https://x.com/miki_sjk",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "49",
+    "name": "crifff",
+    "avatar": "crifff.jpg",
+    "sns": {
+      "link": "https://x.com/crifff",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      }
+    ]
+  },
+  {
+    "id": "50",
+    "name": "nozomuikuta",
+    "company": "newmo株式会社",
+    "avatar": "nozomuikuta.jpg",
+    "sns": {
+      "link": "https://x.com/nozomuikuta",
+      "type": "x"
+    },
+    "communities": [
+      {
+        "name": "Go Conference"
+      },
+      {
+        "name": "Shibuya.go"
+      }
+    ]
   }
 ]
