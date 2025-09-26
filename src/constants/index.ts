@@ -15,7 +15,7 @@ import CrossTechLogo from "../assets/sponsors/10_S318.png";
 import SakuraLogo from "../assets/sponsors/11_S311.png";
 import TokyuLogo from "../assets/sponsors/12_S305.png";
 import BloombergLogo from "../assets/sponsors/13_S315.png";
-import KnoledgeWorkLogo from "../assets/sponsors/14_S308.png";
+import KnowledgeWorkLogo from "../assets/sponsors/14_S308.png";
 import SODALogo from "../assets/sponsors/15_S307.png";
 import GrowthVerseLogo from "../assets/sponsors/16_S301.png";
 import TopotalLogo from "../assets/sponsors/17_S310.png";
@@ -105,9 +105,11 @@ import TechTouchJobLogo from "../assets/sponsors/S304-jb.jpg";
 import TokyuJobLogo from "../assets/sponsors/S305-jb.png";
 import SODALogoJobLogo from "../assets/sponsors/S307-jb.png";
 import HatenaJobLogo from "../assets/sponsors/S306-jb.jpg";
+import KnowledgeWorkJobLogo from "../assets/sponsors/S308-jb.png";
 import LayerXJobLogo from "../assets/sponsors/S309-jb.png";
 import UNextJobLogo from "../assets/sponsors/S312-jb.jpg";
 import UbieJobLogo from "../assets/sponsors/S314-jb.png";
+import KanmuJobLogo from "../assets/sponsors/S316-jb.png";
 import BloombergJobLogo from "../assets/sponsors/S315-jb.png";
 import CrossTechJobLogo from "../assets/sponsors/S318-jb.png";
 import IssueHuntJobLogo from "../assets/sponsors/S313-jb.png";
@@ -417,11 +419,11 @@ export const constants = {
       },
       {
         name: "株式会社ナレッジワーク",
-        imageSrc: KnoledgeWorkLogo,
+        imageSrc: KnowledgeWorkLogo,
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
+          imageSrc: KnowledgeWorkJobLogo,
           link: undefined,
         },
       },
@@ -491,8 +493,8 @@ export const constants = {
         height: silverSponsorImageSize.height,
         width: silverSponsorImageSize.width,
         jobBoard: {
-          imageSrc: NoImage,
-          link: undefined,
+          imageSrc: KanmuJobLogo,
+          link: "https://team.kanmu.co.jp/",
         },
       },
       {
