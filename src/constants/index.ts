@@ -239,8 +239,8 @@ export const constants = {
         description: "",
       },
       jobBoard: {
-        imageSrc: NoImage,
-        link: undefined,
+        imageSrc: CyberAgentLogo,
+        link: "https://www.cyberagent.co.jp/careers/",
       },
     },
     specialSponsor: {
