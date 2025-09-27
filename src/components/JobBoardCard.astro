@@ -46,9 +46,10 @@ const { src, alt, width, height, link } = Astro.props;
       grid-template-columns: 1fr; /* 1200px以下なら1列 */
       width: unset;
       height: unset;
-      max-width: 1120px;
-      max-height: 560px;
       aspect-ratio: 2 / 1;
+      /* grid内のaspect-ratioを指定するとSafariではうまくサイズ計算できない不具合への対策 */
+      min-width: 0;
+      min-height: 0;
     }
   }
 </style>
