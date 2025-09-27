@@ -424,7 +424,7 @@ export const constants = {
         width: silverSponsorImageSize.width,
         jobBoard: {
           imageSrc: KnowledgeWorkJobLogo,
-          link: undefined,
+          link: "https://knowledgework.com/",
         },
       },
       {
