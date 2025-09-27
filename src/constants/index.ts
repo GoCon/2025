@@ -114,6 +114,7 @@ import BloombergJobLogo from "../assets/sponsors/S315-jb.png";
 import CrossTechJobLogo from "../assets/sponsors/S318-jb.png";
 import IssueHuntJobLogo from "../assets/sponsors/S313-jb.png";
 import GrooveXJobLogo from "../assets/sponsors/S302-jb.jpg";
+import CyberAgentJobLogo from "../assets/sponsors/V001-jb.png";
 
 // Bronze Sponsors Job Board
 import S401JobLogo from "../assets/sponsors/S401-jb.png";
@@ -239,8 +240,8 @@ export const constants = {
         description: "",
       },
       jobBoard: {
-        imageSrc: CyberAgentLogo,
-        link: "https://www.cyberagent.co.jp/careers/",
+        imageSrc: CyberAgentJobLogo,
+        link: "https://hrmos.co/pages/cyberagent-group",
       },
     },
     specialSponsor: {
