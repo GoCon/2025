@@ -240,7 +240,7 @@ export const constants = {
         description: "",
       },
       jobBoard: {
-        imageSrc: CyberAgentLogo,
+        imageSrc: CyberAgentJobLogo,
         link: "https://hrmos.co/pages/cyberagent-group",
       },
     },
