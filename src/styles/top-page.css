@@ -21,6 +21,12 @@
   }
 }
 
+.announcement {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .event-table {
   margin: 40px auto 0;
 
