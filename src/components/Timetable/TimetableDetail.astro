@@ -45,8 +45,12 @@ const getEmbedUrl = (url: string | null): string | null => {
 };
 
 const embedUrl = getEmbedUrl(presentationUrl);
-// Zennなど埋め込み不可のサービスを判定
-const isEmbeddable = embedUrl && !embedUrl.includes("zenn.dev");
+// 埋め込み不可のサービスを判定 (リンクボタンとして表示)
+const isEmbeddable =
+  embedUrl &&
+  !embedUrl.includes("zenn.dev") &&
+  !embedUrl.includes("github.com") &&
+  !embedUrl.includes("github.io");
 ---
 
 <style>
@@ -137,9 +141,14 @@ const isEmbeddable = embedUrl && !embedUrl.includes("zenn.dev");
     display: inline-flex;
     align-items: center;
     gap: 4px;
+    padding: 8px 16px;
     font-weight: 700;
+    font-size: 16px;
     text-decoration: none;
     color: var(--text-primary);
+    border: 2px solid var(--surface-tertiary);
+    border-radius: 8px;
+    background-color: var(--surface-primary);
     transition: ease opacity 0.3s;
 
     &:hover {
