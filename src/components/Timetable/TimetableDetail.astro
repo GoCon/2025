@@ -16,11 +16,37 @@ interface Props {
   endsAt: Session["endsAt"];
   description: Session["description"];
   speakers: Session["speakers"];
+  presentationUrl: Session["questionAnswers"][number]["answer"];
 }
 
-const { title, room, startsAt, endsAt, description, speakers } = Astro.props;
+const {
+  title,
+  room,
+  startsAt,
+  endsAt,
+  description,
+  speakers,
+  presentationUrl,
+} = Astro.props;
 
 const currentLocale = Astro.currentLocale || "ja";
+
+// プレゼンテーションURLを埋め込み用に変換
+const getEmbedUrl = (url: string | null): string | null => {
+  if (!url) return null;
+
+  // Googleスライドの場合は /embed を追加
+  if (url.includes("docs.google.com/presentation")) {
+    return url.replace("/edit", "/embed");
+  }
+
+  // その他のURLはそのまま使用
+  return url;
+};
+
+const embedUrl = getEmbedUrl(presentationUrl);
+// Zennなど埋め込み不可のサービスを判定
+const isEmbeddable = embedUrl && !embedUrl.includes("zenn.dev");
 ---
 
 <style>
@@ -83,6 +109,47 @@ const currentLocale = Astro.currentLocale || "ja";
     flex-direction: column;
     gap: 16px;
   }
+
+  .presentation-embed {
+    margin-top: 32px;
+    border: 2px solid var(--surface-tertiary);
+    border-radius: 16px;
+    background-color: var(--surface-primary);
+    overflow: hidden;
+  }
+
+  .presentation-iframe {
+    width: 100%;
+    height: 569px;
+    border: none;
+    display: block;
+
+    @media screen and (max-width: 860px) {
+      height: 400px;
+    }
+
+    @media screen and (max-width: 640px) {
+      height: 300px;
+    }
+  }
+
+  .presentation-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: ease opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .presentation-link-wrapper {
+    margin-top: 32px;
+  }
 </style>
 
 <article>
@@ -109,6 +176,30 @@ const currentLocale = Astro.currentLocale || "ja";
     <div class="description">
       {description}
     </div>
+    {
+      embedUrl &&
+        (isEmbeddable ? (
+          <div class="presentation-embed">
+            <iframe
+              src={embedUrl}
+              class="presentation-iframe"
+              allowfullscreen
+              title={currentLocale === "ja" ? "セッション資料" : "Presentation"}
+            />
+          </div>
+        ) : (
+          <div class="presentation-link-wrapper">
+            <a
+              href={embedUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="presentation-link"
+            >
+              {currentLocale === "ja" ? "スライドを見る" : "View Slides"}
+            </a>
+          </div>
+        ))
+    }
   </div>
   <footer class="session-footer">
     <div class="speakers-list">
