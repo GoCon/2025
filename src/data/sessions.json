@@ -10,7 +10,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -77,7 +85,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/kuro_kurorrr/understanding-module-through-the-lens-of-supply-chain-attacks",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -144,7 +160,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/masa0110/gonozi-ju-jie-xi-wosi-itemiru-8458b8d5-7222-49b5-ba43-bb2116e757e3",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -211,7 +235,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/ymotongpoo/pprof-workshop-for-beginners",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -278,7 +310,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://github.com/tinygo-keeb/workshop",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -345,7 +385,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/chiroruxx/gowoshi-tutetddwoti-yan-siyou",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -412,7 +460,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/uhzz/go-conference-2025",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -479,7 +535,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/daikieng/synctest",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -546,7 +610,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": "false",
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -613,7 +685,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -680,7 +760,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://newmo-oss.github.io/gocon25-workshop/",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -747,7 +835,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -814,7 +910,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/mazrean/go-conference-2025-workshop",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -881,7 +985,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://docs.google.com/presentation/d/1kAbDyscAUXBGc0cQ5PnIPocSNNySpEwvqkMUDbNI0h4/edit?usp=sharing",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -948,7 +1060,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/ryokotmng/go-type-system-internals",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1015,7 +1135,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1082,7 +1210,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1149,7 +1285,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1216,7 +1360,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1283,7 +1435,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/k1low/go-conference-2025",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1350,12 +1510,20 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/k3forx/go1-dot-25xin-ji-neng-testing-synctest-tegao-su-and-que-shi-nabing-xing-tesutowoshi-xian-surufang-fa",
+            "sort": 29,
             "answerExtra": null
           }
         ],
         "id": "958977",
-        "title": "Go1.25新機能 testing/synctest で高速＆確実な並列テストを実現する方法",
+        "title": "Go1.25新機能 testing/synctest で高速＆確実な並行テストを実現する方法",
         "description": "## 概要\r\n\r\nGo1.25で標準パッケージになった testing/synctest パッケージを中心に、Test と Wait の２つの API の動作仕様を詳解します。実コードと GoDoc を交え、時間短縮・flaky対策の実用的なテスト手法を初学者から中級者に向けて丁寧に紹介します。また実際に弊社のテストコードに組み込んだ結果も合わせて共有できればと思います。\r\n\r\n## 発表内容の詳細\r\n\r\n1. 背景と課題提起\r\n    - 並列テストの“遅さ”や“flakiness”という実務課題\r\n2. API紹介\r\n    - `testing/synctest.Test`\r\n    - `testing/synctest.Wait`\r\n3. 実験コード解説\r\n    - 実験 1: TTLを持つキャッシュのテスト\r\n    - 実験 2: goroutineによるexpire実装の検証\r\n4. 動作検証とGoDoc読解\r\n    - GoDocベースで仕様確認＋内部動作の理解\r\n6. flakyテストへの対処\r\n    - `Test`を使った安定化手法とその根拠\r\n7. Goクイズ・参加型検証\r\n    - ミニクイズ形式で仕様の理解を補強\r\n8. 実務適用と今後の展望\r\n    - 弊社での活用事例\r\n　- `synctest` の今後への期待\r\n9. APIの内部実装\r\n    - synthetic timeの実装やgoroutine制御の仕組み\r\n\r\n## 補足事項\r\n\r\n- https://zenn.dev/canary_techblog/articles/ec8a96b4541685 をベースにした発表になります\r\n- 上記の記事執筆時はGo1.24で実験的に導入された時だったので、Go1.25で標準パッケージに入るまでのアップデート（e.g. RunがTestに置き換わった理由など）も併せてお話しする想定です\r\n- 弊社での活用事例のセクションでは、exponential backoffでリトライするようなAPIのテストなどより実践的に使える内容についてもお話しできればと思っています\r\n- またsynthetic timeの実装やgoroutine制御の仕組みについても余裕があればお話ししたいと思います",
         "startsAt": "2025-09-28T10:20:00",
         "endsAt": "2025-09-28T11:00:00",
@@ -1417,7 +1585,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": "true",
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1484,7 +1660,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/takehaya/go-conference-2025-godeti-gan-surumultipath-tcp-go-1-dot-24-shi-dai-no-mptcp-listener-woli-jie-suru",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1551,7 +1735,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/kaorumuta/go-conference-2025",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1618,7 +1810,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://zenn.dev/catatsuy/articles/901fbb10aa6ff2",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1685,7 +1885,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/shotarowatanabe6/go1-dot-24shi-dai-no-yunitutotesutopin-zhi-xiang-shang",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1699,7 +1907,7 @@
         "speakers": [
           {
             "id": "b109987f-9b94-40d7-ba33-6385a63fd45a",
-            "name": "Shotaro Watanabe"
+            "name": "Watanabe Shotaro"
           }
         ],
         "categories": [
@@ -1752,13 +1960,21 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://taichimaeda-gocon2025.vercel.app/",
+            "sort": 29,
             "answerExtra": null
           }
         ],
         "id": "958432",
         "title": "カリカリなMutexを作る / \"Crispifying\" Go's Mutex",
-        "description": "(English follows Japanese)\r\n\r\nGo言語といえば並列処理、並列処理といえばMutexですよね。今回はそんなGo言語のMutexについてです。\r\n\r\n案外簡単なのでは？と思いきや、実際にコードを読んでみると複雑な実装になっていて、いかに「カリカリ」に最適化されているかがわかります。\r\n\r\nもはや職人芸とも言えるGo言語のMutex。とても真似できないと思われるかもしれませんが、決してそんなことはありません。今回は、簡単なスピンロックの実装からスターベーションモードの実装まで、皆さんと一緒に「オレオレMutex」をカリカリにしていこうと思います。\r\n\r\n実際に標準ライブラリ内にオレオレMutexを実装して、テストを通し、またおまけとしてSPINというツールで安全性 (＋活性性？) のモデル検査を行います。もしかしたらバグがあるかもしれませんが、そこはご愛嬌ということで... ぜひお楽しみに！\r\n\r\n---\r\n\r\nWhen you think of Go, you think of concurrency. And when you think of concurrency, you think of mutex. So today, let's talk about Go's mutex.\r\n\r\nAt first glance, it might seem straightforward, depending on who you ask. But once you dive into the source code, you quickly realise it's far more intricate than expected - packed with finely tuned optimisations.\r\n\r\nYou might be tempted to think, \"There's no way I could ever pull this off myself\". But actually, that’s not the case at all! Starting from a simple spinlock, we'll work step by step towards a mutex that even handles starvation mode, gradually building our own \"DIY mutex\" until it's nice and\"crispy\".\r\n\r\nWe’ll implement it right into the standard library, run it through the test suite, and, as a bonus, try out SPIN to check its safety property (and maybe even its liveness). Of course, there might be a few bugs here and there... but that’s all part of the fun. So let’s dive in and enjoy!",
+        "description": "(English follows Japanese)\r\n\r\nGo言語といえば並列処理、並列処理といえばMutexですよね。今回はそんなGo言語のMutexについてです。\r\n\r\n案外簡単なのでは？と思いきや、実際にコードを読んでみると複雑な実装になっていて、いかに「カリカリ」に最適化されているかがわかります。\r\n\r\nもはや職人芸とも言えるGo言語のMutex。とても真似できないと思われるかもしれませんが、決してそんなことはありません。今回は、簡単なスピンロックの実装からスターベーションモードの実装まで、皆さんと一緒に「オレオレMutex」をカリカリにしていこうと思います。\r\n\r\n実際に標準ライブラリ内にオレオレMutexを実装して、テストを通し、またおまけとしてSPINというツールで安全性 (＋活性性？) のモデル検査を行います。もしかしたらバグがあるかもしれませんが、そこはご愛嬌ということで... ぜひお楽しみに！\r\n\r\n* スライドは英語ですが発表は日本語で行う予定です。\r\n\r\n---\r\n\r\nWhen you think of Go, you think of concurrency. And when you think of concurrency, you think of mutex. So today, let's talk about Go's mutex.\r\n\r\nAt first glance, it might seem straightforward, depending on who you ask. But once you dive into the source code, you quickly realise it's far more intricate than expected - packed with finely tuned optimisations.\r\n\r\nYou might be tempted to think, \"There's no way I could ever pull this off myself\". But actually, that’s just not the case!! Starting from a simple spinlock, we'll work step by step towards a mutex that even handles starvation mode, gradually building our own \"DIY mutex\" until it's nice and \"crispy\".\r\n\r\nWe’ll implement it right into the standard library, run it through the test suite, and, as a bonus, try out SPIN to check its safety property (and maybe even its liveness). Of course, there might be a few bugs here and there... but that’s all part of the fun. So let’s dive in and enjoy!\r\n\r\n* The slides will be in English but the presentation itself will be delivered in Japanese.",
         "startsAt": "2025-09-28T14:30:00",
         "endsAt": "2025-09-28T14:50:00",
         "isServiceSession": false,
@@ -1819,7 +2035,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/ymotongpoo/the-history-of-gos-build-system",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1886,7 +2110,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": "true",
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/resilire/go-conference-2025-deng-tan-zi-liao",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -1953,7 +2185,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": "true",
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/optim/20250928-goconference2025-uehara",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2020,7 +2260,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2087,7 +2335,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2154,7 +2410,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2221,7 +2485,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/97vaibhav/after-go-func-goroutines-through-a-beginners-eye-6c9ccb98-e933-4d79-8474-b1715a0f9f2f",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2288,7 +2560,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2355,7 +2635,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/karamaru/mockio-go-dynodexue-bumetapuroguramingu",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2422,7 +2710,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": "true",
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/mbook/cdnogai-shan-nofen-dou",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2489,7 +2785,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": "true",
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/yadon3141/goplskuo-zhang-niyorumaikurosabisujian-no-shi-zhuang-ziyanpunogai-shan",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2556,7 +2860,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/magavel/uniquepatukezinonei-bu-shi-zhuang-wozhi-eruweak-pointernohua",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2623,13 +2935,21 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/komugi8/go-1-dot-24noxin-ji-neng-tool-directivede-turunohuan-jing-gou-zhu-noxiao-lu-xing-zai-xian-xing-wogao-meru",
+            "sort": 29,
             "answerExtra": null
           }
         ],
         "id": "958986",
         "title": "Go 1.24の新機能:tool directivesでツールの環境構築の効率性・再現性を高める",
-        "description": "Go 1.24では、新たに「Tool Directive」の機能が導入され、go.modを活用して開発ツールを効率的に管理できるようになりました。この機能により、プロジェクトで使用するツール（例: stringer や特定のリントツール、フォーマッタなど）を明示的に依存関係として記録し、プロジェクトごとに一貫したツール環境を構築することが可能です。\r\n\r\nこれまで、Goプロジェクトの開発ツール管理には以下のような問題点が存在していました。\r\n\r\n- ビルド制約を利用した方法の煩雑さ\r\n    \r\n    ツールを管理するために、**`tool.go`** ファイルを作成してブランクインポートするプラクティスが一般的でしたが、これには手動での管理が必要であり、煩雑さとミスのリスクが伴いました。\r\n    \r\n- バージョンの管理が不統一\r\n    \r\n    プロジェクト内で使用するツールのバージョンが明確に指定されないため、異なる環境間でツールバージョンが異なる問題が発生しやすく、開発環境の再現性が低下していました。\r\n    \r\n- ツールの実行やアップグレードが非効率\r\n    \r\n    ツールの実行やバージョンアップが手動で行われることが多く、プロジェクトやチーム全体で統一的に行うことが難しい状況でした。\r\n    \r\nTool Directiveは、こうした問題を解消するために設計されています。\r\n\r\nこのセッションでは、以下の内容を話します。\r\n\r\n- Tool Directive登場以前のツールの管理方法(ビルド制約を利用した方法)\r\n- meta-patternの利用によりツールを一括管理・アップグレードする方法\r\n- 実行ファイルがGo build cacheにキャッシュされるようになったことによる繰り返し実行が高速化されている点と関連Issueの紹介。\r\n\r\n本セッションを通じて、参加者の皆さんがGo 1.24で導入されたTool Directiveの概要を理解し、すぐに実践できる状態になることを目指します。この機能を活用することで、Goプロジェクトのツール管理がさらにシンプルで強力になることを覚えていただけたらと思います。",
+        "description": "Go 1.24では、新たに「Tool Directive」の機能が導入され、go.modを活用して開発ツールを効率的に管理できるようになりました。この機能により、プロジェクトで使用するツール（例: stringer や特定のリントツール、フォーマッタなど）を明示的に依存関係として記録し、プロジェクトごとに一貫したツール環境を構築することが可能です。\r\n\r\nこれまで、Goプロジェクトの開発ツール管理には以下のような問題点が存在していました。\r\n\r\n- ビルド制約を利用した方法の煩雑さ\r\n    \r\n    ツールを管理するために、tool.goファイルを作成してブランクインポートするプラクティスが一般的でしたが、これには手動での管理が必要であり、煩雑さとミスのリスクが伴いました。\r\n    \r\n- バージョンの管理が不統一\r\n    \r\n    プロジェクト内で使用するツールのバージョンが明確に指定されないため、異なる環境間でツールバージョンが異なる問題が発生しやすく、開発環境の再現性が低下していました。\r\n    \r\n- ツールの実行やアップグレードが非効率\r\n    \r\n    ツールの実行やバージョンアップが手動で行われることが多く、プロジェクトやチーム全体で統一的に行うことが難しい状況でした。\r\n    \r\nTool Directiveは、こうした問題を解消するために設計されています。\r\n\r\nこのセッションでは、以下の内容を話します。\r\n\r\n- Tool Directive登場以前のツールの管理方法(ビルド制約を利用した方法)\r\n- meta-patternの利用によりツールを一括管理・アップグレードする方法\r\n- 実行ファイルがGo build cacheにキャッシュされるようになったことによる繰り返し実行が高速化されている点と関連Issueの紹介。\r\n- tool管理を別go.modで管理するプラクティス\r\n\r\n本セッションを通じて、参加者の皆さんがGo 1.24で導入されたTool Directiveの概要を理解し、すぐに実践できる状態になることを目指します。この機能を活用することで、Goプロジェクトのツール管理がさらにシンプルで強力になることを覚えていただけたらと思います。",
         "startsAt": "2025-09-28T18:55:00",
         "endsAt": "2025-09-28T19:00:00",
         "isServiceSession": false,
@@ -2690,7 +3010,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/budougumi0617/go-conference-2025-fill-context",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2757,7 +3085,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": null,
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2824,7 +3160,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/upamune/flaky-testhenoxian-shi-jie-wogonopuropozarukarakao-eru-go-conference-2025",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2891,7 +3235,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/kogamochiduki/defer-f-todefer-fnoju-dong-wo-wu-jie-siteitahua",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -2958,7 +3310,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://docs.google.com/presentation/d/1Lak0DPXRvcofeCCr6oyE8IoWMREwP4CC6RqK2qPBY44/edit?usp=drivesdk",
+            "sort": 29,
             "answerExtra": null
           }
         ],
@@ -3025,7 +3385,15 @@
             "question": "Sponsored Session",
             "questionType": "Checkbox",
             "answer": null,
-            "sort": 40,
+            "sort": 41,
+            "answerExtra": null
+          },
+          {
+            "id": 112316,
+            "question": "Presentation Content",
+            "questionType": "Web_address",
+            "answer": "https://speakerdeck.com/askua/pure-goteti-yan-suruwasmnowei-lai",
+            "sort": 29,
             "answerExtra": null
           }
         ],
