@@ -83,7 +83,13 @@
       }
     ],
     "isTopSpeaker": false,
-    "links": [],
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/senoue",
+        "linkType": "Twitter"
+      }
+    ],
     "questionAnswers": [],
     "categories": []
   },
@@ -118,12 +124,12 @@
     "lastName": "",
     "fullName": "Pana",
     "bio": "2021年からGoの開発に関わっています\r\nGoの中でも特に仕様や静的解析に強い興味関心があり、調べたことは https://zenn.dev/kkkxxx にアウトプットしています。",
-    "tagLine": "Engineer",
+    "tagLine": "株式会社カナリー　テクニカルリードエンジニア",
     "profilePicture": "https://sessionize.com/image/63c0-400o400o1-JVJDgfoXnSXi5wW1njJfAn.jpg",
     "sessions": [
       {
         "id": 958977,
-        "name": "Go1.25新機能 testing/synctest で高速＆確実な並列テストを実現する方法"
+        "name": "Go1.25新機能 testing/synctest で高速＆確実な並行テストを実現する方法"
       }
     ],
     "isTopSpeaker": false,
@@ -596,7 +602,7 @@
     "id": "b109987f-9b94-40d7-ba33-6385a63fd45a",
     "firstName": "",
     "lastName": "",
-    "fullName": "Shotaro Watanabe",
+    "fullName": "Watanabe Shotaro",
     "bio": "Goと音楽が好きです。GENIEE CHATを開発しています。",
     "tagLine": "株式会社ジーニー",
     "profilePicture": "https://sessionize.com/image/d557-400o400o1-wERiLHpVa4jAXek7wJfHpS.jpg",
@@ -607,7 +613,13 @@
       }
     ],
     "isTopSpeaker": false,
-    "links": [],
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/5wee7",
+        "linkType": "Twitter"
+      }
+    ],
     "questionAnswers": [],
     "categories": []
   },
@@ -823,7 +835,7 @@
     "firstName": "",
     "lastName": "",
     "fullName": "Yoichiro Shimizu",
-    "bio": "Goが好きなソフトウェアエンジニアです。",
+    "bio": "Goが好きなソフトウェアエンジニアです。\r\n株式会社LayerXで法人向けクレジットカードやETCカードをGoで開発しています。",
     "tagLine": "株式会社LayerX, テックリード",
     "profilePicture": "https://sessionize.com/image/f62a-400o400o1-W4PST9iULBMBKpb2xBmwTJ.png",
     "sessions": [
@@ -956,7 +968,13 @@
       }
     ],
     "isTopSpeaker": false,
-    "links": [],
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/magavel_dev",
+        "linkType": "Twitter"
+      }
+    ],
     "questionAnswers": [],
     "categories": []
   },
