@@ -29,6 +29,11 @@ const session = sessions.at(0)?.sessions.find((s) => s.id === id);
 if (!session) {
   return null;
 }
+
+// 発表資料
+const presentation = session.questionAnswers.find(
+  (v) => v.question === "Presentation Content",
+);
 ---
 
 <Layout title="トーク" titleEn="Talk" metaTitle={session.title}>
@@ -39,5 +44,6 @@ if (!session) {
     endsAt={session.endsAt}
     description={session.description}
     speakers={session.speakers}
+    presentationUrl={presentation?.answer ?? null}
   />
 </Layout>
